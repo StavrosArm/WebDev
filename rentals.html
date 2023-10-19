@@ -1,2 +1,61 @@
 <!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Looking for a good place to rent, a car to go to work , or maybe a workspace ? We are here for you! ">
+    <meta name="keywords" content="Rent, Buy, House, Workspace, Parking">
+    <meta name="author" content="Iouannou-Armeniakos">
+    <meta name="viewport" content="width=device-width", initial-scale="1">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="brand">
+            <img src="your-logo.png" alt="Your Logo">
+            <span>Your Company Name</span>
+        </div>
+
+        
+        <nav>
+            <ul>
+                
+                <ul class="categories-button" onmouseover="showSubcategories()" onmouseout="hideSubcategories()">
+                    <a href="ContactForm.html">Categories</a>
+                    <div class="subcategories" id="subcategories">
+                        
+                        <a href="#">Car Rental</a>
+                        <a href="#">Workspace Rentals</a>
+                        <a href="#">House Rentals</a>
+                        
+                    </div>
+                </ul>
+
+                
+                <ul class="language-sidebar">
+                    <a href="#">EN</a> | <a href="#">GR</a>
+                </ul>
+
+                <ul><a href="#">Sign In/Log In</a></ul>
+                
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <script>
+        function showSubcategories() {
+            document.getElementById('subcategories').style.display = 'block';
+        }
+
+        function hideSubcategories() {
+            document.getElementById('subcategories').style.display = 'none';
+        }
+    </script>
+
+</body>
+
+</html>
