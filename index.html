@@ -2,7 +2,7 @@
 
 <html lang="gr">
     <head>
-        <title>Αγγελίες</title>
+        <title>Rent&Buy-Home Page</title>
 
         <meta charset="UTF-8">
         <meta name="description" content="Home,Workspace,parking and car rent and buying ">
@@ -11,20 +11,100 @@
         <meta name="viewport" content="width=device-width", initial-scale="1">
 
     </head>
-
+<body>
+    
     <header>
-        
 
+        <!--Tο logo μαζί με το alternative text-->
+        <h1 class="brand-logo">
+            <a href="index.html">
+                <img src="png/logo-no-background.png" alt="Rent&Buy" style="width: 120px;
+                height: auto">
+            </a>
+        </h1>
+     
+        <!--Ένα search-bar , θεώρησα ότι ίσως αξίζει να το βάλουμε , θα δείξει-->
+        <form id="search-container" action="/search" method="get">
+            <input type="search" id="search-bar" name="q" placeholder="Search...">
+            <button type="submit" id="search-button">Search</button>
+        </form>
+
+        <!--Το βασικό μας navbar, λογικά θα πρέπει να προσθέσουμε και άλλα πράγματα στο categories-->
+        <nav class="header-navbar">
+            <ul>
+                
+                <ul class="categories-button" onmouseover="showSubcategories()" onmouseout="hideSubcategories()">
+                    <a href="ContactForm.html">Categories</a>
+                    <ul class="subcategories" id="subcategories">
+                        
+                        <ul>
+                            <a href="house-rentals.html">House Rentals</a>
+                        </ul>
+
+                        <ul>
+                            <a href="Workspace.html">Workspace</a>
+                        </ul>
+
+                        <ul>
+                        <a href="Cars.html">Cars and Moto</a>
+                        </ul>
+                </ul>
+
+                
+                <ul class="Sign In" id="sign-in">
+                    <a href=""><img src="" alt="Sign/Log in" class="icon"></a>
+                    
+                </ul>
+
+                <ul class="Language" onmouseover="showLanguage()" onmouseout="hideLanguage()">
+                    <a href="#">EN</a>
+                    <ul class="language-sidebar" id="language-sidebar">
+                        <a href="GR">GR</a>
+                    </ul>
+                </ul>
+                
+            </ul>
+
+        </nav>
     </header>
 
-    <body>
-        <nav>
-            <a href="Categories.html">Κατηγορίες Αγγελιών</a>
-            <a href="ContactForm.html"> Αντιμετωπίζετε πρόβλημα;</a>
-            <a href="AboutUs.html"> About Us</a>
-        </nav>
+        <!--Έχουμε το footer , που δεν έχω υλοποιήσει κάτι ακόμη-->
+        <footer>
 
-    </body>
+            <!--Tο logo μαζί με το alternative text-->
+            <h1 class="brand-logo">
+                <a href="index.html">
+                    <img src="png/logo-no-background.png" alt="Rent&Buy" style="width: 120px;
+                    height: auto">
+                </a>
+            </h1>
+    
+            <nav class="footer-navbar">
+            
+                <ul>
+                    <li>
+                        <p><a href="about-us.html" aria-label="About Us">Learn more about our team</a></p>
+                    </li>
+    
+                    <li>
+                        <p><a href="ContactForm.html">Experiencing problems ? Contact Us!</a> </p>
+                    </li>
+    
+                    <li>
+                        <p><a href="https://european-union.europa.eu/cookies_en">Cookies and data policy</a></p>
+                    </li>
+    
+                </ul>
+            </nav>
+    
+            <p>&copy; 2023 Iouannou-Armeniakos. All rights reserved.</p>
+    
+    
+        </footer>
+</body>
+
+
+
 
 </html>
 
