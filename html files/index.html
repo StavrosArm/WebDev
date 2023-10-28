@@ -3,6 +3,7 @@
 <html lang="gr">
     <head>
         <title>Rent&Buy-Home Page</title>
+        <link href="png/logo-color.png" rel="shortcut icon" type="image/png" />
 
         <meta charset="UTF-8">
         <meta name="description" content="Home,Workspace,parking and car rent and buying ">
@@ -13,64 +14,10 @@
     </head>
 <body>
     
-    <header>
+    <body>
 
-        <!--Tο logo μαζί με το alternative text-->
-        <h1 class="brand-logo">
-            <a href="index.html">
-                <img src="png/logo-no-background.png" alt="Rent&Buy" style="width: 120px;
-                height: auto">
-            </a>
-        </h1>
-     
-        <!--Ένα search-bar , θεώρησα ότι ίσως αξίζει να το βάλουμε , θα δείξει-->
-        <form id="search-container" action="/search" method="get">
-            <input type="search" id="search-bar" name="q" placeholder="Search...">
-            <button type="submit" id="search-button">Search</button>
-        </form>
-
-        <!--Το βασικό μας navbar, λογικά θα πρέπει να προσθέσουμε και άλλα πράγματα στο categories-->
-        <nav class="header-navbar">
-            <ul>
-                
-                <ul class="categories-button" onmouseover="showSubcategories()" onmouseout="hideSubcategories()">
-                    <a href="ContactForm.html">Categories</a>
-                    <ul class="subcategories" id="subcategories">
-                        
-                        <ul>
-                            <a href="house-rentals.html">House Rentals</a>
-                        </ul>
-
-                        <ul>
-                            <a href="Workspace.html">Workspace</a>
-                        </ul>
-
-                        <ul>
-                        <a href="Cars.html">Cars and Moto</a>
-                        </ul>
-                </ul>
-
-                
-                <ul class="Sign In" id="sign-in">
-                    <a href=""><img src="" alt="Sign/Log in" class="icon"></a>
-                    
-                </ul>
-
-                <ul class="Language" onmouseover="showLanguage()" onmouseout="hideLanguage()">
-                    <a href="#">EN</a>
-                    <ul class="language-sidebar" id="language-sidebar">
-                        <a href="GR">GR</a>
-                    </ul>
-                </ul>
-                
-            </ul>
-
-        </nav>
-    </header>
-
-        <!--Έχουμε το footer , που δεν έχω υλοποιήσει κάτι ακόμη-->
-        <footer>
-
+        <header>
+    
             <!--Tο logo μαζί με το alternative text-->
             <h1 class="brand-logo">
                 <a href="index.html">
@@ -78,9 +25,166 @@
                     height: auto">
                 </a>
             </h1>
+         
+            <!--Ένα search-bar , θεώρησα ότι ίσως αξίζει να το βάλουμε , θα δείξει-->
+            <form id="search-container" action="/search" method="get">
+                <input type="search" id="search-bar" name="q" placeholder="Search...">
+                <button type="submit" id="search-button">Search</button>
+            </form>
     
-            <nav class="footer-navbar">
+            <!--Το βασικό μας navbar, λογικά θα πρέπει να προσθέσουμε και άλλα πράγματα στο categories-->
+            <nav class="header-navbar">
+                <ul>
+                    <li class ="Categories"><a href="categories.html" title="Categories">Categories</a>
+                        <ul>
+                            <li><a href = "#" title = "Real Estate">Real Estate</a></li>
+                            <li><a href = "#" title = "Vehicles">Vehicles</a></li>
+                            <li><a href = "#" title = "Work">Work</a></li>
+                            <li><a href = "#" title = "Other Categories">Other Categories</a></li>
+                        </ul>
+                    </li>
+                    
+    
+                    
+                    <li class="Sign In" id="sign-in">
+                        <a href=""><img src="" alt="Sign/Log in" class="icon"></a>
+                        
+                    </li>
+    
+                    <li class="Language">
+                        <a href="#" title = "EN">EN</a>
+                        <ul class="language-sidebar" id="language-sidebar">
+                           <li><a href="#" title = "GR">GR</a></li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+    
+            </nav>
+        </header>
+        
+        <!--Είναι καλή πρακτική να μαζέψουμε σε ένα βασικό article όλες τις αγγελίες , και να τα χωρίσουμε
+        σε επιμέρους articles.Έχω βάλει τις κλάσεις κτλπ καθώς δοκίμαζα και κάποια css, πρέπει ακόμη να προσθέσουμε
+        κάποια πράγματα. -->
+    
+        <main>
             
+            <aside>
+                <h2>Categories</h2>
+                <ul>
+                    <li><a href="#">Real Estate</a></li>
+                        <ul>
+                            <li><a href="house-rentals.html">Houses for rent</a></li>
+                            <li><a href="house-rentals.html">House for sale</a></li>
+                            <li><a href="house-rentals.html">Workspaces for rent</a></li>
+                            <li><a href="house-rentals.html">Workspaces for rent</a></li>
+                            <li><a href="house-rentals.html">Parking spaces for rent</a></li>
+                            <li><a href="house-rentals.html">Parking spaces for sale</a></li>
+                            <li><a href="house-rentals.html">Land</a></li>
+                        </ul>    
+                    <li><a href="#">Vehicles</a></li>
+                        <ul>
+                            <li><a href="house-rentals.html">Cars</a></li>
+                            <li><a href="house-rentals.html">Motorcycles</a></li>
+                            <li><a href="house-rentals.html">Recreational Vehicles</a></li>
+                            <li><a href="house-rentals.html">Professional Vehicles</a></li>
+                        </ul>   
+    
+                    <li><a href="#">Work</a></li>
+                        <ul>
+                            <li><a href="house-rentals.html">Technology</a></li>
+                            <li><a href="house-rentals.html">Sports</a></li>
+                            <li><a href="house-rentals.html">Art</a></li>
+                            <li><a href="house-rentals.html">Εστίαση</a></li>
+                            <li><a href="house-rentals.html">Secretarial support</a></li>
+                            <li><a href="house-rentals.html">Other categories</a></li>
+                        </ul>
+                    
+                    <li><a href="#">Other Categories</a></li>
+                        <ul>
+                            <li><a href="house-rentals.html">Electronic devices</a></li>
+                            <li><a href="house-rentals.html">Domestic devices</a></li>
+                            <li><a href="house-rentals.html">Clothes and jewlery</a></li>
+                            <li><a href="house-rentals.html">Other accessories</a></li>
+                        </ul>
+                </ul>
+            </aside>
+    
+            <section id = "main banner">
+                <img src = "png/Rent-a-home.jpg" alt="Rent a home">
+            </section>
+            <section id = "Last ads">
+                <h2>Last ads</h2>
+                    <article>
+                        <header>
+                            <img src="png\diamerisma-neasmurh-enoikiash.webp" alt="diamerisma-pros-enoikiash">
+                             <h3>Ενοικίαση κατοικίας 80 τ.μ., Νέα Σμύρνη, 950 €</h3>
+                        </header>
+                        <p>
+                            Μοντέρνο (ανεπίπλωτο) οροφοδιαμέρισμα του 2010 , 1ου Ορόφου, 80 τ.μ., πλήρως κλιματιζόμενο, 
+                            με συναγερμό, εξοπλισμένο με ηλεκτρικό φούρνο, ψυγείο, πλυντήριο ρούχων, φωτιστικά παντού
+                            και κουρτίνες, με 2 κρεβατοκάμαρες (με ανεμιστήρες οροφής), 2 τουαλέτες, κεντρική θέρμανση 
+                            αερίου (με αυτονομία), με ηλιακό θερμοσίφωνα, ιδιωτικό σκεπαστό πάρκιν και αποθήκη, βρίσκεται 
+                            σε ωραία (μη εμπορική) γειτονιά της Νέας Σμύρνης, σε φαρδύ δρόμο περιορισμένης κίνησης οχημάτων,
+                             150 Μ. από στάση Τραμ, Σούπερ μάρκετ, ATMs, Φαρμακεία    
+                        </p>
+                        <a href="https://www.xe.gr/property/u/510120?item_type=re_residence&transaction_name=rent" title="περισσότερα" tabindex="0">... περισσότερα</a>
+                    </article>
+                    <article>
+                        <header>
+                            <img src="png\aggelia-gia-gumnastes.jpg" alt="aggelia-gia-gumnastes">
+                            <h3>Χαϊδάρι (Κουνελιών) - Γυμναστές</h3>
+                        </header>
+                        <p>
+                            ΓΥΜΝΑΣΤΕΣ για personal προπονήσεις σε ems studio στις  περιοχές Χαιδαρι ,Πετρούπολη 
+                            και  Αμπελοκήπους . Παρέχεται    σταθερο  ωράριο ασφάλιση  και καλες  αποδοχές.
+                        </p>
+                        <a href="https://www.xe.gr/%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1/%CE%B8%CE%AD%CF%83%CE%B5%CE%B9%CF%82-%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%CF%82?category=athlhtismos_ekswterikes_drasthriothtes" title="περισσότερα" tabindex="0">... περισσότερα</a>
+                    </article>
+                    <article>
+                        <header>
+                            <img src="png\aggelia-gia-agora-amaksiou.jpg" alt="aggelia-gia-agora-amaksiou">
+                            <h3>AUDI A3 TFSI 1400cc, 125hp Face Lift</h3>
+                        </header>
+                        <p>
+                            Πωλείται Audi A3 TFSI 1400cc, 125hp, μοντ. 1/'09, ασημί μεταλλικό, 125.000 χλμ., χειροκίνητο 
+                            κιβώτιο, 3θυρο, ABS, ESP, 8 αερόσακοι, ηλεκ. παράθυρα - καθρέπτες - κλειδαριές, θερμαινόμενα 
+                            καθίσματα, κλιματισμός 2 ζωνών, ζάντες 16", φωτα biXenon, πάρκινγκ σένσορες, ΚΤΕΟ 1/'23, 
+                            βιβλίο service, άριστη κατάσταση.
+                        </p>
+                        <a href="https://www.xe.gr/automoto/used-cars-AUDI,A3-768244031.html" title="περισσότερα" tabindex="0">... περισσότερα</a>
+                    </article>
+                    <article>
+                        <header>
+                            <img src="https://a2.xe.gr/20231026/214148_886632_x.jpg" alt="Gunaikia-rouxa">
+                            <h3>Γυναικεία Ρούχα Στοκ</h3>
+                        </header>
+                        <p>
+                            ΠΩΛΕΊΤΑΙ στοκ εμπόρευμα γυναικείων ενδυμάτων ραμμένο από πολύ καλής ποιότητας υφάσματα και 
+                            με προσεγμένη επαγγελματική ραφή, από ελληνική βιοτεχνία & κατάστημα ενδυμάτων που κλείνει
+                             λόγω συνταξιοδότησης. || Ενδεικτικές τιμές: Σακάκια 15 € | Φορέματα 5 €-10 € | Φούστες, 
+                             Παντελόνια, Κολάν, Φούτερ 3 €-5 € | Πουκάμισα 5 € | Μπλούζες 1 €-3 €, τιμή 5€, συζητήσιμη   
+                        </p>
+                        <a href="https://www.xe.gr/rouxa-kosmimata/gynaikeia-royxa-diafora%7Cad-827292540.html" title="περισσότερα" tabindex="0">... περισσότερα</a>
+                    </article>
+        </section>   
+            
+        </main>
+        <!--Έχουμε το footer , που δεν έχω υλοποιήσει κάτι ακόμη-->
+        <footer>
+    
+            <!--Tο logo μαζί με το alternative text-->
+            <div id="upper-footer">
+                <h1>
+                    <a href="index.html">
+                        <img src="png/logo-no-background.png" alt="Rent&Buy" style="width: 120px;
+                        height: auto">
+                    </a>
+                </h1>
+            </div>
+            
+    
+            <div id = "middle-footer">
                 <ul>
                     <li>
                         <p><a href="about-us.html" aria-label="About Us">Learn more about our team</a></p>
@@ -95,13 +199,26 @@
                     </li>
     
                 </ul>
-            </nav>
+            </div>
+
+            <div id = "Right footer">
+                <!--Den eimai sigouros an einai kalh prakthkh header san paidi enos div-->
+                <header>
+                    <img src="png\phone-call.png" alt="phone-call-icon">
+                    <h1>2106322573</h1>
+                </header>
+                <p>Τηλεφώνησε τώρα από σταθερό ή κινητό και βάλε εύκολα και γρήγορα την αγγελία σου!</p>
+            </div>
+            
+                
+            
     
             <p>&copy; 2023 Iouannou-Armeniakos. All rights reserved.</p>
     
     
         </footer>
-</body>
+    
+    </body>
 
 
 
