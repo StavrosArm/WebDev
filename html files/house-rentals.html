@@ -15,7 +15,7 @@
 <body>
 
     <header>
-
+ 
         <!--Tο logo μαζί με το alternative text-->
         <h1 class="brand-logo">
             <a href="index.html">
@@ -23,53 +23,40 @@
                 height: auto">
             </a>
         </h1>
-     
+         
         <!--Ένα search-bar , θεώρησα ότι ίσως αξίζει να το βάλουμε , θα δείξει-->
         <form id="search-container" action="/search" method="get">
             <input type="search" id="search-bar" name="q" placeholder="Search...">
             <button type="submit" id="search-button">Search</button>
         </form>
-
+    
         <!--Το βασικό μας navbar, λογικά θα πρέπει να προσθέσουμε και άλλα πράγματα στο categories-->
         <nav class="header-navbar">
             <ul>
-                
-                <ul class="categories-button" onmouseover="showSubcategories()" onmouseout="hideSubcategories()">
-                    <a href="ContactForm.html">Κατηγορίες Αγγελιών</a>
-                    <ul class="subcategories" id="subcategories">
-                        
-                        <ul>
-                            <a href="house-rentals.html">Ακίνητα</a>
-                        </ul>
-
-                        <ul>
-                            <a href="car-ads.html">Οχήματα</a>
-                        </ul>
-
-                        <ul>
-                            <a href="#">Εργασία</a>
-                        </ul>
-
-                        <ul>
-                            <a href="other-categories.html">Άλλο</a>
-                        </ul>
-                </ul>
-
-                
-                <ul class="Sign In" id="sign-in">
-                    <a href=""><img src="" alt="Sign/Log in" class="icon"></a>
-                    
-                </ul>
-
-                <ul class="Language" onmouseover="showLanguage()" onmouseout="hideLanguage()">
-                    <a href="#">EN</a>
-                    <ul class="language-sidebar" id="language-sidebar">
-                        <a href="GR">GR</a>
+                <li class ="Categories"><a href="categories.html" title="Categories">Categories</a>
+                    <ul>
+                        <li><a href = "house-rentals.html" title = "Real Estate">Real Estate</a></li>
+                        <li><a href = "car-ads.html" title = "Vehicles">Vehicles</a></li>
+                        <li><a href = "#" title = "Work">Work</a></li>
+                        <li><a href = "#" title = "Other Categories">Other Categories</a></li>
                     </ul>
-                </ul>
-                
+                </li>
+                    
+    
+                    
+                <li class="Sign In" id="sign-in">
+                    <a href=""><img src="" alt="Sign/Log in" class="icon"></a>
+                </li>
+    
+                <li class="Language">
+                    <a href="#" title = "EN">EN</a>
+                    <ul class="language-sidebar" id="language-sidebar">
+                        <li><a href="#" title = "GR">GR</a></li>
+                    </ul>
+                </li>
+                    
             </ul>
-
+    
         </nav>
     </header>
     
@@ -92,7 +79,7 @@
                     <ul><a href="house-rentals.html">Land</a></ul>
 
                 <li><a href="#">Οχήματα</a></li>
-                    <ul><a href="house-rentals.html">Αυτοκίνητα Ι.Χ</a></ul>
+                    <ul><a href="car-ads.html">Αυτοκίνητα Ι.Χ</a></ul>
                     <ul><a href="house-rentals.html">Μοτοσυκλέτες</a></ul>
                     <ul><a href="house-rentals.html">RV-Tροχόσπιτα</a></ul>
                     <ul><a href="house-rentals.html">Οχήματα επαγγελματικής χρήσεως</a></ul>
@@ -121,8 +108,7 @@
         <article>
             <a href="#">
                 <header>
-                    <h1>Ενοικίαση κατοικίας 80 τ.μ., Νέα Σμύρνη, 950 €</h1>
-                    <h4>Aριθμός αγγελίας #210851095</h4>
+                    <h1>Ενοικίαση κατοικίας 80 τ.μ., Νέα Σμύρνη, 950 €</h1> 
                     <img src="..\png\house_rentals-images\diamerisma-neasmurh-enoikiash.webp" alt="diamerisma-pros-enoikiash">
                 </header>
 
