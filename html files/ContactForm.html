@@ -5,6 +5,7 @@
 <head>
     <title>Rent&Buy-Tech Support</title>
 
+    <link href="../png/logo-color.png" rel="shortcut icon" type="image/png" />
     <meta charset="UTF-8">
     <meta name="description" content="Troubleshooting">
     <meta name="keywords" content="Problem, Contact, Tech Support">
@@ -16,114 +17,134 @@
 <body>
 
     <header>
-
-        <!--Tο logo μαζί με το alternative text-->
-        <h1 class="brand-logo">
-            <a href="index.html">
-                <img src="png/logo-no-background.png" alt="Rent&Buy" style="width: 120px;
-                height: auto">
-            </a>
-        </h1>
-     
-        <!--Ένα search-bar , θεώρησα ότι ίσως αξίζει να το βάλουμε , θα δείξει-->
-        <form id="search-container" action="/search" method="get">
-            <input type="search" id="search-bar" name="q" placeholder="Search...">
-            <button type="submit" id="search-button">Search</button>
-        </form>
-
-        <!--Το βασικό μας navbar, λογικά θα πρέπει να προσθέσουμε και άλλα πράγματα στο categories-->
-        <nav class="header-navbar">
-            <ul>
-                
-                <ul class="categories-button" onmouseover="showSubcategories()" onmouseout="hideSubcategories()">
-                    <a href="ContactForm.html">Categories</a>
-                    <ul class="subcategories" id="subcategories">
+        <header>
+    
+            <!--Tο logo μαζί με το alternative text-->
+            <h1 class="brand-logo">
+                <a href="index.html">
+                    <img src="../png/logo-no-background.png" alt="Rent&Buy" style="width: 120px;
+                    height: auto">
+                </a>
+            </h1>
+             
+            <!--Ένα search-bar , θεώρησα ότι ίσως αξίζει να το βάλουμε , θα δείξει-->
+            <form id="search-container" action="/search" method="get">
+                <input type="search" id="search-bar" name="q" placeholder="Search...">
+                <button type="submit" id="search-button">Search</button>
+            </form>
+        
+            <!--Το βασικό μας navbar, λογικά θα πρέπει να προσθέσουμε και άλλα πράγματα στο categories-->
+            <nav class="header-navbar">
+                <ul>
+                    <li class ="Categories"><a href="categories.html" title="Categories">Categories</a>
+                        <ul>
+                            <li><a href = "#" title = "Real Estate">Real Estate</a></li>
+                            <li><a href = "#" title = "Vehicles">Vehicles</a></li>
+                            <li><a href = "#" title = "Work">Work</a></li>
+                            <li><a href = "#" title = "Other Categories">Other Categories</a></li>
+                        </ul>
+                    </li>
                         
-                        <ul>
-                            <a href="house-rentals.html">House Rentals</a>
+        
+                        
+                    <li class="Sign In" id="sign-in">
+                        <a href=""><img src="" alt="Sign/Log in" class="icon"></a>
+                    </li>
+        
+                    <li class="Language">
+                        <a href="#" title = "EN">EN</a>
+                        <ul class="language-sidebar" id="language-sidebar">
+                            <li><a href="#" title = "GR">GR</a></li>
                         </ul>
-
-                        <ul>
-                            <a href="Workspace.html">Workspace</a>
-                        </ul>
-
-                        <ul>
-                        <a href="Cars.html">Cars and Moto</a>
-                        </ul>
+                    </li>
+                        
                 </ul>
-
-                
-                <ul class="Sign In" id="sign-in">
-                    <a href=""><img src="" alt="Sign/Log in" class="icon"></a>
-                    
-                </ul>
-
-                <ul class="Language" onmouseover="showLanguage()" onmouseout="hideLanguage()">
-                    <a href="#">EN</a>
-                    <ul class="language-sidebar" id="language-sidebar">
-                        <a href="GR">GR</a>
-                    </ul>
-                </ul>
-                
-            </ul>
-
-        </nav>
+        
+            </nav>
     </header>
 
-<fieldset action="http://localhost:8000" method="post">
-    <legend>Tech Support</legend>
+<main class="tech-support">
+    
+    <h2>Φόρμα Επικοινωνίας - Τεχνική Υποστήριξη</h2>
 
-    <label for="txt_name">Name</label>
-    <input type="text" id="txt_name" name="name"
-            placeholder="Jon">
+    <form action="/submit" method="post">
 
-    <label for="txt_sirname">Sirname</label>
-    <input type="text" id="txt_sirname" name="sirname"
-            placeholder="Doe">
+        <fieldset>
+            <legend>Στοιχεία επικοινωνίας</legend>
 
-    <label for="txt_mail">e-mail</label>
-    <input type="text" id="txt_mail" name="mail"
-            placeholder="JonDoe@gmail.gr">
-            
+            <label for="fullName">Ονοματεπώνυμο:</label>
+            <input type="text" id="fullName" name="fullName" required
+                    placeholder="π.χ Γιώργος Παπαδόπουλος">
 
-    <label for="txt_adnumber">Ad number</label>
-    <input type="text" id="txt_adnumber" name="adnumber"
-             placeholder="#210851095">
-    <label for="txt_description">Tell us your problem</label>
-    <input type="text" id="txt_description" name="description">                
-</fieldset>
-<input type ="submit" id="tech-support-button" name="submit">
 
-    <!--Έχουμε το footer , που δεν έχω υλοποιήσει κάτι ακόμη-->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required
+                    placeholder="π.χ gpap@gmail.com">
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Πληροφορίες Τεχνικής Υποστήριξης</legend>
+
+            <label for="ad_number">Aριθμός αγγελίας:</label>
+            <input type="text" id="ad_number" name="ad_number" pattern="[0-9]{9}" title="Εισαγωγή 9 ψηφίων" required
+                        placeholder="#123456789">
+
+            <label for="problemDescription">Περιγραφή Προβλήματος:</label>
+            <textarea id="problemDescription" name="problemDescription" rows="4" required></textarea>
+
+        </fieldset>
+
+        <input type="submit" id="btn_submit" value="Υποβολή">
+
+    </form>
+
+</main>
+
+
     <footer>
-
+    
         <!--Tο logo μαζί με το alternative text-->
-        <h1 class="brand-logo">
-            <a href="index.html">
-                <img src="png/logo-no-background.png" alt="Rent&Buy" style="width: 120px;
-                height: auto">
-            </a>
-        </h1>
-
-        <nav class="footer-navbar">
-        
+        <div id="upper-footer">
+            <h1>
+                <a href="index.html">
+                    <img src="../png/logo-no-background.png" alt="Rent&Buy" style="width: 120px;
+                    height: auto">
+                </a>
+            </h1>
+        </div>
+            
+    
+        <div id = "middle-footer">
             <ul>
                 <li>
                     <p><a href="about-us.html" aria-label="About Us">Learn more about our team</a></p>
                 </li>
-
+    
                 <li>
                     <p><a href="ContactForm.html">Experiencing problems ? Contact Us!</a> </p>
                 </li>
-
+    
                 <li>
                     <p><a href="https://european-union.europa.eu/cookies_en">Cookies and data policy</a></p>
                 </li>
-
+    
             </ul>
-        </nav>
+        </div>
 
+        <div id = "Right footer">
+            <!--Den eimai sigouros an einai kalh prakthkh header san paidi enos div-->
+            <header>
+                <img src="..\png\index-images\phone-call.png" alt="phone-call-icon">
+                <h1>2106322573</h1>
+            </header>
+            <p>Τηλεφώνησε τώρα από σταθερό ή κινητό και βάλε εύκολα και γρήγορα την αγγελία σου!</p>
+        </div>
+        
         <p>&copy; 2023 Iouannou-Armeniakos. All rights reserved.</p>
+    
+    
+    </footer>
 
 
     </footer>
