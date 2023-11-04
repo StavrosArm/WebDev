@@ -3,13 +3,13 @@
 
 <head>
     <title>Rent&Buy-House Rentals</title>
-    <link href="../png/logo-color.png" rel="shortcut icon" type="image/png" />
+    <link href="../png/logo-no-background.png" rel="shortcut icon" type="image/png" />
     <meta charset="UTF-8">
     <meta name="description" content="Looking for a good place to rent, a car to go to work , or maybe a workspace ? We are here for you! ">
     <meta name="keywords" content="House,apartment,loft rentals">
     <meta name="author" content="Iouannou-Armeniakos">
     <meta name="viewport" content="width=device-width", initial-scale="1">
-    
+    <link rel="stylesheet" href="../css files/all_files.css">
 </head>
 
 <body>
@@ -33,7 +33,7 @@
         <!--Το βασικό μας navbar, λογικά θα πρέπει να προσθέσουμε και άλλα πράγματα στο categories-->
         <nav class="header-navbar">
             <ul>
-                <li class ="Categories"><a href="categories.html" title="Categories">Κατηγορίες Αγγελιών</a>
+                <li class ="Show-Sublist"><a href="categories.html" title="Categories ">Κατηγορίες Αγγελιών</a>
                     <ul>
                         <li><a href = "house-rentals.html" title = "Real Estate">Ακίνητα</a></li>
                         <li><a href = "car-ads.html" title = "Vehicles">Οχήματα</a></li>
@@ -45,10 +45,11 @@
     
                     
                 <li class="Sign In" id="sign-in">
-                    <a href=""><img src="" alt="Sign/Log in" class="icon"></a>
+                    <a href=""><img src="../png/sign in.png" alt="Sign/Log in" class="icon" style="width: 20px;
+                        height: auto">Sign/Log in</a>
                 </li>
     
-                <li class="Language">
+                <li class="Show-Sublist">
                     <a href="#" title = "EN">EN</a>
                     <ul class="language-sidebar" id="language-sidebar">
                         <li><a href="#" title = "GR">GR</a></li>
@@ -58,6 +59,7 @@
             </ul>
     
         </nav>
+        
     </header>
     
     <!--Είναι καλή πρακτική να μαζέψουμε σε ένα βασικό article όλες τις αγγελίες , και να τα χωρίσουμε
@@ -65,7 +67,7 @@
     κάποια πράγματα. -->
 
     <main class="main-content">
-        
+        <hr>
         <aside>
             <h2>Κατηγορίες Αγγελιών</h2>
             <ul>
@@ -115,9 +117,7 @@
                 <p>
                     Μοντέρνο (ανεπίπλωτο) οροφοδιαμέρισμα του 2010 , 1ου Ορόφου, 80 τ.μ., πλήρως κλιματιζόμενο, 
                     με συναγερμό, εξοπλισμένο με ηλεκτρικό φούρνο, ψυγείο, πλυντήριο ρούχων, φωτιστικά παντού
-                    και κουρτίνες, με 2 κρεβατοκάμαρες (με ανεμιστήρες οροφής), 2 τουαλέτες, κεντρική θέρμανση 
-                    αερίου (με αυτονομία), με ηλιακό θερμοσίφωνα, ιδιωτικό σκεπαστό πάρκιν και αποθήκη, βρίσκεται 
-                    σε ωραία (μη εμπορική) γειτονιά της Νέας Σμύρνης, σε φαρδύ δρόμο περιορισμένης κίνησης οχημάτων,
+                    και κουρτίνες, με 2 κρεβατοκάμαρες (με ανεμιστήρες οροφής), 2 τουαλέτες, κεντρική θέρμανση,
                     150 Μ. από στάση Τραμ, Σούπερ μάρκετ, ATMs, Φαρμακεία <a href="#" title="περισσότερα" tabindex="0">... περισσότερα</a>   
                 </p>
 
@@ -162,8 +162,7 @@
         <article>
             <a href="#">
                 <header>
-                    <h3>Ενοικίαση κατοικίας 43 τ.μ., Κυψέλη, 290 €</h3>
-                    <h4>Aριθμός αγγελίας #131413141</h4>
+                    <h1>Ενοικίαση κατοικίας 43 τ.μ., Κυψέλη, 290 €</h1>
                     <img src="../png/house_rentals-images/kypseli.jpg">
                 </header>
 
@@ -300,10 +299,9 @@
     
         <!--Tο logo μαζί με το alternative text-->
         <div id="upper-footer">
-            <h1>
+            <h1 class="brand-logo">
                 <a href="index.html">
-                    <img src="../png/logo-no-background.png" alt="Rent&Buy" style="width: 120px;
-                    height: auto">
+                    <img src="../png/logo-no-background.png" alt="Rent&Buy" >
                 </a>
             </h1>
         </div>
@@ -327,7 +325,7 @@
         </div>
         
 
-        <div id = "Right footer">
+        <div id = "Right-footer">
             <!--Den eimai sigouros an einai kalh prakthkh header san paidi enos div-->
             <header>
                 <img src="..\png\index-images\phone-call.png" alt="phone-call-icon">
