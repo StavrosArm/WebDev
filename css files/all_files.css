@@ -1,16 +1,62 @@
 body {
     font-family: 'Times New Roman', Times, serif;
     font-size: medium;
+    margin:0%;
   }
+
   .brand-logo > a{
     float: left;
   }
 
   .header-navbar{
     float:right;
+    width: 100%;
+    background-image: linear-gradient(to top, yellow , #831010);
+    height: 202px;
+    border-bottom: solid ;
+    border-width: 2px;
+  }
+  .search-container{
+    width:40em;
+    padding-top:2em;
+  }
+  li input{
+    width: 30em;
+    border-radius: 30px;
+    height:5em;
+  }
+  
+  .Border-Radius{
+    border:solid #404040;
+    border-width: thin;
+    border-radius: 10px;
+    padding: 4px;
+    position: relative;
+    top:3em;
+  }
+  .Border-Radius:hover{
+    background-color: white;
+  }
+  .Border-Radius >a{
+    font-weight: bold;
+  }
+  .Border-Radius ul{
+    border:solid #404040;
+    border-width:thin;
+    margin-top: 5px;
+    border-radius: 10px;
+  }
+  .Border-Radius ul>li{
+    font-weight: bold;
+    border-radius: 10px;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+  .Border-Radius ul>li:hover{
+    background-color: white;
   }
 
-
+  
   .header-navbar > ul > li {
     margin:1.5em;
     float: left;
@@ -23,11 +69,8 @@ body {
 
   .Show-Sublist ul{
     display: none;
-    position:absolute;
-    display: none;
-    position: absolute;
-    top: 100%; 
-    left: 0; 
+    position:absolute; 
+    left: 0;
     padding: 5px;
   }
   /*.Show-Sublist >a:hover{
@@ -38,6 +81,7 @@ body {
   .Show-Sublist:hover ul {
     display: block; 
   }
+  
   a {
     text-decoration: none;
     color: black;
@@ -47,8 +91,101 @@ body {
     clear: both;
   }
 
+/*FOOTER*/
+
+.brand-logo img{
+  width: 120px;
+  margin-top: 15px;
+}
+#middle-footer > ul{
+  margin-left: 4em;
+  float: left;
+  padding-right: 40px;
+}
+#middle-footer > ul>li{
+  list-style: none;
+  font-weight: bold;
+}
+
+#Right-footer img{
+  width: 50px;
+  float: left;
+  margin-top: 20px;
+}
+#Right-footer > header h1{
+  padding-top: 20px;
+}
+
+#Right-footer > header{
+  padding-bottom: 40px;
+}
+#Right-footer > p{
+  position: relative;
+  bottom: 60px;
+}
+
+footer >p{
+  clear: both;
+  text-align: center;
+  font-weight: bold;
+}
+#Main-footer{
+  background-image: linear-gradient(to bottom, yellow , #831010);
+  border-top: solid ;
+  border-width: 2px;
+  clear:both;
+}
 
 
+/* Articles*/
 
 
+aside{
+  float: right;
+  width: 350px;
+}
+.ads-articles{
+  float:left;
+  
+}
+
+.ads-articles>article{
+  float:left;
+  width:500px;  
+  height:570px;
+  border:solid;
+  border-radius: 17px;
+  margin:0.5px;
+  padding-left: 12px;
+  padding-right: 12px;
+  text-align: center;
+  border-color: #831010;
+  border-width: 0.5px;
+}
+
+.ads-articles>article img{
+  width:200px;
+  height:200px;
+}
+
+.ads-articles>article ul{
+  list-style: none;
+  margin-bottom:2.5em;
+}
+
+.ads-articles>article p{
+  text-align: justify;
+  margin:
+}
+
+.ads-articles>article:nth-of-type(2n+1){
+  clear:both;
+}
+
+.ads-articles>article:last-child{
+  margin-bottom: 20px;
+}
+.ads-articles p>a{
+  display: block;
+}
 
