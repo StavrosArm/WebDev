@@ -10,77 +10,86 @@
         <meta name="keywords" content="Rent, Buy, House, Workspace, Parking">
         <meta name="author" content="Iouannou-Armeniakos">
         <meta name="viewport" content="width=device-width", initial-scale="1">
+        <link rel="stylesheet" href="../css files/all_files.css">
+        <link rel="stylesheet" href="../css files/Peugeot-208.css">
 
     </head>
 <body>
-    <header>
+  <header>
+ 
+    <!--Tο logo μαζί με το alternative text-->
+     
+    <!--Ένα search-bar , θεώρησα ότι ίσως αξίζει να το βάλουμε , θα δείξει-->
+
+    <!--Το βασικό μας navbar, λογικά θα πρέπει να προσθέσουμε και άλλα πράγματα στο categories-->
+    <nav class="header-navbar">
+        <ul>
+            <li>
+                <div class="brand-logo">
+                    <a href="index.html">
+                        <img src="../png/logo-no-background.png" alt="Rent&Buy" style="width: 120px;
+                        height: auto">
+                    </a>
+                </div>
+            </li>
+            <li class="search-container">
+                <form  action="/search" method="get">
+                    <input type="search" id="search-bar" name="q" placeholder="Search...">
+                    <button type="submit" id="search-button">Search</button>
+                </form>
+            </li>
+            <li class ="Show-Sublist Border-Radius"><a href="categories.html" title="Categories ">Κατηγορίες Αγγελιών</a>
+                <ul>
+                    <li><a href = "house-rentals.html" title = "Real Estate">Ακίνητα</a></li>
+                    <li><a href = "car-ads.html" title = "Vehicles">Οχήματα</a></li>
+                    <li><a href = "#" title = "Work">Εργασία</a></li>
+                    <li><a href = "#" title = "Other Categories">Άλλες κατηγορίες</a></li>
+                </ul>
+            </li>
+                
+
+                
+            <li class="Sign In Border-Radius" id="sign-in">
+                <a href=""><img src="../png/sign in.png" alt="Sign/Log in" class="icon" style="width: 20px;
+                    height: auto">Sign/Log in</a>
+            </li>
+
+            <li class="Show-Sublist Border-Radius">
+                <a href="#" title = "EN">EN</a>
+                <ul class="language-sidebar" id="language-sidebar">
+                    <li><a href="#" title = "GR">GR</a></li>
+                    <li><a href="#" title ="EN-LISt">EN</a></li>
+                </ul>
+            </li>
+                
+        </ul>
+
+    </nav>
     
-        <!--Tο logo μαζί με το alternative text-->
-        <h1 class="brand-logo">
-            <a href="index.html">
-                <img src="../png/logo-no-background.png" alt="Rent&Buy" style="width: 120px;
-                height: auto">
-            </a>
-        </h1>
-         
-        <!--Ένα search-bar , θεώρησα ότι ίσως αξίζει να το βάλουμε , θα δείξει-->
-        <form id="search-container" action="/search" method="get">
-            <input type="search" id="search-bar" name="q" placeholder="Search...">
-            <button type="submit" id="search-button">Search</button>
-        </form>
+  </header>
     
-        <!--Το βασικό μας navbar, λογικά θα πρέπει να προσθέσουμε και άλλα πράγματα στο categories-->
-        <nav class="header-navbar">
-            <ul>
-                <li class ="Categories"><a href="categories.html" title="Categories">Κατηγορίες Αγγελιών</a>
-                    <ul>
-                        <li><a href = "house-rentals.html" title = "Real Estate">Ακίνητα</a></li>
-                        <li><a href = "car-ads.html" title = "Vehicles">Οχήματα</a></li>
-                        <li><a href = "#" title = "Work">Εργασία</a></li>
-                        <li><a href = "#" title = "Other Categories">Άλλες κατηγορίες</a></li>
-                    </ul>
-                </li>
-                    
-    
-                    
-                <li class="Sign In" id="sign-in">
-                    <a href=""><img src="" alt="Sign/Log in" class="icon"></a>
-                </li>
-    
-                <li class="Language">
-                    <a href="#" title = "EN">EN</a>
-                    <ul class="language-sidebar" id="language-sidebar">
-                        <li><a href="#" title = "GR">GR</a></li>
-                    </ul>
-                </li>
-                    
-            </ul>
-    
-        </nav>
-    </header>
-    
-    <main>
+  <main>
       <header>
-        <div id="Upper header">
+        <div id="Upper-header">
           <a href="index.html">Αρχική</a>
           <p>>></p>
           <a href="categories.html">Κατηγορίες</a>
           <p>>></p>
           <a href="car-ads.html">Αγγελίες Αμαξιών</a>
-          <p>>>λεπτομέρειες αγγελίαςμε κωδικό 806519046</p>
+          <p id="Bold">>>Λεπτομέρειες αγγελίαςμε κωδικό 806519046</p>
         </div>
-        <div id = "Left header">
+        <div id = "Left-header">
           <h1>PEUGEOT 208 Allure</h1>
           <p>Κέντρο Αθήνας > Γουδή</p>
         </div>
-        <div id = "Right Header">
+        <div id = "Right-Header">
           <h1>19.000 €</h1>
           <p>1199 Κυβικά, 100 Ίπποι</p>
-          <button>Προβολή Τηλεφώνου</button>
+          <button><span>Προβολή Τηλεφώνου</span></button>
         </div>
       </header>
       
-      <section id = "Φωτογραφίες Αμαξιού">
+      <section id = "Φωτογραφίες-Αμαξιού">
         <h2>Φωτογραφίες(7)</h2>
         <img src="..\png\car-ads-images\Peugeot-208-Allure-images\Peugeot-208-Allure-1Photo.jpg" alt="Peugeot-208-Allure-1Photo">
 
@@ -191,16 +200,15 @@
       </section>
 
 
-    </main>
+  </main>
 
-    <footer>
+    <footer id="Main-footer">
     
       <!--Tο logo μαζί με το alternative text-->
       <div id="upper-footer">
-          <h1>
+          <h1 class="brand-logo">
               <a href="index.html">
-                  <img src="png/logo-no-background.png" alt="Rent&Buy" style="width: 120px;
-                  height: auto">
+                  <img src="../png/logo-no-background.png" alt="Rent&Buy" >
               </a>
           </h1>
       </div>
@@ -209,7 +217,7 @@
       <div id = "middle-footer">
           <ul>
               <li>
-                  <p><a href="about-us.html" aria-label="About Us">Ποίοι είμαστε</a></p>
+                  <p><a href="about-us.html" aria-label="About Us">Ποιοί είμαστε</a></p>
               </li>
   
               <li>
@@ -222,8 +230,9 @@
   
           </ul>
       </div>
+      
 
-      <div id = "Right footer">
+      <div id = "Right-footer">
           <!--Den eimai sigouros an einai kalh prakthkh header san paidi enos div-->
           <header>
               <img src="..\png\index-images\phone-call.png" alt="phone-call-icon">

@@ -1,0 +1,65 @@
+
+/*Upper header style */
+#Upper-header>p{
+  display: inline;
+}
+#Upper-header>a,#Upper-header>p{
+  color:#00BFFF;
+}
+#Bold{
+  font-weight: bold;
+}
+#Upper-header>a:hover{
+  text-decoration: underline;
+}
+
+/*left header style*/
+#Left-header{
+  float:left;
+  padding-right: 20em;
+  border-right:solid;
+  border-color: gray;
+  border-width: 3px;
+  margin-top:10px;
+}
+#Left-header>p{
+  margin-top:0px;
+}
+#Left-header>h1{
+  margin-bottom:0px;
+}
+/*Right header style*/
+#Right-Header{
+  padding-left:42em;
+}
+#Right-Header>p{
+  float:left;
+}
+#Right-Header>h1{
+  margin-bottom:0px;
+  margin-top: 1em;
+  margin-left: 2em;
+}
+#Right-Header>p{
+  margin-left:1.3em;
+}
+#Right-Header>button{
+  position: absolute;
+  margin-left: 3em;
+  top:19.6em;
+  border-radius: 5px;
+  width: 15em;
+  height:2em;
+  background-color: yellow;
+}
+#Right-Header>button>span{
+  font-size:17px;
+  font-weight: bold;
+}
+#Right-Header>p{
+  margin-top: 0px;
+}
+
+#Φωτογραφίες-Αμαξιού{
+  clear:both;
+}
