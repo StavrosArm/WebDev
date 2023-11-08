@@ -10,179 +10,212 @@
         <meta name="keywords" content="Rent, Buy, House, Workspace, Parking">
         <meta name="author" content="Iouannou-Armeniakos">
         <meta name="viewport" content="width=device-width", initial-scale="1">
+        <link rel="stylesheet" href="../css files/all_files.css">
 
     </head>
 <body>
-    <header>
-    
-        <!--Tο logo μαζί με το alternative text-->
-        <h1 class="brand-logo">
-            <a href="index.html">
-                <img src="../png/logo-no-background.png" alt="Rent&Buy" style="width: 120px;
-                height: auto">
-            </a>
-        </h1>
-         
-        <!--Ένα search-bar , θεώρησα ότι ίσως αξίζει να το βάλουμε , θα δείξει-->
-        <form id="search-container" action="/search" method="get">
-            <input type="search" id="search-bar" name="q" placeholder="Search...">
-            <button type="submit" id="search-button">Αναζήτηση</button>
-        </form>
-    
-        <!--Το βασικό μας navbar, λογικά θα πρέπει να προσθέσουμε και άλλα πράγματα στο categories-->
-        <nav class="header-navbar">
-            <ul>
-                <li class ="Categories"><a href="categories.html" title="Categories">Κατηγορίες Αγγελιών</a>
-                    <ul>
-                        <li><a href = "house-rentals.html" title = "Real Estate">Ακίνητα</a></li>
-                        <li><a href = "car-ads.html" title = "Vehicles">Οχήματα</a></li>
-                        <li><a href = "#" title = "Work">Εργασία</a></li>
-                        <li><a href = "#" title = "Other Categories">Άλλες κατηγορίες</a></li>
-                    </ul>
-                </li>
-                    
-    
-                    
-                <li class="Sign In" id="sign-in">
-                    <a href=""><img src="" alt="Sign/Log in" class="icon"></a>
-                </li>
-    
-                <li class="Language">
-                    <a href="#" title = "EN">EN</a>
-                    <ul class="language-sidebar" id="language-sidebar">
-                        <li><a href="#" title = "GR">GR</a></li>
-                    </ul>
-                </li>
-                    
-            </ul>
-    
-        </nav>
-    </header>
+  <header>
+ 
+    <!--Tο logo μαζί με το alternative text-->
+     
+    <!--Ένα search-bar , θεώρησα ότι ίσως αξίζει να το βάλουμε , θα δείξει-->
 
-    <main>
+    <!--Το βασικό μας navbar, λογικά θα πρέπει να προσθέσουμε και άλλα πράγματα στο categories-->
+    <nav class="header-navbar">
+        <ul>
+            <li>
+                <div class="brand-logo">
+                    <a href="index.html">
+                        <img src="../png/logo-no-background.png" alt="Rent&Buy" style="width: 120px;
+                        height: auto">
+                    </a>
+                </div>
+            </li>
+            <li class="search-container">
+                <form  action="/search" method="get">
+                    <input type="search" id="search-bar" name="q" placeholder="Search...">
+                    <button type="submit" id="search-button">Search</button>
+                </form>
+            </li>
+            <li class ="Show-Sublist Border-Radius"><a href="categories.html" title="Categories ">Κατηγορίες Αγγελιών</a>
+                <ul>
+                    <li><a href = "house-rentals.html" title = "Real Estate">Ακίνητα</a></li>
+                    <li><a href = "car-ads.html" title = "Vehicles">Οχήματα</a></li>
+                    <li><a href = "#" title = "Work">Εργασία</a></li>
+                    <li><a href = "#" title = "Other Categories">Άλλες κατηγορίες</a></li>
+                </ul>
+            </li>
+                
+
+                
+            <li class="Sign In Border-Radius" id="sign-in">
+                <a href=""><img src="../png/sign in.png" alt="Sign/Log in" class="icon" style="width: 20px;
+                    height: auto">Sign/Log in</a>
+            </li>
+
+            <li class="Show-Sublist Border-Radius">
+                <a href="#" title = "EN">EN</a>
+                <ul class="language-sidebar" id="language-sidebar">
+                    <li><a href="#" title = "GR">GR</a></li>
+                    <li><a href="#" title ="EN-LISt">EN</a></li>
+                </ul>
+            </li>
+                
+        </ul>
+
+    </nav>
+  </header>
+  <main>
+    <aside>
+      <h2>Κατηγορίες Αγγελιών</h2>
+      <ul>
+          <li><a href="#">Ακίνητα</a></li>
+              <ul><a href="house-rentals.html">Ακίνητα προς ενοικίαση</a></ul>
+              <ul><a href="house-rentals.html">Ακίνητα προς πώληση</a></ul>
+              <ul><a href="house-rentals.html">Ενοικιάσεις χώρων εργασίας</a></ul>
+              <ul><a href="house-rentals.html">Πωλήσεις χώρων εργασίας</a></ul>
+              <ul><a href="house-rentals.html">Χώροι Parking</a></ul>        
+              <ul><a href="house-rentals.html">Οικόπεδα</a></ul>
+
+          <li><a href="#">Οχήματα</a></li>
+              <ul><a href="car-ads.html">Αυτοκίνητα Ι.Χ</a></ul>
+              <ul><a href="house-rentals.html">Μοτοσυκλέτες</a></ul>
+              <ul><a href="house-rentals.html">RV-Tροχόσπιτα</a></ul>
+              <ul><a href="house-rentals.html">Οχήματα επαγγελματικής χρήσεως</a></ul>
+              
+
+          <li><a href="#">Εργασία</a></li>
+              <ul><a href="house-rentals.html">Τεχνολογία</a></ul>
+              <ul><a href="house-rentals.html">Αθλήματα</a></ul>
+              <ul><a href="house-rentals.html">Τέχνη</a></ul>
+              <ul><a href="house-rentals.html">Εστίαση</a></ul>
+              <ul><a href="house-rentals.html">Γραμματειακή υποστήριξη</a></ul>
+              <ul><a href="house-rentals.html">Άλλο</a></ul>
+
+          
+          <li><a href="#">Άλλες Κατηγορίες</a></li>
+              <ul><a href="house-rentals.html">Ηλεκτρονικές συσκεύες</a></ul>
+              <ul><a href="house-rentals.html">Οικιακές συσκεύες</a></ul>
+              <ul><a href="house-rentals.html">Ρούχα και κοσμήματα</a></ul>
+              <ul><a href="house-rentals.html">Αξεσουάρ</a></ul>
+          
+      </ul>
+    </aside>
+    <section class="ads-articles">
       <article>
-        <header>
-          <h1>Peugeot 208 Allure</h1>
-          <img src="..\png\car-ads-images\Peugeot-208-Allure-images\Peugeot-208-Allure-1Photo.jpg" alt="Peugeot-208-Allure">
-        </header>
-        <h2>Σύντομή περιγραφή και Χαρακτηριστικά</h2>
-        <p>Πρόκειται για ένα αυτοκίνητο μάρκας PEUGEOT μοντέλο 208 Allure, κινητήρας 1.199 cc με 100 ίππους, 
+        <a href="Peugeot-208-Allure.html">
+          <header>
+            <h1>Peugeot 208 Allure</h1>
+            <img src="..\png\car-ads-images\Peugeot-208-Allure-images\Peugeot-208-Allure-1Photo.jpg" alt="Peugeot-208-Allure">
+          </header>
+          <h2>Σύντομή περιγραφή και Χαρακτηριστικά</h2>
+          <p>Πρόκειται για ένα αυτοκίνητο μάρκας PEUGEOT μοντέλο 208 Allure, κινητήρας 1.199 cc με 100 ίππους, 
           λευκού χρώματος και μόλις 4.500 χιλιόμετρα διανυθέντα. Καταναλώνει 104 gr CO2 ανά 100 χιλιόμετρα 
           και είναι Euro6. Διαθέτει αρκετές πρόσθετες επιλογές όπως πάρκινγκ σένσορες, φώτα LED, cruise control 
           και πολλά άλλα. Είναι σε άριστη κατάσταση, μοντέλο του 2022 και προσφέρεται στην τιμή των 19.000€.</p>
-        <footer>
-          <ul>
-            <li>Κωδικός : 806519046</li>
-            <li>Κόστος : 19.000€</li>
-            <li>Tελευταία τροποποίηση αγγελίας : Κυριακή, 29 Οκτωβρίου 2023</li>
-          </ul>
-          <a href="Peugeot-208-Allure.html" title="Peugeot-208-Allure" tabindex="0">Αναλυτική Περιγραφή</a>
-        </footer>
+          <footer>
+            <ul>
+              <li>Κωδικός : 806519046</li>
+              <li>Κόστος : 19.000€</li>
+              <li>Tελευταία τροποποίηση αγγελίας : Κυριακή, 29 Οκτωβρίου 2023</li>
+            </ul>
+            <a class="blue-color-underlined" href="Peugeot-208-Allure.html" title="Peugeot-208-Allure" tabindex="0">Αναλυτική Περιγραφή</a>
+          </footer>
+        </a>
       </article>
-
-      <!--Βάζω μια αλλα΄γή γραμμής απλά για να φαίνεται πιο ωραίο . Μ΄΄ολις ξεκιν΄ήσουμε το css θα αφαιρεθεί-->
-      <br>
-
+  
       <article>
-        <header>
-          <h1>Mercedes Gla 200</h1>
-          <img src="..\png\car-ads-images\Mercedes-Gla-200.jpg" alt="Mercedes-Gla-200">
-        </header>
-        <h2>Σύντομή περιγραφή και Χαρακτηριστικά</h2>
-        <p>Πωλείται Mercedes GLA 200, μοντέλο 12/'18, γκρι, 22.500 χλμ. Αυτόματο, 5θυρο, βενζίνη, άριστη κατάσταση, 
+        <a href="Peugeot-208-Allure.html">
+          <header>
+            <h1>Mercedes Gla 200</h1>
+            <img src="..\png\car-ads-images\Mercedes-Gla-200.jpg" alt="Mercedes-Gla-200">
+          </header>
+          <h2>Σύντομή περιγραφή και Χαρακτηριστικά</h2>
+          <p>Πωλείται Mercedes GLA 200, μοντέλο 12/'18, γκρι, 22.500 χλμ. Αυτόματο, 5θυρο, βενζίνη, άριστη κατάσταση, 
           ελάχιστα χιλιόμετρα. Πλήρες ιστορικό service. Προσεγμένο, φυλάσσεται σε υπόγειο parking. Περιλαμβάνει 
           3 κλειδιά, το ένα αξίας 400€. Τιμή 31.000€, συζητήσιμη.</p>
-        <footer>
-          <ul>
-            <li>Κωδικός : 822879775</li>
-            <li>Κόστος : 31.000 €</li>
-            <li>Tελευταία τροποποίηση αγγελίας : 	Σάββατο, 28 Οκτωβρίου 2023</li>
-          </ul>
-          <a href="Peugeot-208-Allure.html" title="Peugeot-208-Allure" tabindex="0">Αναλυτική Περιγραφή</a>
-        </footer>
+          <footer>
+            <ul>
+              <li>Κωδικός : 822879775</li>
+              <li>Κόστος : 31.000 €</li>
+              <li>Tελευταία τροποποίηση αγγελίας : 	Σάββατο, 28 Οκτωβρίου 2023</li>
+            </ul>
+            <a class="blue-color-underlined" href="Peugeot-208-Allure.html" title="Peugeot-208-Allure" tabindex="0">Αναλυτική Περιγραφή</a>
+          </footer>
+        </a>
       </article>
-
-      <!--Βάζω μια αλλα΄γή γραμμής απλά για να φαίνεται πιο ωραίο . Μ΄΄ολις ξεκιν΄ήσουμε το css θα αφαιρεθεί-->
-      <br>
-
+  
       <article>
-        <header>
-          <h1>Opel Astra S.Wagon Sport Tourer</h1>
-          <img src="..\png\car-ads-images\Opel-Astra-SWagon.jpg" alt="Opel-Astra-SWagon">
-        </header>
-        <h2>Σύντομή περιγραφή και Χαρακτηριστικά</h2>
-        <p>Προς πώληση Opel Astra Sport Tourer Edition, κατασκευής 1/'21, με κινητήρα 1.500cc και 105 ίππους.
-           Έχει λευκό χρώμα, διανύει 54.000 χιλιόμετρα και εκπέμπει 91 gr/100km CO2. Διαθέτει χειροκίνητο κιβώτιο, 
-           5 πόρτες και πολλά εξτρά όπως ABS, ESP, 6 αερόσακους, κλιματισμό, cruise control, κ.ά. 
-           Είναι σε άριστη κατάσταση, με service στην αντιπροσωπεία και προσφέρεται στην τιμή των 16.700€.</p>
-        <footer>
-          <ul>
-            <li>Κωδικός : 811996349</li>
-            <li>Κόστος : 16.700 €</li>
-            <li>Tελευταία τροποποίηση αγγελίας : 	Σάββατο, 28 Οκτωβρίου 2023</li>
-          </ul>
-          <a href="Peugeot-208-Allure.html" title="Peugeot-208-Allure" tabindex="0">Αναλυτική Περιγραφή</a>
-        </footer>
+        <a href="Peugeot-208-Allure.html">
+          <header>
+            <h1>Opel Astra S.Wagon Sport Tourer</h1>
+            <img src="..\png\car-ads-images\Opel-Astra-SWagon.jpg" alt="Opel-Astra-SWagon">
+          </header>
+          <h2>Σύντομή περιγραφή και Χαρακτηριστικά</h2>
+          <p>Προς πώληση Opel Astra Sport Tourer Edition, κατασκευής 1/'21, με κινητήρα 1.500cc και 105 ίππους.
+          Έχει λευκό χρώμα, διανύει 54.000 χιλιόμετρα και εκπέμπει 91 gr/100km CO2. Διαθέτει χειροκίνητο κιβώτιο, 
+          5 πόρτες και πολλά εξτρά όπως ABS, ESP, 6 αερόσακους, κλιματισμό, cruise control, κ.ά. 
+          Είναι σε άριστη κατάσταση, με service στην αντιπροσωπεία και προσφέρεται στην τιμή των 16.700€.</p>
+          <footer>
+            <ul>
+              <li>Κωδικός : 811996349</li>
+              <li>Κόστος : 16.700 €</li>
+              <li>Tελευταία τροποποίηση αγγελίας : 	Σάββατο, 28 Οκτωβρίου 2023</li>
+            </ul>
+            <a class="blue-color-underlined" href="Peugeot-208-Allure.html" title="Peugeot-208-Allure" tabindex="0">Αναλυτική Περιγραφή</a>
+          </footer>
+        </a>
       </article>
-
-      <!--Βάζω μια αλλα΄γή γραμμής απλά για να φαίνεται πιο ωραίο . Μ΄΄ολις ξεκιν΄ήσουμε το css θα αφαιρεθεί-->
-      <br>
-
+        
       <article>
-        <header>
-          <h1>VW T-ROC 2.0 Tdi 150HP 4X4 Dsg7 4Motio</h1>
-          <img src="..\png\car-ads-images\VW T-Roc.jpg" alt="VW T-ROC">
-        </header>
-        <h2>Σύντομή περιγραφή και Χαρακτηριστικά</h2>
-        <p>VW T-ROC 2.0 TDI 150HP 4X4 DSG7 4MOTION ΕΛΛΗΝΙΚΟ 22.000ΚΜ , 2.000 cc, μοντ. 10/'20, 150 hp, λευκό, 
-           22.000 χλμ., ρύποι(CO2): 130 gr/100km, Euro6, αυτόματο κιβώτιο, 4x4, 5θυρο, υδρ. τιμόνι, ABS, ESP, 
-           6 αερόσακοι, ηλεκ. παράθυρα - καθρέπτες - κλειδαριές, καθίσματα bucket, κλιματισμός 2 ζωνών, ζάντες
-           16", cruise control, parktronic, φώτα LED, GPS, full extra, πετρέλαιο, βιβλίο service, μονό, 
-           άριστη κατάσταση, τιμή 29.700€</p>
-        <footer>
-          <ul>
-            <li>Κωδικός : 814502562</li>
-            <li>Κόστος : 29.700 €</li>
-            <li>Tελευταία τροποποίηση αγγελίας : 	Σάββατο, 28 Οκτωβρίου 2023</li>
-          </ul>
-          <a href="Peugeot-208-Allure.html" title="Peugeot-208-Allure" tabindex="0">Αναλυτική Περιγραφή</a>
-        </footer>
+        <a href="Peugeot-208-Allure.html">
+          <header>
+            <h1>VW T-ROC 2.0 Tdi 150HP 4X4 Dsg7 4Motio</h1>
+            <img src="..\png\car-ads-images\VW T-Roc.jpg" alt="VW T-ROC">
+          </header>
+          <h2>Σύντομή περιγραφή και Χαρακτηριστικά</h2>
+          <p>VW T-ROC 2.0 TDI 150HP 4X4 DSG7 4MOTION ΕΛΛΗΝΙΚΟ 22.000ΚΜ , 2.000 cc, μοντ. 10/'20, 150 hp, λευκό, 22.000 χλμ., ρύποι(CO2): 130 gr/100km, Euro6, αυτόματο κιβώτιο, 4x4, 5θυρο, υδρ. τιμόνι, ABS, ESP, 6 αερόσακοι, ηλεκ. παράθυρα - καθρέπτες - κλειδαριές, καθίσματα bucket, κλιματισμός 2 ζωνών, ζάντες 16", cruise control, parktronic, φώτα LED, GPS, full extra, πετρέλαιο, βιβλίο service, μονό, άριστη κατάσταση, τιμή 29.700€
+          </p>
+          <footer>
+            <ul>
+              <li>Κωδικός : 814502562</li>
+              <li>Κόστος : 29.700 €</li>
+              <li>Tελευταία τροποποίηση αγγελίας : 	Σάββατο, 28 Οκτωβρίου 2023</li>
+            </ul>
+            <a class="blue-color-underlined" href="Peugeot-208-Allure.html" title="Peugeot-208-Allure" tabindex="0">Αναλυτική Περιγραφή</a>
+          </footer>
+        </a>
       </article>
-
-      <!--Βάζω μια αλλα΄γή γραμμής απλά για να φαίνεται πιο ωραίο . Μ΄΄ολις ξεκιν΄ήσουμε το css θα αφαιρεθεί-->
-      <br>
-
+  
+      
       <article>
-        <header>
-          <h1>Mazda 2</h1>
-          <img src="..\png\car-ads-images\Mazda-2.jpg" alt="Mazda-2">
-        </header>
-        <h2>Σύντομή περιγραφή και Χαρακτηριστικά</h2>
-        <p>MAZDA 2 1.349 cc, μοντ. 10/'08, 75 hp, πράσινο μεταλλικό, 102.400 χλμ., χειροκίνητο κιβώτιο, 
-           3θυρο, υδρ. τιμόνι, ABS, αερόσακοι οδηγού - συνοδηγού, ηλεκ. παράθυρα - καθρέπτες - κλειδαριές, 
-           a/c, ράδιο-cd, συναγερμός, καταλυτικό, βενζίνη, ζυγό, άριστη κατάσταση, φυλασσόμενο σε γκαράζ, 
-           Τακτική συντήρηση σε εξουσιοδοτημένο συνεργείο Στεγασμένο σε κλειστό οικιακό γκαράζ Ατρακάριστο 
-           Δεκτός έλεγχος σε συνεργείο επιλογής του αγοραστή , τιμή 7.200€, συζητήσιμη</p>
-        <footer>
-          <ul>
-            <li>Κωδικός : 827403388</li>
-            <li>Κόστος : 7.200 €</li>
-            <li>Tελευταία τροποποίηση αγγελίας : 		Παρασκευή, 27 Οκτωβρίου 2023</li>
-          </ul>
-          <a href="Peugeot-208-Allure.html" title="Peugeot-208-Allure" tabindex="0">Αναλυτική Περιγραφή</a>
-        </footer>
+        <a href="Peugeot-208-Allure.html">
+          <header>
+            <h1>Mazda 2</h1>
+            <img src="..\png\car-ads-images\Mazda-2.jpg" alt="Mazda-2">
+          </header>
+          <h2>Σύντομή περιγραφή και Χαρακτηριστικά</h2>
+          <p>MAZDA 2 1.349 cc, μοντ. 10/'08, 75 hp, πράσινο μεταλλικό, 102.400 χλμ., χειροκίνητο κιβώτιο, 3θυρο, υδρ. τιμόνι, ABS, αερόσακοι οδηγού - συνοδηγού, ηλεκ. παράθυρα - καθρέπτες - κλειδαριές,a/c, ράδιο-cd, συναγερμός, καταλυτικό, βενζίνη, ζυγό, άριστη κατάσταση, φυλασσόμενο σε γκαράζ, Τακτική συντήρηση σε εξουσιοδοτημένο συνεργείο Στεγασμένο σε κλειστό οικιακό γκαράζ Ατρακάριστο.Δεκτός έλεγχος σε συνεργείο επιλογής του αγοραστή , τιμή 7.200€, συζητήσιμη</p>
+          <footer>
+            <ul>
+              <li>Κωδικός : 827403388</li>
+              <li>Κόστος : 7.200 €</li>
+              <li>Tελευταία τροποποίηση αγγελίας : 		Παρασκευή, 27 Οκτωβρίου 2023</li>
+            </ul>
+            <a class="blue-color-underlined" href="Peugeot-208-Allure.html" title="Peugeot-208-Allure" tabindex="0">Αναλυτική Περιγραφή</a>
+          </footer>
+        </a>
       </article>
+    </section>
+  </main>
 
-    </main>
-
-    <footer>
+    <footer id="Main-footer">
     
       <!--Tο logo μαζί με το alternative text-->
       <div id="upper-footer">
-          <h1>
+          <h1 class="brand-logo">
               <a href="index.html">
-                  <img src="../png/logo-no-background.png" alt="Rent&Buy" style="width: 120px;
-                  height: auto">
+                  <img src="../png/logo-no-background.png" alt="Rent&Buy" >
               </a>
           </h1>
       </div>
@@ -191,7 +224,7 @@
       <div id = "middle-footer">
           <ul>
               <li>
-                  <p><a href="about-us.html" aria-label="About Us">Ποίοι είμαστε</a></p>
+                  <p><a href="about-us.html" aria-label="About Us">Ποιοί είμαστε</a></p>
               </li>
   
               <li>
@@ -204,8 +237,9 @@
   
           </ul>
       </div>
+      
 
-      <div id = "Right footer">
+      <div id = "Right-footer">
           <!--Den eimai sigouros an einai kalh prakthkh header san paidi enos div-->
           <header>
               <img src="..\png\index-images\phone-call.png" alt="phone-call-icon">
