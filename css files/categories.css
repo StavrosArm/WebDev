@@ -1,0 +1,50 @@
+
+
+.categories-articles>article img{
+    width:32px;
+    height: auto;
+    
+}
+
+.categories-articles header{
+    text-align: center;
+    width:20em;
+    padding:4px;
+    border-bottom:solid ;
+    border-bottom-width: 1px;
+}
+
+.categories-articles>article{
+    margin:1em;
+    float:left;
+    border-width: 1px;
+    height:20em;
+    width:14m;
+}
+
+.categories-articles>article:nth-of-type(3n+1){
+    clear:both;
+}
+
+article h1{
+   padding:0;
+   margin:0;
+    
+}
+
+.categories-articles{
+    height:500px;
+    margin-left:22vw;
+    text-align: center;
+    
+}
+
+
+
+
+
+
+article ul{
+    list-style: none;
+    text-align: left;
+}
