@@ -1,3 +1,5 @@
+/*ήταν επιλογή περισσότερο για layout για την 2η 
+εργασία*/
 main{
     margin-left:12vw;   
 }
@@ -10,6 +12,9 @@ main>h1{
     margin-left:0.8em;
 }
 
+/*Θέλουμε τα δυο articles να έχουν απόσταση 1+1=2em ,
+φτιάχνουμε περίγραμμα , προσαρμόζουμε τα ύψη και τα 
+κάνουμε float left*/
 main>article{
     margin:1em;
     padding:1em;
@@ -24,6 +29,11 @@ main>article{
 
 main>article img{
     width:33.3vw;
+}
+
+main p{
+    text-align: justify;
+    font-size:large;
 }
 
 

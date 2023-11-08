@@ -19,7 +19,6 @@
     float:left;
     border-width: 1px;
     height:20em;
-    width:14m;
 }
 
 .categories-articles>article:nth-of-type(3n+1){
