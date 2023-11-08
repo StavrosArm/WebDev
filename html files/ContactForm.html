@@ -11,6 +11,8 @@
     <meta name="keywords" content="Problem, Contact, Tech Support">
     <meta name="author" content="Iouannou-Armeniakos">
     <meta name="viewport" content="width=device-width", initial-scale="1">
+    <link rel="stylesheet" href="../css files/all_files.css">
+    <link rel="stylesheet" href="../css files/contact_form.css">
 
 </head>
 
@@ -18,49 +20,55 @@
 
     <header>
         <header>
+ 
+        <!--Tο logo μαζί με το alternative text-->
+         
+        <!--Ένα search-bar , θεώρησα ότι ίσως αξίζει να το βάλουμε , θα δείξει-->
     
-            <!--Tο logo μαζί με το alternative text-->
-            <h1 class="brand-logo">
-                <a href="index.html">
-                    <img src="../png/logo-no-background.png" alt="Rent&Buy" style="width: 120px;
-                    height: auto">
-                </a>
-            </h1>
-             
-            <!--Ένα search-bar , θεώρησα ότι ίσως αξίζει να το βάλουμε , θα δείξει-->
-            <form id="search-container" action="/search" method="get">
-                <input type="search" id="search-bar" name="q" placeholder="Search...">
-                <button type="submit" id="search-button">Search</button>
-            </form>
-        
-            <!--Το βασικό μας navbar, λογικά θα πρέπει να προσθέσουμε και άλλα πράγματα στο categories-->
-            <nav class="header-navbar">
-                <ul>
-                    <li class ="Categories"><a href="categories.html" title="Categories">Κατηγορίες Αγγελιών</a>
-                        <ul>
-                            <li><a href = "#" title = "Real Estate">Ακίνητα</a></li>
-                            <li><a href = "#" title = "Vehicles">Οχήματα</a></li>
-                            <li><a href = "#" title = "Work">Εργασία</a></li>
-                            <li><a href = "#" title = "Other Categories">Άλλες κατηγορίες</a></li>
-                        </ul>
-                    </li>
-                        
-        
-                        
-                    <li class="Sign In" id="sign-in">
-                        <a href=""><img src="" alt="Sign/Log in" class="icon"></a>
-                    </li>
-        
-                    <li class="Language">
-                        <a href="#" title = "EN">EN</a>
-                        <ul class="language-sidebar" id="language-sidebar">
-                            <li><a href="#" title = "GR">GR</a></li>
-                        </ul>
-                    </li>
-                        
-                </ul>
-        
-            </nav>
+        <!--Το βασικό μας navbar, λογικά θα πρέπει να προσθέσουμε και άλλα πράγματα στο categories-->
+        <nav class="header-navbar">
+            <ul>
+                <li>
+                    <div class="brand-logo">
+                        <a href="index.html">
+                            <img src="../png/logo-no-background.png" alt="Rent&Buy" style="width: 120px;
+                            height: auto">
+                        </a>
+                    </div>
+                </li>
+                <li class="search-container">
+                    <form  action="/search" method="get">
+                        <input type="search" id="search-bar" name="q" placeholder="Search...">
+                        <button type="submit" id="search-button">Search</button>
+                    </form>
+                </li>
+                <li class ="Show-Sublist Border-Radius"><a href="categories.html" title="Categories ">Κατηγορίες Αγγελιών</a>
+                    <ul>
+                        <li><a href = "house-rentals.html" title = "Real Estate">Ακίνητα</a></li>
+                        <li><a href = "car-ads.html" title = "Vehicles">Οχήματα</a></li>
+                        <li><a href = "#" title = "Work">Εργασία</a></li>
+                        <li><a href = "#" title = "Other Categories">Άλλες κατηγορίες</a></li>
+                    </ul>
+                </li>
+                    
+    
+                    
+                <li class="Sign In Border-Radius" id="sign-in">
+                    <a href=""><img src="../png/sign in.png" alt="Sign/Log in" class="icon" style="width: 20px;
+                        height: auto">Sign/Log in</a>
+                </li>
+    
+                <li class="Show-Sublist Border-Radius">
+                    <a href="#" title = "EN">EN</a>
+                    <ul class="language-sidebar" id="language-sidebar">
+                        <li><a href="#" title = "GR">GR</a></li>
+                        <li><a href="#" title ="EN-LISt">EN</a></li>
+                    </ul>
+                </li>
+                    
+            </ul>
+    
+        </nav>
     </header>
 
 <main class="tech-support">
@@ -72,27 +80,35 @@
         <fieldset>
             <legend>Στοιχεία επικοινωνίας</legend>
 
-            <label for="fullName">Ονοματεπώνυμο:</label>
-            <input type="text" id="fullName" name="fullName" required
-                    placeholder="π.χ Γιώργος Παπαδόπουλος">
+            
+                <label for="fullName">Ονοματεπώνυμο:</label>
+                <input type="text" id="fullName" name="fullName" required
+                        placeholder="π.χ Γιώργος Παπαδόπουλος">
+            
 
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required
-                    placeholder="π.χ gpap@gmail.com">
+            
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required
+                        placeholder="π.χ gpap@gmail.com">
+            
 
         </fieldset>
 
         <fieldset>
             <legend>Πληροφορίες Τεχνικής Υποστήριξης</legend>
 
-            <label for="ad_number">Aριθμός αγγελίας:</label>
-            <input type="text" id="ad_number" name="ad_number" pattern="[0-9]{9}" title="Εισαγωγή 9 ψηφίων" required
-                        placeholder="#123456789">
+            
+                <label for="ad_number">Aριθμός αγγελίας:</label>
+                <input type="text" id="ad_number" name="ad_number" pattern="[0-9]{9}" title="Εισαγωγή 9 ψηφίων" required
+                            placeholder="#123456789">
+            
 
-            <label for="problemDescription">Περιγραφή Προβλήματος:</label>
-            <textarea id="problemDescription" name="problemDescription" rows="4" required></textarea>
+            
+                <label for="problemDescription">Περιγραφή Προβλήματος:</label>
+                <textarea id="problemDescription" name="problemDescription" rows="4" required></textarea>
+            
 
+        
         </fieldset>
 
         <input type="submit" id="btn_submit" value="Υποβολή">
@@ -102,46 +118,46 @@
 </main>
 
 
-    <footer>
+<footer id="Main-footer">
     
-        <!--Tο logo μαζί με το alternative text-->
-        <div id="upper-footer">
-            <h1>
-                <a href="index.html">
-                    <img src="../png/logo-no-background.png" alt="Rent&Buy" style="width: 120px;
-                    height: auto">
-                </a>
-            </h1>
-        </div>
-            
-    
-        <div id = "middle-footer">
-            <ul>
-                <li>
-                    <p><a href="about-us.html" aria-label="About Us">Ποίοι είμαστε</a></p>
-                </li>
-    
-                <li>
-                    <p><a href="ContactForm.html">Τεχνική υποστήριξη</a> </p>
-                </li>
-    
-                <li>
-                    <p><a href="https://european-union.europa.eu/cookies_en">Cookies και πολιτική δεδομένων</a></p>
-                </li>
-    
-            </ul>
-        </div>
-
-        <div id = "Right footer">
-            <!--Den eimai sigouros an einai kalh prakthkh header san paidi enos div-->
-            <header>
-                <img src="..\png\index-images\phone-call.png" alt="phone-call-icon">
-                <h1>2106322573</h1>
-            </header>
-            <p>Τηλεφώνησε τώρα από σταθερό ή κινητό και βάλε εύκολα και γρήγορα την αγγελία σου!</p>
-        </div>
+    <!--Tο logo μαζί με το alternative text-->
+    <div id="upper-footer">
+        <h1 class="brand-logo">
+            <a href="index.html">
+                <img src="../png/logo-no-background.png" alt="Rent&Buy" >
+            </a>
+        </h1>
+    </div>
         
-        <p>&copy; 2023 Iouannou-Armeniakos. All rights reserved.</p>
+
+    <div id = "middle-footer">
+        <ul>
+            <li>
+                <p><a href="about-us.html" aria-label="About Us">Ποιοί είμαστε</a></p>
+            </li>
+
+            <li>
+                <p><a href="ContactForm.html">Τεχνική υποστήριξη</a> </p>
+            </li>
+
+            <li>
+                <p><a href="https://european-union.europa.eu/cookies_en">Cookies και πολιτική δεδομένων</a></p>
+            </li>
+
+        </ul>
+    </div>
+    
+
+    <div id = "Right-footer">
+        <!--Den eimai sigouros an einai kalh prakthkh header san paidi enos div-->
+        <header>
+            <img src="..\png\index-images\phone-call.png" alt="phone-call-icon">
+            <h1>2106322573</h1>
+        </header>
+        <p>Τηλεφώνησε τώρα από σταθερό ή κινητό και βάλε εύκολα και γρήγορα την αγγελία σου!</p>
+    </div>
+    
+    <p>&copy; 2023 Iouannou-Armeniakos. All rights reserved.</p>
     </footer>
 
 </body>
