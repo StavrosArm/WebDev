@@ -1,0 +1,135 @@
+
+/*Upper header style */
+#Upper-header>p{
+  display: inline;
+}
+#Upper-header>a,#Upper-header>p{
+  color:#00BFFF;
+}
+#Bold{
+  font-weight: bold;
+}
+#Upper-header>a:hover{
+  text-decoration: underline;
+}
+
+/*left header style*/
+#Left-header{
+  float:left;
+  padding-right: 20em;
+  border-right:solid;
+  border-color: gray;
+  border-width: 3px;
+  margin-top:10px;
+}
+#Left-header>p{
+  margin-top:0px;
+}
+#Left-header>h1{
+  margin-bottom:0px;
+}
+/*Right header style*/
+#Right-Header{
+  padding-left:42em;
+}
+#Right-Header>p{
+  float:left;
+}
+#Right-Header>h1{
+  margin-bottom:0px;
+  margin-top: 1em;
+  margin-left: 2em;
+}
+#Right-Header>p{
+  margin-left:1.3em;
+}
+#Right-Header>button{
+  position: absolute;
+  margin-left: 3em;
+  top:19.6em;
+  border-radius: 5px;
+  width: 15em;
+  height:2em;
+  background-color: yellow;
+}
+#Right-Header>button>span{
+  font-size:17px;
+  font-weight: bold;
+}
+#Right-Header>p{
+  margin-top: 0px;
+}
+
+/* Section Φωτογραφίες-Αμαξιού style */
+#Φωτογραφίες-Αμαξιού{
+  clear:both;
+}
+
+#Φωτογραφίες-Αμαξιού>h2{
+  border-bottom:solid gray;
+  border-top:solid gray;
+  border-width: thin;
+  background-image: linear-gradient(to right, yellow , #831010);
+  margin-top: 2em;
+}
+#Φωτογραφίες-Αμαξιού >img{
+  float:left;
+  border: 4mm ridge rgba(131, 16, 16, 1);
+}
+#car-small-photos{
+  margin-left: 42em;
+}
+#car-small-photos>img{
+  border: 4mm ridge rgba(131, 16, 16, 1);
+}
+#Συντομή-Περιγραφή{
+  margin-top: 9.6em;
+}
+.Περιγραφές >h3{
+  border-bottom: solid gray;
+  border-width: thin;
+  margin-bottom: 0;
+}
+#Συντομή-Περιγραφή >p{
+  margin-top: 0;
+}
+
+/* Section Περιγραφή-και-χαρακτηριστικά-αυτοκινήτου style */
+#Περιγραφή-και-χαρακτηριστικά-αυτοκινήτου{
+  clear: both;
+}
+#Περιγραφή-και-χαρακτηριστικά-αυτοκινήτου > h1{
+  text-align: center;
+  border-bottom: solid gray;
+  border-top: solid gray;
+  border-width: thin;
+  margin-bottom: 0;
+  background-image: linear-gradient(to right, yellow , #831010);
+
+}
+#Αναλυτική-Περιγραφή{
+  width: 50vw;
+  float: left;
+}
+#Αναλυτική-Περιγραφή>h3{
+  text-align: center;
+}
+#Περιγραφή-και-χαρακτηριστικά-αυτοκινήτου p{
+  text-align: justify;
+}
+.Μορφοποιήση-Πινάκων{
+  text-align: center;
+  padding-left:47.7em;
+}
+.Μορφοποιήση-Πινάκων>h3{
+  border-bottom: solid gray;
+  border-width: thin;
+  margin-bottom: 0;
+}
+.Μορφοποιήση-Πινάκων table {
+  margin: 0 auto;
+}
+#Στατιστικά-αγγελίας-και-επικοινωνία > .Μορφοποιήση-Πινάκων{
+  margin-top: 4em;
+}
+
