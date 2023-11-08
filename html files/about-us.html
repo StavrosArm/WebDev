@@ -9,29 +9,33 @@
         <meta name="keywords" content="Learn more about Rent&Buy team">
         <meta name="author" content="Iouannou-Armeniakos">
         <meta name="viewport" content="width=device-width", initial-scale="1">
-
+        <link rel="stylesheet" href="../css files/all_files.css">
+        <link rel="stylesheet" href="../css files/about_us.css">
     </head>
 <body>
-    <header>
     
         <!--Tο logo μαζί με το alternative text-->
-        <h1 class="brand-logo">
-            <a href="index.html">
-                <img src="../png/logo-no-background.png" alt="Rent&Buy" style="width: 120px;
-                height: auto">
-            </a>
-        </h1>
          
         <!--Ένα search-bar , θεώρησα ότι ίσως αξίζει να το βάλουμε , θα δείξει-->
-        <form id="search-container" action="/search" method="get">
-            <input type="search" id="search-bar" name="q" placeholder="Search...">
-            <button type="submit" id="search-button">Search</button>
-        </form>
     
         <!--Το βασικό μας navbar, λογικά θα πρέπει να προσθέσουμε και άλλα πράγματα στο categories-->
         <nav class="header-navbar">
             <ul>
-                <li class ="Categories"><a href="categories.html" title="Categories">Κατηγορίες Αγγελιών</a>
+                <li>
+                    <div class="brand-logo">
+                        <a href="index.html">
+                            <img src="../png/logo-no-background.png" alt="Rent&Buy" style="width: 120px;
+                            height: auto">
+                        </a>
+                    </div>
+                </li>
+                <li class="search-container">
+                    <form  action="/search" method="get">
+                        <input type="search" id="search-bar" name="q" placeholder="Search...">
+                        <button type="submit" id="search-button">Search</button>
+                    </form>
+                </li>
+                <li class ="Show-Sublist Border-Radius"><a href="categories.html" title="Categories ">Κατηγορίες Αγγελιών</a>
                     <ul>
                         <li><a href = "house-rentals.html" title = "Real Estate">Ακίνητα</a></li>
                         <li><a href = "car-ads.html" title = "Vehicles">Οχήματα</a></li>
@@ -42,20 +46,23 @@
                     
     
                     
-                <li class="Sign In" id="sign-in">
-                    <a href=""><img src="" alt="Sign/Log in" class="icon"></a>
+                <li class="Sign In Border-Radius" id="sign-in">
+                    <a href=""><img src="../png/sign in.png" alt="Sign/Log in" class="icon" style="width: 20px;
+                        height: auto">Sign/Log in</a>
                 </li>
     
-                <li class="Language">
+                <li class="Show-Sublist Border-Radius">
                     <a href="#" title = "EN">EN</a>
                     <ul class="language-sidebar" id="language-sidebar">
                         <li><a href="#" title = "GR">GR</a></li>
+                        <li><a href="#" title ="EN-LISt">EN</a></li>
                     </ul>
                 </li>
                     
             </ul>
     
         </nav>
+        
     </header>
 
     <main>
@@ -69,10 +76,11 @@
             </header>
          
             <p>  
-                Είμαι φοιτητής στο Οικονομικό Πανεπιστήμιο Αθηνών με κύρια ενασχόληση στον χώρο της πληροφορικής. Η αγάπη μου για τον κόσμο του development με καθοδηγεί 
-                στην ανακάλυψη συναρπαστικών πτυχών της τεχνολογίας. Μέσα από την εκπαίδευση και τα project μου,
-                αναζητώ συνεχώς νέες προκλήσεις που θα εμπλουτίσουν την κατανόησή μου στον κόσμο του προγραμματισμού.
-                Η διαρκής εξέλιξη της τεχνολογίας αναζωογονεί το πάθος μου και με καλεί να συμβάλλω στην δημιουργία καινοτόμων λύσεων.
+                Είμαι φοιτητής στο τμήμα Πληροφορικής του Οικονομικού Πανεπιστημίου Αθηνών. Η αγάπη μου για τον κόσμο της πληροφορικής με καθοδηγεί 
+                στην ανακάλυψη συναρπαστικών πτυχών της τεχνολογίας. Μέσα από τις σπουδές μου αλλά και την εκπλήρωση διαφόρων project,
+                αναζητώ συνεχώς νέες προκλήσεις που θα εμπλουτίσουν την κατανόησή μου για τον κόσμο του προγραμματισμού.
+                Η διαρκής εξέλιξη της τεχνολογίας αναζωογονεί το πάθος μου για αυτήν και με καλεί να συμβάλλω στην δημιουργία καινοτόμων λύσεων.Τα κύρια 
+                ενδιαφέροντα μου αφορούν την Μηχανική Μάθηση, το Web Development καθώς και το Data Science.
                 Ακολουθήστε με στo <a href="https://github.com/StavrosArm"> StavrosArm</a> στο GitHub για να δείτε το portfolio μου.
             </p>
 
@@ -97,14 +105,14 @@
         </article>    
     </main>
 
-    <footer>
+ 
+    <footer id="Main-footer">
     
         <!--Tο logo μαζί με το alternative text-->
         <div id="upper-footer">
-            <h1>
+            <h1 class="brand-logo">
                 <a href="index.html">
-                    <img src="../png/logo-no-background.png" alt="Rent&Buy" style="width: 120px;
-                    height: auto">
+                    <img src="../png/logo-no-background.png" alt="Rent&Buy" >
                 </a>
             </h1>
         </div>
@@ -126,8 +134,9 @@
     
             </ul>
         </div>
+        
 
-        <div id = "Right footer">
+        <div id = "Right-footer">
             <!--Den eimai sigouros an einai kalh prakthkh header san paidi enos div-->
             <header>
                 <img src="..\png\index-images\phone-call.png" alt="phone-call-icon">
