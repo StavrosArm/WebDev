@@ -60,6 +60,76 @@
   margin-top: 0px;
 }
 
+/* Section Φωτογραφίες-Αμαξιού style */
 #Φωτογραφίες-Αμαξιού{
   clear:both;
 }
+
+#Φωτογραφίες-Αμαξιού>h2{
+  border-bottom:solid gray;
+  border-top:solid gray;
+  border-width: thin;
+  background-image: linear-gradient(to right, yellow , #831010);
+  margin-top: 2em;
+}
+#Φωτογραφίες-Αμαξιού >img{
+  float:left;
+  border: 4mm ridge rgba(131, 16, 16, 1);
+}
+#car-small-photos{
+  margin-left: 42em;
+}
+#car-small-photos>img{
+  border: 4mm ridge rgba(131, 16, 16, 1);
+}
+#Συντομή-Περιγραφή{
+  margin-top: 9.6em;
+}
+.Περιγραφές >h3{
+  border-bottom: solid gray;
+  border-width: thin;
+  margin-bottom: 0;
+}
+#Συντομή-Περιγραφή >p{
+  margin-top: 0;
+}
+
+/* Section Περιγραφή-και-χαρακτηριστικά-αυτοκινήτου style */
+#Περιγραφή-και-χαρακτηριστικά-αυτοκινήτου{
+  clear: both;
+}
+#Περιγραφή-και-χαρακτηριστικά-αυτοκινήτου > h1{
+  text-align: center;
+  border-bottom: solid gray;
+  border-top: solid gray;
+  border-width: thin;
+  margin-bottom: 0;
+  background-image: linear-gradient(to right, yellow , #831010);
+
+}
+#Αναλυτική-Περιγραφή{
+  width: 50vw;
+  float: left;
+}
+#Αναλυτική-Περιγραφή>h3{
+  text-align: center;
+}
+#Περιγραφή-και-χαρακτηριστικά-αυτοκινήτου p{
+  text-align: justify;
+}
+.Μορφοποιήση-Πινάκων{
+  text-align: center;
+  padding-left:47.7em;
+}
+.Μορφοποιήση-Πινάκων>h3{
+  border-bottom: solid gray;
+  border-width: thin;
+  margin-bottom: 0;
+}
+.Μορφοποιήση-Πινάκων table {
+  margin: 0 auto;
+}
+#Στατιστικά-αγγελίας-και-επικοινωνία > .Μορφοποιήση-Πινάκων{
+  margin-top: 4em;
+}
+
