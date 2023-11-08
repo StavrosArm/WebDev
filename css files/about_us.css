@@ -1,0 +1,29 @@
+main{
+    margin-left:12vw;   
+}
+
+main>h1{
+    padding-top:1em;
+    border-bottom:solid;
+    border-color: #831010;
+    margin-right:13.3vw;
+    margin-left:0.8em;
+}
+
+main>article{
+    margin:1em;
+    padding:1em;
+    width:33.3vw;
+    height:1000px;
+    border:solid;
+    border-color:#831010;
+    border-radius: 17px;
+    float:left;
+}
+
+
+main>article img{
+    width:33.3vw;
+}
+
+
