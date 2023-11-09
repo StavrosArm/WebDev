@@ -132,6 +132,7 @@ footer >p{
 #Main-footer{
   background-image: linear-gradient(to bottom, yellow , #831010);
   border-top: solid ;
+  padding:1em;
   border-width: 2px;
   clear:both;
 }
