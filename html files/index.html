@@ -10,29 +10,36 @@
         <meta name="keywords" content="Rent, Buy, House, Workspace, Parking">
         <meta name="author" content="Iouannou-Armeniakos">
         <meta name="viewport" content="width=device-width", initial-scale="1">
+        <link rel="stylesheet" href="../css files/all_files.css">
+        <link rel="stylesheet" href="../css files/index.css">
+
 
     </head>
 <body>
     <header>
-    
+ 
         <!--Tο logo μαζί με το alternative text-->
-        <h1 class="brand-logo">
-            <a href="index.html">
-                <img src="../png/logo-no-background.png" alt="Rent&Buy" style="width: 120px;
-                height: auto">
-            </a>
-        </h1>
          
         <!--Ένα search-bar , θεώρησα ότι ίσως αξίζει να το βάλουμε , θα δείξει-->
-        <form id="search-container" action="/search" method="get">
-            <input type="search" id="search-bar" name="q" placeholder="Search...">
-            <button type="submit" id="search-button">Search</button>
-        </form>
     
         <!--Το βασικό μας navbar, λογικά θα πρέπει να προσθέσουμε και άλλα πράγματα στο categories-->
         <nav class="header-navbar">
             <ul>
-                <li class ="Categories"><a href="categories.html" title="Categories">Κατηγορίες Αγγελιών</a>
+                <li>
+                    <div class="brand-logo">
+                        <a href="index.html">
+                            <img src="../png/logo-no-background.png" alt="Rent&Buy" style="width: 120px;
+                            height: auto">
+                        </a>
+                    </div>
+                </li>
+                <li class="search-container">
+                    <form  action="/search" method="get">
+                        <input type="search" id="search-bar" name="q" placeholder="Search...">
+                        <button type="submit" id="search-button">Search</button>
+                    </form>
+                </li>
+                <li class ="Show-Sublist Border-Radius"><a href="categories.html" title="Categories ">Κατηγορίες Αγγελιών</a>
                     <ul>
                         <li><a href = "house-rentals.html" title = "Real Estate">Ακίνητα</a></li>
                         <li><a href = "car-ads.html" title = "Vehicles">Οχήματα</a></li>
@@ -43,20 +50,23 @@
                     
     
                     
-                <li class="Sign In" id="sign-in">
-                    <a href=""><img src="" alt="Sign/Log in" class="icon"></a>
+                <li class="Sign In Border-Radius" id="sign-in">
+                    <a href=""><img src="../png/sign in.png" alt="Sign/Log in" class="icon" style="width: 20px;
+                        height: auto">Sign/Log in</a>
                 </li>
     
-                <li class="Language">
+                <li class="Show-Sublist Border-Radius">
                     <a href="#" title = "EN">EN</a>
                     <ul class="language-sidebar" id="language-sidebar">
                         <li><a href="#" title = "GR">GR</a></li>
+                        <li><a href="#" title ="EN-LISt">EN</a></li>
                     </ul>
                 </li>
                     
             </ul>
     
         </nav>
+        
     </header>
         
     <!--Είναι καλή πρακτική να μαζέψουμε σε ένα βασικό article όλες τις αγγελίες , και να τα χωρίσουμε
@@ -100,16 +110,14 @@
                 
             </ul>
         </aside>
-    
-        <section id = "main banner">
-            <img src = "..\png\index-images\Rent-a-home.jpg" alt="Rent a home">
-        </section>
-        <section id = "Last ads">
+
+        <section class = "ads-articles" id="Last-ads">
             <h2>Πρόσφατες Αγγελίες</h2>
-                <article>
+            <article>
+                <a href="#">
                     <header>
+                        <h1>Ενοικίαση κατοικίας 80 τ.μ., Νέα Σμύρνη, 950 €</h1>
                         <img src="..\png\index-images\diamerisma-neasmurh-enoikiash.webp" alt="diamerisma-pros-enoikiash">
-                        <h3>Ενοικίαση κατοικίας 80 τ.μ., Νέα Σμύρνη, 950 €</h3>
                     </header>
                     <p>
                         Μοντέρνο (ανεπίπλωτο) οροφοδιαμέρισμα του 2010 , 1ου Ορόφου, 80 τ.μ., πλήρως κλιματιζόμενο, 
@@ -118,58 +126,65 @@
                         αερίου (με αυτονομία), με ηλιακό θερμοσίφωνα, ιδιωτικό σκεπαστό πάρκιν και αποθήκη, βρίσκεται 
                         σε ωραία (μη εμπορική) γειτονιά της Νέας Σμύρνης, σε φαρδύ δρόμο περιορισμένης κίνησης οχημάτων,
                         150 Μ. από στάση Τραμ, Σούπερ μάρκετ, ATMs, Φαρμακεία    
+                        <a class="blue-color-underlined" href="https://www.xe.gr/property/u/510120?item_type=re_residence&transaction_name=rent" title="περισσότερα" tabindex="0">... περισσότερα</a>
                     </p>
-                    <a href="https://www.xe.gr/property/u/510120?item_type=re_residence&transaction_name=rent" title="περισσότερα" tabindex="0">... περισσότερα</a>
-                </article>
-                <article>
+                </a>
+            </article>
+            
+            <article>
+                <a href="#">
                     <header>
+                        <h1>Χαϊδάρι (Κουνελιών) - Γυμναστές</h1>
                         <img src="..\png\index-images\aggelia-gia-gumnastes.jpg" alt="aggelia-gia-gumnastes">
-                        <h3>Χαϊδάρι (Κουνελιών) - Γυμναστές</h3>
                     </header>
                     <p>
                         ΓΥΜΝΑΣΤΕΣ για personal προπονήσεις σε ems studio στις  περιοχές Χαιδαρι ,Πετρούπολη 
                         και  Αμπελοκήπους . Παρέχεται    σταθερο  ωράριο ασφάλιση  και καλες  αποδοχές.
+                        <a class="blue-color-underlined" href="https://www.xe.gr/%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1/%CE%B8%CE%AD%CF%83%CE%B5%CE%B9%CF%82-%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%CF%82?category=athlhtismos_ekswterikes_drasthriothtes" title="περισσότερα" tabindex="0">... περισσότερα</a>
                     </p>
-                    <a href="https://www.xe.gr/%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1/%CE%B8%CE%AD%CF%83%CE%B5%CE%B9%CF%82-%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%CF%82?category=athlhtismos_ekswterikes_drasthriothtes" title="περισσότερα" tabindex="0">... περισσότερα</a>
-                </article>
-                <article>
+                </a>
+            </article>
+            <article>
+                <a href="">
                     <header>
+                        <h1>AUDI A3 TFSI 1400cc, 125hp Face Lift</h1>
                         <img src="..\png\index-images\aggelia-gia-agora-amaksiou.jpg" alt="aggelia-gia-agora-amaksiou">
-                        <h3>AUDI A3 TFSI 1400cc, 125hp Face Lift</h3>
                     </header>
                     <p>
                         Πωλείται Audi A3 TFSI 1400cc, 125hp, μοντ. 1/'09, ασημί μεταλλικό, 125.000 χλμ., χειροκίνητο 
                         κιβώτιο, 3θυρο, ABS, ESP, 8 αερόσακοι, ηλεκ. παράθυρα - καθρέπτες - κλειδαριές, θερμαινόμενα 
                         καθίσματα, κλιματισμός 2 ζωνών, ζάντες 16", φωτα biXenon, πάρκινγκ σένσορες, ΚΤΕΟ 1/'23, 
                         βιβλίο service, άριστη κατάσταση.
+                        <a class="blue-color-underlined" href="https://www.xe.gr/automoto/used-cars-AUDI,A3-768244031.html" title="περισσότερα" tabindex="0">... περισσότερα</a>
                     </p>
-                    <a href="https://www.xe.gr/automoto/used-cars-AUDI,A3-768244031.html" title="περισσότερα" tabindex="0">... περισσότερα</a>
-                </article>
-                <article>
+                </a>
+            </article>
+            <article>
+                <a href="">
                     <header>
+                        <h1>Γυναικεία Ρούχα Στοκ</h1>
                         <img src="https://a2.xe.gr/20231026/214148_886632_x.jpg" alt="Gunaikia-rouxa">
-                        <h3>Γυναικεία Ρούχα Στοκ</h3>
                     </header>
                     <p>
                         ΠΩΛΕΊΤΑΙ στοκ εμπόρευμα γυναικείων ενδυμάτων ραμμένο από πολύ καλής ποιότητας υφάσματα και 
                         με προσεγμένη επαγγελματική ραφή, από ελληνική βιοτεχνία & κατάστημα ενδυμάτων που κλείνει
                         λόγω συνταξιοδότησης. || Ενδεικτικές τιμές: Σακάκια 15 € | Φορέματα 5 €-10 € | Φούστες, 
-                        Παντελόνια, Κολάν, Φούτερ 3 €-5 € | Πουκάμισα 5 € | Μπλούζες 1 €-3 €, τιμή 5€, συζητήσιμη   
+                        Παντελόνια, Κολάν, Φούτερ 3 €-5 € | Πουκάμισα 5 € | Μπλούζες 1 €-3 €, τιμή 5€, συζητήσιμη
+                        <a class="blue-color-underlined" href="https://www.xe.gr/rouxa-kosmimata/gynaikeia-royxa-diafora%7Cad-827292540.html" title="περισσότερα" tabindex="0">... περισσότερα</a>   
                     </p>
-                    <a href="https://www.xe.gr/rouxa-kosmimata/gynaikeia-royxa-diafora%7Cad-827292540.html" title="περισσότερα" tabindex="0">... περισσότερα</a>
-                </article>
+                </a>
+            </article>
         </section>   
             
     </main>
     <!--Έχουμε το footer , που δεν έχω υλοποιήσει κάτι ακόμη-->
-    <footer>
+    <footer id="Main-footer">
     
         <!--Tο logo μαζί με το alternative text-->
         <div id="upper-footer">
-            <h1>
+            <h1 class="brand-logo">
                 <a href="index.html">
-                    <img src="../png/logo-no-background.png" alt="Rent&Buy" style="width: 120px;
-                    height: auto">
+                    <img src="../png/logo-no-background.png" alt="Rent&Buy" >
                 </a>
             </h1>
         </div>
@@ -191,8 +206,9 @@
     
             </ul>
         </div>
+        
 
-        <div id = "Right footer">
+        <div id = "Right-footer">
             <!--Den eimai sigouros an einai kalh prakthkh header san paidi enos div-->
             <header>
                 <img src="..\png\index-images\phone-call.png" alt="phone-call-icon">

@@ -1,0 +1,39 @@
+/*main styling*/
+
+/* put the side bar at the right of the screen */
+aside{
+  float: right; 
+}
+
+/*made the images of the articles look like polaroid with shadow boxing*/
+
+/*#Last-ads header{
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+*/
+
+
+/*
+#Last-ads header>h1{
+  text-align: center;
+  padding: 10px 20px;
+}
+*/
+/*
+#Last-ads header>img{
+  border-radius: 10px;
+  border:solid rgba(131, 16, 16, 1);
+}
+*/
+/*
+.blue-color-underlined{
+  color:#00BFFF;
+}
+.blue-color-underlined:hover{
+  text-decoration: underline;
+}
+*/
+
+

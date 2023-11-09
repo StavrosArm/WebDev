@@ -12,7 +12,7 @@ body {
     float:right;
     width: 100%;
     background-image: linear-gradient(to top, yellow , #831010);
-    height: 202px;
+    height: 210px;
     border-bottom: solid ;
     border-width: 2px;
   }
@@ -146,13 +146,13 @@ aside{
 }
 .ads-articles{
   float:left;
-  
+  margin-top:1em; 
 }
 
 .ads-articles>article{
   float:left;
   width:500px;  
-  height:570px;
+  height:600px;
   border:solid;
   border-radius: 17px;
   margin:0.5px;
@@ -161,6 +161,19 @@ aside{
   text-align: center;
   border-color: #831010;
   border-width: 0.5px;
+}
+.ads-articles header{
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.ads-articles header>h1{
+  text-align: center;
+  padding: 10px 20px;
+}
+.ads-articles header>img{
+  border-radius: 10px;
+  border:solid rgba(131, 16, 16, 1);
 }
 
 .ads-articles>article img{
@@ -171,11 +184,14 @@ aside{
 .ads-articles>article ul{
   list-style: none;
   margin-bottom:2.5em;
+  text-align: center;
+  padding-left: 0%;
+  margin-bottom: 0%;
 }
+
 
 .ads-articles>article p{
   text-align: justify;
-  margin:
 }
 
 .ads-articles>article:nth-of-type(2n+1){
@@ -187,5 +203,11 @@ aside{
 }
 .ads-articles p>a{
   display: block;
+}
+.blue-color-underlined{
+  color:#00BFFF;
+}
+.blue-color-underlined:hover{
+  text-decoration: underline;
 }
 
