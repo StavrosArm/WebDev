@@ -1,29 +1,30 @@
-/*ήταν επιλογή περισσότερο για layout για την 2η 
-εργασία*/
+
 main{
-    margin-left:12vw;   
+    margin:3em;
+    margin-left :17vw;  
+    margin-right:17vw;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1em;
 }
 
 main>h1{
-    padding-top:1em;
     border-bottom:solid;
     border-color: #831010;
-    margin-right:13.3vw;
-    margin-left:0.8em;
+    grid-column: span 2;
 }
 
 /*Θέλουμε τα δυο articles να έχουν απόσταση 1+1=2em ,
 φτιάχνουμε περίγραμμα , προσαρμόζουμε τα ύψη και τα 
 κάνουμε float left*/
 main>article{
-    margin:1em;
     padding:1em;
-    width:33.3vw;
+    width:33vw;
     height:1000px;
     border:solid;
     border-color:#831010;
     border-radius: 17px;
-    float:left;
+    
 }
 
 

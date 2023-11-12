@@ -14,36 +14,23 @@
     border-bottom-width: 1px;
 }
 
-.categories-articles>article{
-    margin:1em;
-    float:left;
-    border-width: 1px;
-    height:20em;
-}
-
-.categories-articles>article:nth-of-type(3n+1){
-    clear:both;
-}
-
 article h1{
    padding:0;
    margin:0;
-    
 }
 
 .categories-articles{
-    height:500px;
-    margin-left:22vw;
     text-align: center;
-    
+    margin:5em;
+    margin-left:7em;
+    display:grid;
+    row-gap: 7em;
+    column-gap:10em;
+    grid-template-columns:max-content max-content max-content ;
 }
-
-
-
-
-
 
 article ul{
     list-style: none;
     text-align: left;
 }
+
