@@ -1,3 +1,5 @@
+
+
 /*tech support ονομάζουμε όλο το main content της σελίδας
 τεχνικής υποστήριξης.Ουσιαστικά βάζουμε ένα padding,μια σκιά 
 και φτιάχνουμε τα margins.*/
@@ -18,7 +20,7 @@
 καθώς και το margin για να απέχουν τα fieldset μεταξύ τους
 καθώς και απο το header της φόρμα.*/
 
-.tech-support>form>fieldset {
+.tech-support>form fieldset {
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 10px;
@@ -64,5 +66,44 @@ padding για να έχουμε ένα μεγαλύτερο κουμπί.*/
     background-color: #680c18;
 }
 
+.question {
+    display: flex;
+    align-items: baseline;
+}
+
+.question legend{
+    font-weight: normal;
+}
+
+.question input[type="checkbox"]{
+    width:15px;
+    margin-left:10px;
+}
+
+.question #nomos{
+    margin-left:10px;
+}
 
 
+
+#step2{
+    display: none;
+}
+
+#step3{
+    display: none;
+}
+
+
+button{
+    color: hsl(0, 0%, 100%);
+    background-color: #831010;
+}
+
+button:hover{
+   background-color: #680c18; 
+}
+
+fieldset>button:nth-of-type(2),#step1 button{
+    float:right;
+}

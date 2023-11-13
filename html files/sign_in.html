@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html lang="gr">
+
+<head>
+    <title>Rent&Buy-Tech Support</title>
+
+    <link href="../png/logo-no-background.png" rel="shortcut icon" type="image/png" />
+    <meta charset="UTF-8">
+    <meta name="description" content="Troubleshooting">
+    <meta name="keywords" content="Problem, Contact, Tech Support">
+    <meta name="author" content="Iouannou-Armeniakos">
+    <meta name="viewport" content="width=device-width", initial-scale="1">
+    <link rel="stylesheet" href="../css files/all_files.css">
+    <link rel="stylesheet" href="../css files/sign_in.css">
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="header-navbar">
+            <ul>
+                <li>
+                    <div class="brand-logo">
+                        <a href="index.html">
+                            <img src="../png/logo-no-background.png" alt="Rent&Buy" style="width: 120px;
+                            height: auto">
+                        </a>
+                    </div>
+                </li>
+                <li class="search-container">
+                    <form  action="/search" method="get">
+                        <input type="search" id="search-bar" name="q" placeholder="Search...">
+                        <button type="submit" id="search-button">
+                            <img src="../svg/search.svg" alt="Search Icon">
+                        </button>
+                    </form>
+                </li>
+                <li class ="Show-Sublist Border-Radius"><a href="categories.html" title="Categories ">Κατηγορίες Αγγελιών</a>
+                    <ul>
+                        <li><a href = "house-rentals.html" title = "Real Estate">Ακίνητα</a></li>
+                        <li><a href = "car-ads.html" title = "Vehicles">Οχήματα</a></li>
+                        <li><a href = "#" title = "Work">Εργασία</a></li>
+                        <li><a href = "#" title = "Other Categories">Άλλες κατηγορίες</a></li>
+                    </ul>
+                </li>
+                    
+    
+                    
+                <li class="Sign In Border-Radius" id="sign-in">
+                    <a href="">Sign/Log in</a>
+                </li>
+    
+                <li class="Show-Sublist Border-Radius">
+                    <a href="#" title = "EN">EN</a>
+                    <ul class="language-sidebar" id="language-sidebar">
+                        <li><a href="#" title = "GR">GR</a></li>
+                        <li><a href="#" title ="EN-LISt">EN</a></li>
+                    </ul>
+                </li>
+                    
+            </ul>
+    
+        </nav>
+    </header>
+
+    <main class="tech-support">
+
+        <form action="/submit" method="post">
+
+            <fieldset id="step1">
+                <legend>Eγγραφή χρήστη</legend>
+    
+                
+                    <label for="username">Όνομα χρήστη: </label>
+                    <input type="text" id="username" name="username" pattern="[^\s]+" 
+                        title="Παρακαλώ εισάγετε μία λέξη" required>
+                
+    
+                
+                    <label for="password">Κωδικός πρόσβασης: </label>
+                    <input type="password" id="password" name="password" required>
+
+                    <label for="confirmPassword">Επαλήθευση κωδικού πρόσβασης: </label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+                    <button type="button" onclick="nextStep(2)">Επόμενο</button>
+                
+            </fieldset>
+
+            <fieldset id="step2">
+                <legend>Προσωπικά στοιχεία</legend>
+    
+                
+                    <label for="fullName">Ονοματεπώνυμο:</label>
+                    <input type="text" id="fullName" name="fullName" required
+                            placeholder="π.χ Γιώργος Παπαδόπουλος">
+                                
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required
+                            placeholder="π.χ gpap@gmail.com">
+
+                    <label for="phone">Τηλέφωνο επικοινωνίας: </label> 
+                    <input type="text" id="phone" name="number" pattern="69\d{8}" title="Παρακαλώ εισάγετε 10 ψηφία τηλεφώνου" required
+                            placeholder="πχ 6989401950">
+                
+                    <label for="address">Διεύθυνση κατοικίας: </label>
+                    <input type="tel" id="adress" name="address" required
+                            placeholder="Πατησίων και παραμυθιού">
+
+                    
+                    <label for="birthday">Ημ/μηνία γέννησης:</label>
+                    <input type="date" id="birthday" name="birthday" min="1900-01-01" max="2023-12-31" required>
+
+                    
+                    <fieldset class="question">
+
+                        <legend>Επιθυμώ να λαμβάνω προωθητικά μηνύματα για νέες αγγελίες με: </legend>
+    
+                        <input type="checkbox" id="SMS" name="SMS">
+                        <label for="SMS">SMS</label>
+    
+                        <input type="checkbox" id="mail" name="mail">
+                        <label for="mail">E-mail</label>
+    
+                        <input type="checkbox" id="viber" name="viber">
+                        <label for="viber">Viber</label>
+    
+                        <input type="checkbox" id="whatsApp" name="whatsApp">
+                        <label for="whatsApp">WhatsApp</label>
+                    </fieldset>
+   
+                <button type="button" onclick="prevStep(1)">Προηγούμενο</button>
+                <button type="button" onclick="nextStep(3)">Επόμενο</button>
+
+            </fieldset>
+    
+            <fieldset id="step3">
+                <legend>Eρωτηματολόγιο προτιμήσεων</legend>
+
+                <fieldset class="question">
+                    
+                    <legend>Για ποιές αγγελίες ενδιαφέρεστε περισσότερο; </legend>
+
+                    <input type="checkbox" id="real-estate" name="houses">
+                    <label for="real-estate">Aκίνητα</label>
+
+                    <input type="checkbox" id="vehicles" name="vehicles">
+                    <label for="vehicles">Οχήματα</label>
+
+                    <input type="checkbox" id="work" name="work">
+                    <label for="work">Εργασία</label>
+
+                    <input type="checkbox" id="tech" name="tech">
+                    <label for="tech">Τεχνολογία</label>
+
+                    <input type="checkbox" id="sports" name="sports">
+                    <label for="sports">Aθλητισμός</label>
+
+                    <input type="checkbox" id="other" name="other">
+                    <label for="other">Άλλo</label>
+
+
+                </fieldset>
+
+
+                <fieldset class="question">
+                    <label for="nomos">Σε ποιόν νομό αναζητείτε αγγελίες;</label>
+                    <select id="nomos" name="nomos">
+                        <option value="attiki">Αττική</option>
+                        <option value="central-greece">Στερεά Ελλάδα</option>
+                        <option value="central-macedonia">Κεντρική Μακεδονία</option>
+                        <option value="crete">Κρήτη</option>
+                        <option value="east-macedonia-and-thrace">Ανατολική Μακεδονία και Θράκη</option>
+                        <option value="epirus">Ήπειρος</option>
+                        <option value="ionian-islands">Ιόνια Νησιά</option>
+                        <option value="north-aegean">Βόρειο Αιγαίο</option>
+                        <option value="peloponnese">Πελοπόννησος</option>
+                        <option value="south-aegean">Νότιο Αιγαίο</option>
+                        <option value="thessaly">Θεσσαλία</option>
+                        <option value="west-greece">Δυτική Ελλάδα</option>
+                        <option value="west-macedonia">Δυτική Μακεδονία</option>
+                    </select>
+                </fieldset>
+
+                <fieldset class="question">
+                    
+                    <legend>Tι είδους οχήματα σας ενδιαφέρουν; </legend>
+
+                    <input type="checkbox" id="cars" name="cars">
+                    <label for="cars">Αυτοκίνητα Ι.Χ</label>
+
+                    <input type="checkbox" id="motorcycles" name="motorcycles">
+                    <label for="motorcycles">Μοτοσυκλέτες</label>
+
+                    <input type="checkbox" id="RV" name="RV">
+                    <label for="RV">Τροχόσπιτα</label>
+
+                    <input type="checkbox" id="trucks" name="trucks">
+                    <label for="trucks">Φορτηγά</label>
+
+                    <input type="checkbox" id="work-vec" name="work-vec">
+                    <label for="work-vec">Επαγγελματικής χρήσεως</label>
+
+                </fieldset>
+
+                <fieldset class="question">
+
+                    <legend>Σε ποιούς κλάδους θα θέλατε να εργαστείτε; </legend>
+
+                    <input type="checkbox" id="tech-work" name="tech-work">
+                    <label for="tech-work">Τεχνολογία</label>
+
+                    <input type="checkbox" id="sport-work" name="sport-work">
+                    <label for="sport-work">Αθλητισμός</label>
+
+                    <input type="checkbox" id="art-work" name="art-work">
+                    <label for="art-work">Τέχνη</label>
+
+                    <input type="checkbox" id="sec-work" name="sec-work">
+                    <label for="sec-work">Γραμματεία</label>
+
+                    <input type="checkbox" id="ret-work" name="ret-work">
+                    <label for="ret-work">Εστίαση</label>
+
+                    <input type="checkbox" id="other-work" name="other-work">
+                    <label for="other-work">Άλλο</label>
+
+                </fieldset>
+
+                
+                <label for="interests">Πείτε μας μερικά λόγια για τα ενδιαφέροντα σας: </label>
+                <textarea id="interests" name="interests" rows="6"></textarea>
+                
+                
+
+            <button type="button" onclick="prevStep(2)">Προηγούμενο</button>
+            <input type="submit" value="Υποβολή">
+            
+            </fieldset>
+
+
+          
+            
+        </form>
+
+    </main>
+
+    <footer id="Main-footer">
+    
+        <!--Tο logo μαζί με το alternative text-->
+        <div id="upper-footer">
+            <h1 class="brand-logo">
+                <a href="index.html">
+                    <img src="../png/logo-no-background.png" alt="Rent&Buy" >
+                </a>
+            </h1>
+        </div>
+            
+    
+        <div id = "middle-footer">
+            <ul>
+                <li>
+                    <p><a href="about-us.html" aria-label="About Us">Ποιοί είμαστε</a></p>
+                </li>
+    
+                <li>
+                    <p><a href="ContactForm.html">Τεχνική υποστήριξη</a> </p>
+                </li>
+    
+                <li>
+                    <p><a href="https://european-union.europa.eu/cookies_en">Cookies και πολιτική δεδομένων</a></p>
+                </li>
+    
+            </ul>
+        </div>
+        
+    
+        <div id = "Right-footer">
+            <!--Den eimai sigouros an einai kalh prakthkh header san paidi enos div-->
+            <header>
+                <img src="..\png\index-images\phone-call.png" alt="phone-call-icon">
+                <h1>2106322573</h1>
+            </header>
+            <p>Τηλεφώνησε τώρα από σταθερό ή κινητό και βάλε εύκολα και γρήγορα την αγγελία σου!</p>
+        </div>
+        
+        <p>&copy; 2023 Iouannou-Armeniakos. All rights reserved.</p>
+        </footer>
+
+
+        <script>
+
+            let currentStep = 1;
+
+
+            function nextStep(step) {
+
+                const prevStep = currentStep;
+                currentStep = step;
+                
+                
+                    document.getElementById(`step${prevStep}`).style.display = 'none';
+                    document.getElementById(`step${currentStep}`).style.display = 'block';
+                
+                 
+            }
+
+            function prevStep(step) {
+                const prevStep = currentStep;
+                currentStep = step;
+
+                document.getElementById(`step${prevStep}`).style.display = 'none';
+                document.getElementById(`step${currentStep}`).style.display = 'block'
+            
+            
+            }
+
+
+        </script>
+    
+    </body>
