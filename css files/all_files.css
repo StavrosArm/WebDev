@@ -4,7 +4,7 @@ body {
     margin:0;
     padding: 0;
     display: grid;
-    
+    grid-template-columns: 100vw;
   }
 
   body>header{
@@ -15,7 +15,7 @@ body {
 
   .header-navbar{
     width: 100%;
-    height: 180px;
+    height: 200px;
     border-bottom: solid ;
     border-width: 2px;
   }
@@ -50,7 +50,7 @@ body {
     border-radius: 10px;
     padding: 4px;
     /*position: relative;*/
-    top:3em;
+    
   }
   .Border-Radius:hover{
     background-color: white;
@@ -74,22 +74,33 @@ body {
     background-color: white;
   }
 
-  .header-navbar>ul{
+
+  .header-navbar > ul{
     display: flex;
-    padding: 0%;
-    margin: 0%;
-    flex-direction: row;
-    flex-wrap:nowrap;
-    justify-content:first baseline;
+    flex-flow: row wrap;
+    justify-content: space-around;
     align-items: center;
-    align-content: space-around;
+    height: inherit;
   }
   
   .header-navbar > ul > li {
-    margin:1.5em;
-   /* float: left;
-    position: relative;*/
+    position:relative;
   }
+
+  .Show-Sublist ul{
+    display:none;
+    position:absolute;
+    padding: 5px;
+  }
+
+  .Show-Sublist:hover ul {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start; 
+  }
+
+  
+
 
   .header-navbar  ul > li {
     list-style: none;
@@ -97,28 +108,17 @@ body {
 
 
 
-  .Show-Sublist ul{
-    display: none;
-    position: relative;
-    left: 0;
-    padding: 5px;
-  }
-  /*.Show-Sublist >a:hover{
-    color:yellow;
-    display: block;
-  }
-  */
-  .Show-Sublist:hover ul {
-    display: block; 
-  }
+
+
+ 
   
   a {
     text-decoration: none;
     color: black;
   }
   
-  main {
-    clear: both;
+  body>main {
+    grid-column: 1/2;
   }
 
 /*FOOTER*/
@@ -127,6 +127,7 @@ body {
 οργανώσουμε το περιεχόμενο με grid 3 θέσεων */
 
 #Main-footer{
+  grid-column: 1/2;
   background-image: linear-gradient(to bottom, yellow , #831010);
   border-top: solid ;
   padding:1em;

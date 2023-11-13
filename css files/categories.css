@@ -29,6 +29,11 @@ article h1{
     grid-template-columns:max-content max-content max-content ;
 }
 
+.categories-articles>article{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
 article ul{
     list-style: none;
     text-align: left;
