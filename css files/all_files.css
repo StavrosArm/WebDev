@@ -4,7 +4,7 @@ body {
     margin:0;
     padding: 0;
     display: grid;
-    grid-template-columns: 100vw;
+
   }
 
   body>header{
@@ -49,7 +49,6 @@ body {
     border-width: thin;
     border-radius: 10px;
     padding: 4px;
-    /*position: relative;*/
     
   }
   .Border-Radius:hover{

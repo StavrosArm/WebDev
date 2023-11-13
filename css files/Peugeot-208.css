@@ -36,7 +36,9 @@ main>header{
   border-color: gray;
   border-width: 3px;
   margin-top:10px;
+  margin-left: 0.8em;
 }
+
 #Left-header>p{
   margin-top:0px;
 }
@@ -74,7 +76,7 @@ main>header{
 /* Section Φωτογραφίες-Αμαξιού style */
 #Φωτογραφίες-Αμαξιού{
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: max-content 1fr;
   column-gap: 0.6em;
   
 }
@@ -91,6 +93,7 @@ main>header{
 #Φωτογραφίες-Αμαξιού >img{
   border: 4mm ridge rgba(131, 16, 16, 1);
   grid-column: 1/2;
+  margin-left: 0.8em;
 }
 #car-small-photos{
   grid-column: 2/3;
@@ -134,7 +137,7 @@ main>header{
 }
 #Αναλυτική-Περιγραφή{
   width: 50vw;
-  margin-left: 2em;
+  margin-left: 0.8em;
 }
 
 #Αναλυτική-Περιγραφή>h3{
