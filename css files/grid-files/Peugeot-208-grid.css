@@ -1,0 +1,108 @@
+body {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: medium;
+  margin:0%;
+}
+/*
+ Όλα τα links να μην είναι underlined
+*/
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.header-navbar{
+  width: 100%;
+  background-image: linear-gradient(to top, yellow , #831010);
+  height: 210px;
+  border-bottom: solid;
+  border-width: 2px;
+}
+/* 
+Μορφοποιήση της φόρμας αναζήτησης βάζοντας του πλάτος 40 χαρακτήρες και απόσταση από το border του 2 χαρακτήρες
+*/
+.search-container{
+  width:40em;
+}
+/*
+Μορφοποιήση του input όπου ο χρήστης πληκτρολογεί ό,τι επιθυμεί να αναζητήσει δινόντας του πλάτος 30 χαρακτήρες , δημιουργόντας μια καμπύλη στο Border 30 px και δίνοντας του ύψος 5 χαρακτήρες
+*/
+li input{
+  width: 30em;
+  border-radius: 30px;
+  height:5em;
+}
+/* Μορφοποιήση των 3 τελευταίων στοιχε΄ίων της λίστας εμφανίζοντας το border τους σε γκρι λεπτό χρώμα και δίνοντας του καμπ΄ύλη της τάξης των 10 px .
+*/
+.Border-Radius{
+  border:solid #404040;
+  border-width: thin;
+  border-radius: 10px;
+  padding: 4px;
+}
+/* 
+Όταν το ποντίκι περνάει πάνω από τα 3 τελευταια στοιχεία της λίστας (Κατηγορίες Αγγελιών,Sign/Log in,EN(αλλαγή γλώσσας)) το background γίνετια χρ΄΄ωμα άσπρο 
+*/
+.Border-Radius:hover{
+  background-color: white;
+}
+/*
+ Όλα τα links που έχουν γόνιο της κλάση Border-Radius αποκτούν γραμματοσείρα bold
+*/
+.Border-Radius >a{
+  font-weight: bold;
+}
+/*
+Οι υπολίστες που περιέχουν τα στοιχεία της λίστας (Κατηγορίες Αγγελιών,EN(αλλαγή γλώσσας)) αποκτούν διακρίτο border με γκρι λεπτό χρώμα και με καμπύλη της τάξης 10 px
+*/
+.Border-Radius ul{
+  border:solid #404040;
+  border-width:thin;
+  margin-top: 5px;
+  border-radius: 10px;
+}
+/* 
+Τα στοιχεία των υπολιστών που προαναφέρθηκαν στο πάνω σχόλιο αποκτόυν bold γραμματοσείρα και καμπύλη στο border τους της τάξης των 10 px
+*/
+.Border-Radius ul>li{
+  font-weight: bold;
+  border-radius: 10px;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+/*
+Τα στοιχεία των υπολιστών να μην έχουν τελείες στα αρίστερα τους και list-style γενικά
+*/
+.header-navbar  ul > li {
+  list-style: none;
+}
+/* 
+Τα στοιχεία των υπολιστών που προαναφέρθηκαν στο πάνω σχόλιο αποκτόυν background χρώμα άσπρο μόλις το ποντίκι του χρήστη περνάει από πάνω από κάθε στοιχείο
+*/
+.Border-Radius ul>li:hover{
+  background-color: white;
+}
+
+.header-navbar > ul{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  height: inherit;
+}
+
+.header-navbar > ul > li {
+  position:relative;
+}
+.Show-Sublist ul{
+  display:none;
+  position:absolute;
+  padding: 5px;
+}
+.Show-Sublist:hover ul {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start; 
+}
+
+
