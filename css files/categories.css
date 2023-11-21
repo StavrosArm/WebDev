@@ -22,11 +22,15 @@ article h1{
 .categories-articles{
     text-align: center;
     margin:5em;
-    margin-left:7em;
+    margin-left:6em;
     display:grid;
     row-gap: 7em;
     column-gap:10em;
     grid-template-columns:max-content max-content max-content ;
+}
+
+.banner >img{
+    max-width: 100%;
 }
 
 .categories-articles>article{
