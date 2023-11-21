@@ -1,0 +1,43 @@
+
+main{
+    margin:3em;
+    width: 33.3vw;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 1em;
+    align-items: center;
+}
+
+main>h1{
+    border-bottom:solid;
+    border-color: #831010;
+    grid-column: span 3;
+}
+
+/*Θέλουμε τα δυο articles να έχουν απόσταση 1+1=2em ,
+φτιάχνουμε περίγραμμα , προσαρμόζουμε τα ύψη και τα 
+κάνουμε float left*/
+
+main>article{
+    padding:1em;
+    width:33vw;
+    height:1000px;
+    border:solid;
+    border-color:#831010;
+    border-radius: 17px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+}
+
+
+main>article img{
+    width:33.3vw;
+}
+
+main p{
+    text-align: justify;
+    font-size:large;
+}
+
+

@@ -1,0 +1,45 @@
+
+
+.categories-articles>article img{
+    width:32px;
+    height: auto;
+    
+}
+
+.categories-articles header{
+    text-align: center;
+    width:20em;
+    padding:4px;
+    border-bottom:solid ;
+    border-bottom-width: 1px;
+}
+
+article h1{
+   padding:0;
+   margin:0;
+}
+
+.categories-articles{
+    text-align: center;
+    margin:5em;
+    margin-left:6em;
+    display:grid;
+    row-gap: 7em;
+    column-gap:10em;
+    grid-template-columns:max-content max-content max-content ;
+}
+
+.banner >img{
+    max-width: 100%;
+}
+
+.categories-articles>article{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+article ul{
+    list-style: none;
+    text-align: left;
+}
+

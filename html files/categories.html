@@ -2,55 +2,64 @@
 
 <html lang="gr">
     <head>
-        <title>Rent&Buy-Home Page</title>
-        <link href="png/logo-color.png" rel="shortcut icon" type="image/png" />
+        <title>Rent&Buy-Categories</title>
+        <link href="../png/logo-no-background.png" rel="shortcut icon" type="image/png" />
 
         <meta charset="UTF-8">
         <meta name="description" content="Home,Workspace,parking and car rent and buying ">
-        <meta name="keywords" content="Rent, Buy, House, Workspace, Parking">
+        <meta name="keywords" content="Rent, Buy, House, Workspace, Parking , Technology, sports">
         <meta name="author" content="Iouannou-Armeniakos">
-        <meta name="viewport" content="width=device-width", initial-scale="1">
-
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+        <link rel="stylesheet" href="../css files/all_files.css">
+        <link rel="stylesheet" href="../css files/categories.css">
     </head>
 <body>
-    <header>
+    <header class="main-head">
     
         <!--Tο logo μαζί με το alternative text-->
-        <h1 class="brand-logo">
-            <a href="index.html">
-                <img src="../png/logo-no-background.png" alt="Rent&Buy" style="width: 120px;
-                height: auto">
-            </a>
-        </h1>
          
         <!--Ένα search-bar , θεώρησα ότι ίσως αξίζει να το βάλουμε , θα δείξει-->
-        <form id="search-container" action="/search" method="get">
-            <input type="search" id="search-bar" name="q" placeholder="Search...">
-            <button type="submit" id="search-button">Search</button>
-        </form>
     
         <!--Το βασικό μας navbar, λογικά θα πρέπει να προσθέσουμε και άλλα πράγματα στο categories-->
         <nav class="header-navbar">
             <ul>
-                <li class ="Categories"><a href="categories.html" title="Categories">Categories</a>
+                <li>
+                    <div class="brand-logo">
+                        <a href="index.html">
+                            <img src="../png/logo-no-background.png" alt="Rent&Buy" style="width: 120px;
+                            height: auto">
+                        </a>
+                    </div>
+                </li>
+                <li class="search-container">
+                    <form  action="/search" method="get">
+                        <input type="search" id="search-bar" name="q" placeholder="Search...">
+                        <button type="submit" id="search-button">
+                          <img src="../svg/search.svg" alt="Search Icon">
+                        </button>
+                    </form>
+                </li>
+                <li class ="Show-Sublist Border-Radius"><a href="categories.html" title="Categories ">Κατηγορίες Αγγελιών</a>
                     <ul>
-                        <li><a href = "#" title = "Real Estate">Real Estate</a></li>
-                        <li><a href = "#" title = "Vehicles">Vehicles</a></li>
-                        <li><a href = "#" title = "Work">Work</a></li>
-                        <li><a href = "#" title = "Other Categories">Other Categories</a></li>
+                        <li><a href = "house-rentals.html" title = "Real Estate">Ακίνητα</a></li>
+                        <li><a href = "car-ads.html" title = "Vehicles">Οχήματα</a></li>
+                        <li><a href = "#" title = "Work">Εργασία</a></li>
+                        <li><a href = "#" title = "Other Categories">Άλλες κατηγορίες</a></li>
                     </ul>
                 </li>
                     
     
                     
-                <li class="Sign In" id="sign-in">
-                    <a href=""><img src="" alt="Sign/Log in" class="icon"></a>
+                <li class="Sign In Border-Radius" id="sign-in">
+                    <a href=""><img src="../png/sign in.png" alt="Sign/Log in" class="icon" style="width: 20px;
+                        height: auto">Sign/Log in</a>
                 </li>
     
-                <li class="Language">
+                <li class="Show-Sublist Border-Radius">
                     <a href="#" title = "EN">EN</a>
                     <ul class="language-sidebar" id="language-sidebar">
                         <li><a href="#" title = "GR">GR</a></li>
+                        <li><a href="#" title ="EN-LISt">EN</a></li>
                     </ul>
                 </li>
                     
@@ -60,75 +69,108 @@
     </header>
 
     <main>
-        <section id = "Categories">
+      <section class="banner">
+        <img src="../png/Categories-logos/categories-banner.jpg" alt="house and car picture">
+      </section>
+
+        <section class="categories-articles">
           <article>
             <header>
-              <img src="..\png\Categories-logos\RealEstate.png" alt="Real Estate">
-              <h1>Real Estate</h1>
+              <img src="..\png\Categories-logos\RealEstate.png" alt="Small house picture">
+              <h1>Ακίνητα</h1>
             </header>
             <ul>
-              <li><a href="house-rentals.html">Houses for rent</a></li>
-              <li><a href="house-rentals.html">House for sale</a></li>
-              <li><a href="house-rentals.html">Workspaces for rent</a></li>
-              <li><a href="house-rentals.html">Workspaces for rent</a></li>
-              <li><a href="house-rentals.html">Parking spaces for rent</a></li>
-              <li><a href="house-rentals.html">Parking spaces for sale</a></li>
-              <li><a href="house-rentals.html">Land</a></li>
+              <li><a href="house-rentals.html">Κατοικίες προς ενοικίαση</a></li>
+              <li><a href="#">Κατοικίες προς πώληση</a></li>
+              <li><a href="#">Ενοικίαση επαγγελματικών χώρων</a></li>
+              <li><a href="#">Πώληση επαγγελματικών χώρων</a></li>
+              <li><a href="#">Χώροι parking</a></li>
+              <li><a href="#">Οικόπεδα</a></li>
             </ul>    
           </article>
 
           <article>
             <header>
-              <img src="..\png\Categories-logos\Vehycles.png" alt="Vehycles">
-              <h1>Vehycles</h1>  
+              <img src="..\png\Categories-logos\Vehycles.png" alt="Car pictures">
+              <h1>Οχήματα</h1>  
             </header>
             <ul>
-              <li><a href="car-ads.html">Cars</a></li>
-              <li><a href="house-rentals.html">Motorcycles</a></li>
-              <li><a href="house-rentals.html">Recreational Vehicles</a></li>
-              <li><a href="house-rentals.html">Professional Vehicles</a></li>
+              <li><a href="car-ads.html">Αυτοκίνητα Ι.Χ</a></li>
+              <li><a href="#">Μοτοσυκλέτες</a></li>
+              <li><a href="#">R.V-Τροχόσπιτα</a></li>
+              <li>Φορτηγά</li>
+              <li><a href="#">Οχήματα επαγγελματικής χρήσεως</a></li>
              </ul> 
           </article>
           
           <article>
             <header>
-              <img src="..\png\Categories-logos\Work.png" alt="Work">
-              <h1>Work</h1>
+              <img src="..\png\Categories-logos\Work.png" alt="Work picture">
+              <h1>Εργασία</h1>
             </header>
             <ul>
-              <li><a href="house-rentals.html">Technology</a></li>
-              <li><a href="house-rentals.html">Sports</a></li>
-              <li><a href="house-rentals.html">Art</a></li>
+              <li><a href="house-rentals.html">Tεχνολογία</a></li>
+              <li><a href="house-rentals.html">Αθλήματα</a></li>
+              <li><a href="house-rentals.html">Τέχνη</a></li>
               <li><a href="house-rentals.html">Εστίαση</a></li>
-              <li><a href="house-rentals.html">Secretarial support</a></li>
-              <li><a href="house-rentals.html">Other categories</a></li>
+              <li><a href="house-rentals.html">Γραμματειακή υποστήριξη</a></li>
+              <li><a href="house-rentals.html">Άλλες κατηγορίες</a></li>
+            </ul>
+          </article>
+
+          <article>
+            <header>
+              <img src="..\png\Categories-logos\technology.png" alt="Other categories">
+              <h1>Τεχνολογία</h1>
+            </header>
+            <ul>
+              <li><a href="house-rentals.html">Smartphones</a></li>
+              <li><a href="house-rentals.html">Eπιτραπέζιοι Υπολογιστές</a></li>
+              <li><a href="house-rentals.html">Laptops και Tablets</a></li>
+              <li>Τηλεοράσεις</li>
+              <li><a href="house-rentals.html">Περιφερειακά Η/Υ</a></li>
+            </ul>
+          </article>
+
+          <article>
+            <header>
+              <img src="..\png\Categories-logos\sports.png" alt="Other categories">
+              <h1>Αθλητισμός</h1>
+            </header>
+            <ul>
+              <li><a href="house-rentals.html">Ποδήλατα</a></li>
+              <li><a href="house-rentals.html">Όργανα γυμναστικής</a></li>
+              <li><a href="house-rentals.html">Αξεσουάρ ποδηλασίας</a></li>
+              <li>Αθλητικά ρούχα και παπούτσια</li>
+              <li><a href="house-rentals.html">Άλλα σπορ</a></li>
             </ul>
           </article>
 
           <article>
             <header>
               <img src="..\png\Categories-logos\OtherCategories.png" alt="Other categories">
-              <h1>Other Categories</h1>
+              <h1>Άλλες κατηγορίες</h1>
             </header>
             <ul>
-              <li><a href="house-rentals.html">Electronic devices</a></li>
-              <li><a href="house-rentals.html">Domestic devices</a></li>
-              <li><a href="house-rentals.html">Clothes and jewlery</a></li>
-              <li><a href="house-rentals.html">Other accessories</a></li>
+              <li><a href="house-rentals.html">Οικιακές συσκεύες</a></li>
+              <li><a href="house-rentals.html">Ρούχα και κοσμήματα</a></li>
+              <li><a href="house-rentals.html">Είδη μαγειρικής</a></li>
+              <li>Έπιπλα</li>
+              <li><a href="house-rentals.html">Άξεσουάρ και ψιψιψόνια</a></li>
             </ul>
           </article>
+          
 
         </section>
     </main>
     
-    <footer>
+    <footer id="Main-footer">
     
       <!--Tο logo μαζί με το alternative text-->
       <div id="upper-footer">
-          <h1>
+          <h1 class="brand-logo">
               <a href="index.html">
-                  <img src="png/logo-no-background.png" alt="Rent&Buy" style="width: 120px;
-                  height: auto">
+                  <img src="../png/logo-no-background.png" alt="Rent&Buy" >
               </a>
           </h1>
       </div>
@@ -137,32 +179,32 @@
       <div id = "middle-footer">
           <ul>
               <li>
-                  <p><a href="about-us.html" aria-label="About Us">Learn more about our team</a></p>
+                  <p><a href="about-us.html" aria-label="About Us">Ποιοί είμαστε</a></p>
               </li>
   
               <li>
-                  <p><a href="ContactForm.html">Experiencing problems ? Contact Us!</a> </p>
+                  <p><a href="ContactForm.html">Τεχνική υποστήριξη</a> </p>
               </li>
   
               <li>
-                  <p><a href="https://european-union.europa.eu/cookies_en">Cookies and data policy</a></p>
+                  <p><a href="https://european-union.europa.eu/cookies_en">Cookies και πολιτική δεδομένων</a></p>
               </li>
   
           </ul>
       </div>
-
-      <div id = "Right footer">
+      
+  
+      <div id = "Right-footer">
           <!--Den eimai sigouros an einai kalh prakthkh header san paidi enos div-->
           <header>
-              <img src="..\png\phone-call.png" alt="phone-call-icon">
+              <img src="..\png\index-images\phone-call.png" alt="phone-call-icon">
               <h1>2106322573</h1>
           </header>
           <p>Τηλεφώνησε τώρα από σταθερό ή κινητό και βάλε εύκολα και γρήγορα την αγγελία σου!</p>
       </div>
       
       <p>&copy; 2023 Iouannou-Armeniakos. All rights reserved.</p>
-  
-  
+      
   </footer>
 </body>
 
