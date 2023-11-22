@@ -1,12 +1,12 @@
 /* Ό,τι περιέχεται μ΄έσα στο body έχει γραμματόσειρα (Times New Roman :sans serif) και τα γρ΄άμματα έχουν μεσαίο μέγεθος */
 
-body {
+body{
     font-family: 'Times New Roman', Times, serif;
     font-size: medium;
-    margin:0;
+    margin: 0;
     padding: 0;
-    display: grid;
-    grid-template-columns: 1fr;
+    /*display: grid;
+    grid-template-columns: 1fr;*/
   }
 /* ΘΑ θέσουμε grid areas για τα 4 βασικά δομικά στοιχεία των ιστοσελίδων μας (header,main,sidebar,footer)*/
   /*
@@ -24,7 +24,7 @@ body {
 
 /*----------------------------------------grid separation------------------------------------
 */
-
+/*
 body>header{
     grid-column: 1/2;
   }
@@ -35,7 +35,7 @@ body>main {
 #Main-footer{
     grid-column: 1/2;
   }
-
+*/
 /*----------------------------------------general styling------------------------------------
 */
 
@@ -78,6 +78,7 @@ a {
     padding-top:0em;
     border-bottom: solid ;
     border-width: 2px;
+    height: 220px;
   }
 
 /* Η λίστα περιήγησης του ιστότοπου περίεχεται μέσα στο header και καλύπτει όλο το πλάτος του header κα΄θώς και ένα ύψος τάξης 200 px .
@@ -179,6 +180,7 @@ a {
     justify-content: space-around;
     align-items: center;
     height: inherit;
+    margin:0;
   }
 
 /* Θέτουμε τα στοιχεία της λίστας να έχουν position=relative ώστε να το χ΄ρησιμοποιήσουμε παρακάτω ώστε να υπάρχει εξάρτηση του position των sublist από το parent (<li></li>) */
@@ -296,114 +298,11 @@ footer >p{
   bottom: 60px;
 }
 
-/*--------------------------------------Main content styling---------------------------------
-*/
 
-/*To Main content αποτελείται από έναν αριθμό από articles και από ένα aside bar το οποίο παρέχει πλήρες πλοήγηση στις κατήγορίες όλων των αγγελίων καθώς και στις υποκατηγορίες τους */
 
-/* Δίνουμε στο main-content δίαταξη grid δύο στηλών εκ των οποίων η πρώτη αποτέλει τα 2/3 του ελεύθερου χώρου και η αλλή το υπόλοιπο 1/3 */
 
-.main-content{
-  display:grid;
-  grid-template-columns: 2fr 1fr;
-}
 
-/*----------------------------------Main content grid separation-----------------------------
-*/
-
-.ads-articles{
-  grid-column: 1/2;
-}
-aside{
-  grid-column: 2/3;
-}
-
-/*----------------------------------------Articles Styling-----------------------------------
-*/
-
-/*Θέτουμε διάταξη τύπου grid για την ενότητα που περίεχει όλα τα articles και τα χωρίζει σε δύο στήλες η οποίες έχουν μέγεθος όσο το με΄γαλύτερο μέγεθος ενός article .Επιπλέον τα articles εχουν απ΄σταση μεταξύ τους 1 χαρακτήρα .Τέλος η ενότητα αύτη έχει απόσταση 1 χαρακτήρα από ολές τις πλεύρες της. */
-
-.ads-articles{
-  margin:1em; 
-  display: grid;
-  grid-template-columns: max-content max-content;
-  gap:1em;
-}
-
-/* Ο τίτλος της ενότητας τοποθετήτε στην πάνω γραμμή του grid */
-.ads-articles>h2{
-  grid-column: 1/3 ;
-}
-
-/* Κάθε article έχει διάταξη flex και τοποθέτει τα περίεχομενα σε μορφή στηλών χωρίς αναδιάπλωση . Τα στοιχεία του περιέχομενου έ΄χουν ίσο κενό χώρο γύρω τους .Επιπλεόν, κάθε article έχει πλάτος , ύψος 500px,600px αντίστοιχα και ελλειψώειδες περίγραμμα της τάξης των 17 px . To περιεχόμενο έχει αριστερή,δεξία απόσταση από το περ΄ργραμα 17px,12px αντίστοιχα και το περιεχόμενο είναι στοιχισμένο στο κέντρο .Τέλος το περίγραμμα έχει μπορντό χρώμα και πάχος της τάξης των 0.5px */
-
-.ads-articles>article{
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-around;
-  width:500px;  
-  height:650px;
-  border:solid;
-  border-radius: 17px;
-  padding-left: 12px;
-  padding-right: 12px;
-  text-align: center;
-  border-color: #831010;
-  border-width: 0.5px;
-}
-
-/* To header κάθε article αποτελείται από ένα τίτλο και μια εικόνα . Στην παρακάτων εντολή κάνουμε την εμφάνιση του header να μοιάζει με polaroid καθώς το περικλείουμαι σε ένα box-shadow */
-
-.ads-articles header{
-  width: 100%;
-  background-color: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-/*Ο τίτλος του header τοποθε΄ίται στο κέντρο του block και του θέτουμε πάνω,κάτω απόσταση περιεχομένου από το περίγραμμα 10 px και δεξιά και αρ΄ιστερα απ΄όσταση από το περίγραμμα 20 px */
-
-.ads-articles header>h1{
-  text-align: center;
-  padding: 10px 20px;
-}
-
-/* Το περίγραμμα της εικόνας έχει ελλειψοείδες σχήμα της τάξης των 10 px και έχει μπορντό χρώμα .Επιπλέον κάθε εικόνα έχει πλάτος-ύψος 200 px*/
-
-.ads-articles header>img{
-  border-radius: 10px;
-  border:solid rgba(131, 16, 16, 1);
-  width:200px;
-  height:200px;
-}
-
-/* Κάποια article έχουν και μια λίστα με τα βασικά χαρακτηρίστικα της αγγελίας .Το περιέχομενο της λίστας βρίσκεται στο κέντρο του article με βάση το πλάτος και δεν έχει list-style */
-
-.ads-articles>article ul{
-  list-style: none;
-  text-align: center;
-  padding-left: 0%;
-}
-
-/* Όλα τα article περίεχουν μια περιγράφη σε μορφή κειμένου που περιγράφει την αγγελία .*/
-
-.ads-articles>article p{
-  text-align: justify;
-}
-
-/* Στην περιγράφη κάτω περιέχεται ένα link που σε οδήγει σε ειδική σελίδα με αναλυτικότερη περιγραφή και περισσότερες πληροφορίες */
-
-.ads-articles p>a{
-  display: block;
-}
-
-/*-----------------------------------------Aside Styling-------------------------------------
-*/
-
-/* Του δίνουμε πλάτος 350 px και απόσταση από τον header 1.5 χαρακτήρα*/
-aside{
-  width: 350px;
-  margin-top: 1.5em;
-}
+/*επανατοποθέτηση αυ΄τών που έσβησά
 
 
 /*-----------------------------------------Media Queries-------------------------------------
