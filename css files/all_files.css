@@ -5,9 +5,14 @@ body{
     font-size: medium;
     margin: 0;
     padding: 0;
-    /*display: grid;
-    grid-template-columns: 1fr;*/
+    display: grid;
+    grid-template-columns: repeat(12, [col-start] 1fr);
   }
+
+  body > *{
+    grid-column: col-start / span 12;
+  }
+
 /* ΘΑ θέσουμε grid areas για τα 4 βασικά δομικά στοιχεία των ιστοσελίδων μας (header,main,sidebar,footer)*/
   /*
   .main-head {
@@ -43,7 +48,7 @@ body>main {
 /*Θέτουμε το πλατός του logo μας σε 120 px */
 
 .brand-logo img{
-  width: 120px;
+  width: 20vw;
 }
 
 /* Τα στοιχεία των λιστών δεν έχουν list style (δηλαδή περίεχουν μόνο το κείμενο) */
@@ -78,15 +83,15 @@ a {
     padding-top:0em;
     border-bottom: solid ;
     border-width: 2px;
-    height: 220px;
+    height: 300px;
   }
 
 /* Η λίστα περιήγησης του ιστότοπου περίεχεται μέσα στο header και καλύπτει όλο το πλάτος του header κα΄θώς και ένα ύψος τάξης 200 px .
 */
 
   .header-navbar{
-    width: 100%;
-    height: 200px;
+    width: inherit;
+    height: inherit;
   }
 
 /*---------------------------------Search bar container styling------------------------------
@@ -94,9 +99,10 @@ a {
 Η μπάρα αναζήτησης μαζί με το search button έχoyn πλα΄τός 40 χαρακτήρες και το κείμενο τους είναι στοιχισμένο στο κέντρο */
 
   .search-container{
-    width:40em;
+    width:100%;
     text-align: center;
     padding:0em;
+    grid-column: 1/3;
     
   }
 
@@ -110,14 +116,14 @@ a {
 /* Θετούμε το πλάτος και το ύψος του εικονιδίου αναζήτησης σε 20 px */
 
   #search-button img{
-    width:20px;
+    width:inherit;
     height:20px;
   }
 
 /* Θέτουμε το πλάτος της μπάρας αναζήτησης σε 30 χαρακτήρες και το ύψος σε 3 χαρακτήρες . Επιπλεόν δίνουμε ελλειψοείδες μορ΄φή στο περίγραμμα της */
 
   li input{
-    width: 30em;
+    width: 70%;
     border-radius: 30px;
     height:3em;
   }
@@ -132,7 +138,7 @@ a {
     border:solid #404040;
     border-width: thin;
     border-radius: 10px;
-    padding: 4px;
+    padding: 5px;
   }
 
 /* Περνόντας από πάνω τους το ποντίκι το background color του περιεχομένου τους γίνεται άσπρο */
@@ -143,13 +149,13 @@ a {
 
 /* Η γραμματοσείρα τους έχει εντονό πάχος:bold */
 
-  .Border-Radius >a{
+  .Border-Radius {
     font-weight: bold;
   }
 
 /* Οι υπολ΄ίστες τους έχουν ελλειψοείδες εμφανές περίγραμμα με λεπτό πάχος και γκρι χρώμα .Επιπλέον έχουν απόσταση από το γωνεικό τους στοιχείο 5 px */
 
-  .Border-Radius ul{
+  .Show-Sublist ul{
     border:solid #404040;
     border-width:thin;
     margin-top: 5px;
@@ -159,7 +165,7 @@ a {
 /* Τα στοιχεία των υπολίστων έχουν γραμματοσείρα με έντονο π΄άχος , ελλειψοείδες περίγραμμα και το περιέχομενο τους έχει δεξία και αριστερή απόσταση από το περίγραμμα 4 px */
 
 
-  .Border-Radius ul>li{
+  .Show-Sublist ul>li{
     font-weight: bold;
     border-radius: 10px;
     padding-left: 4px;
@@ -168,25 +174,66 @@ a {
 
 /* Περνόντας το ποντίκι πάνω από τα στοιχεία της υπολίστας το background color τους περιέχομενού τους γίνεται άσπρο */
 
-  .Border-Radius ul>li:hover{
+  .Show-Sublist ul>li:hover{
     background-color: white;
   }
 
 /* Θέτουμε την λίστα η οποιά περιέχει τα στοιχεία του navbar να έχει διάταξη τύπου flex και να διαταξει τα περιέχομενα της λίστας σε μια γραμμή δίνοντας τους την δυνατότητα αναδιάπλωσης . Επιπλέον , τα στοιχεία έχουν κενό χώρο αναμ΄έσα τους και είναι όλα διεταγμένα στο κέντρο */
 
   .header-navbar > ul{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 1fr 1fr 1fr 2fr;
     height: inherit;
-    margin:0;
+    width:inherit;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-top: 15px;
   }
+
+/*Θέτουμε το brand logo να είναι καλ΄΄υπτει όλη την πάνω γραμμή του grid */
+
+  .brand-logo {
+    grid-column: 1/3;
+    text-align: center;
+  }
+  
+/* Θέτουμε τις κατήγοριες αγγελίων στις στήλες 3-6 */
+
+  #Ads-Categories{
+    grid-column: 1/2;
+    grid-row:3/4;
+    justify-self: center;
+    align-self: center;
+  }
+/* Θέτουμε την επιλογή sign In/log in στις στήλες 6-9 */
+
+  .Sign-In{
+    grid-row:3/4;
+    grid-column: 2/3;
+    justify-self: center;
+    align-self: center;
+  }
+  #sign-in img{
+    width:20px;
+    background-color: transparent;
+    margin-top: -5px;
+  }
+/* Θέτουμε την επιλογή αλλαγής γλώσσας στις στήλες 9-12 */
+
+ #Change-language{
+    grid-row:4/5;
+    grid-column: 2/3;
+    justify-self: center;
+  }
+
 
 /* Θέτουμε τα στοιχεία της λίστας να έχουν position=relative ώστε να το χ΄ρησιμοποιήσουμε παρακάτω ώστε να υπάρχει εξάρτηση του position των sublist από το parent (<li></li>) */
 
   .header-navbar > ul > li {
     position:relative;
+    height:auto;
   }
 
 /*Θέτουμε το display των sublist none με σκοπό να μην φαίνονται και το position=absolute ώστε η τοποθέτηση των sublist να έχει σχέση με το position των parent στοιχείων (<li></li>).Τέλος, δίνουμε στο περιέχομενο μια απόσταση 5px από το border */
@@ -199,7 +246,7 @@ a {
 
 /*Καθώς περ΄νάει το ποντίκι πάνω από τα στοιχε΄ία του navbar που ΄περιέχουν μια υπολίστα δίνει στην υπολίστα διάταξη flex και εμφανίζεται η υπολ΄ίστα με τα στοιχέια διεταγμένα σε στηλές με την δυνατότητα αναδιαπλ΄΄ω΄σης */
 
-  .Show-Sublist:hover ul {
+  .Border-Radius:hover + ul{
     display: flex;
     flex-flow: column wrap;
     justify-content: flex-start; 
@@ -226,15 +273,15 @@ a {
 */
 
 #upper-footer{
-  grid-column: 1/2;
+  grid-column: 1/4;
   text-align: center;
 }
 
 footer>p{
-  grid-column: 2/3;
+  grid-column: 1/4;
 }
 #Right-footer {
-  grid-column: 3/4;
+  grid-column: 1/4;
 }
 
 /*------------------------------------Footer general styling---------------------------------
