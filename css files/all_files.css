@@ -48,7 +48,7 @@ body>main {
 /*Θέτουμε το πλατός του logo μας σε 120 px */
 
 .brand-logo img{
-  width: 20vw;
+  width: 120px;
 }
 
 /* Τα στοιχεία των λιστών δεν έχουν list style (δηλαδή περίεχουν μόνο το κείμενο) */
@@ -190,6 +190,7 @@ a {
     margin-right: 0;
     margin-bottom: 0;
     margin-top: 15px;
+    padding-left: 0;
   }
 
 /*Θέτουμε το brand logo να είναι καλ΄΄υπτει όλη την πάνω γραμμή του grid */
@@ -265,23 +266,33 @@ a {
   border-width: 2px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr ;
-  column-gap:1em ;
-  justify-content: space-evenly;
 }
 
 /*----------------------------------------grid separation------------------------------------
 */
 
+#Main-footer>*{
+  width: 90vw;
+}
 #upper-footer{
+  grid-column: 1/4;
+  align-self: center;
+  justify-self: center;
+}
+#middle-footer{
+  grid-column: 1/4;
+  justify-self: center;
+  grid-row: 2/3;
+  align-self: center;
+}
+footer>p{
   grid-column: 1/4;
   text-align: center;
 }
-
-footer>p{
-  grid-column: 1/4;
-}
 #Right-footer {
   grid-column: 1/4;
+  align-self: center;
+  justify-self: center;
 }
 
 /*------------------------------------Footer general styling---------------------------------
@@ -301,8 +312,13 @@ footer >p{
 /* Θέτουμε την από πάνω απ΄όσταστη την λίστας στα 40 px και την δεξία απόσταση του περιεχομένου από το περίγραμμα στα 40 px */
 
 #middle-footer > ul{
-  margin-top:40px;
-  padding-right: 40px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  padding-left: 0;
+  width: inherit;
+  justify-content: space-around;
+
 }
 
 /*Θέτουμε τα στοιχεία της λίστας να μην έχουν styling (δηλαδή να εμφαν΄ίζεται μόνο το κείμενο) και να έχουν bold γράμματα */
