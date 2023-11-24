@@ -198,8 +198,9 @@ aside>ul>li{
 
 /* ρύθμιση τοποθέτησης και πλα΄τους μια indroduction φωτογραφίας */
 body>img{
-  grid-column: 1/12;
+  grid-column: 1/13;
   width:100%;
+  text-align: center;
 }
 
 
