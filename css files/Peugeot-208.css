@@ -1,23 +1,32 @@
 main>header{
   display: grid;
   grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 3fr 1fr;
+  width:inherit;
 }
 
-
+main{
+  display: flex;
+  flex-flow: column nowrap;
+}
+main>*{
+  height:fit-content;
+}
 /*Upper header style */
+
 #Upper-header{
   grid-column: 1/3;
   display: flex;
-  flex-flow: row nowrap;
-  align-items: baseline;
+  flex-flow: row wrap;
   justify-content:flex-start;
 
 }
 
 #Upper-header>a,#Upper-header> p{
   color:#00BFFF;
-  margin-bottom: auto;
-  margin-top: auto;
+  margin-bottom: 0;
+  margin-top: 0;
+  height: fit-content;
 }
 
 #Bold{
@@ -29,14 +38,16 @@ main>header{
 }
 
 /*left header style*/
+
 #Left-header{
   grid-column: 1/2;
-  padding-right: 20em;
   border-right:solid;
   border-color: gray;
   border-width: 3px;
-  margin-top:10px;
-  margin-left: 0.8em;
+  width: 50vw;
+  display:flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
 }
 
 #Left-header>p{
@@ -44,6 +55,7 @@ main>header{
 }
 #Left-header>h1{
   margin-bottom:0px;
+
 }
 /*Right header style*/
 
@@ -51,20 +63,17 @@ main>header{
   display: flex;
   flex-flow: row wrap;
   align-items: center;
-  width: 25em;
-  margin-left: 1em;
+  width: 50vw;
   grid-column: 2/3;
+  justify-content: space-around;
 }
 
-#Right-Header>p{
-  margin-top: auto;
-}
+
 
 #Right-Header>button{
-  margin-left:1em;
   border-radius: 5px;
-  width: 15em;
-  height:2em;
+  width: auto;
+  height:auto;
   background-color: yellow;
 }
 #Right-Header>button>span{
@@ -74,12 +83,14 @@ main>header{
 
 
 /* Section Φωτογραφίες-Αμαξιού style */
+
 #Φωτογραφίες-Αμαξιού{
-  display: grid;
-  grid-template-columns: max-content 1fr;
-  column-gap: 0.6em;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
   
 }
+
 
 #Φωτογραφίες-Αμαξιού>h2{
   border-bottom:solid gray;
@@ -87,17 +98,18 @@ main>header{
   border-width: thin;
   background-image: linear-gradient(to right, yellow , #831010);
   margin-top: auto;
-  grid-column: 1/3;
+  width:100vw;
 }
 
 #Φωτογραφίες-Αμαξιού >img{
   border: 4mm ridge rgba(131, 16, 16, 1);
-  grid-column: 1/2;
-  margin-left: 0.8em;
+  width: 90vw;
+  margin-bottom: 10px;
 }
 #car-small-photos{
-  grid-column: 2/3;
-  height: 20em;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
 
 #car-small-photos>img{
@@ -105,7 +117,7 @@ main>header{
 }
 
 #Συντομή-Περιγραφή{
-  width: 50em;
+  width: auto;
   
 }
 
@@ -119,12 +131,15 @@ main>header{
 }
 
 /* Section Περιγραφή-και-χαρακτηριστικά-αυτοκινήτου style */
+
 #Περιγραφή-και-χαρακτηριστικά-αυτοκινήτου{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 4em;
+  display: flex;
+  flex-flow:row wrap;
+  justify-content: space-around;
+  align-items: center;
   margin-bottom: 2em;
 }
+
 #Περιγραφή-και-χαρακτηριστικά-αυτοκινήτου > h1{
   text-align: center;
   border-bottom: solid gray;
@@ -132,12 +147,11 @@ main>header{
   border-width: thin;
   margin-bottom: 0;
   background-image: linear-gradient(to right, yellow , #831010);
-  grid-column: 1/3;
+  width: 100vw;
 
 }
 #Αναλυτική-Περιγραφή{
-  width: 50vw;
-  margin-left: 0.8em;
+  width: auto;
 }
 
 #Αναλυτική-Περιγραφή>h3{
@@ -147,21 +161,28 @@ main>header{
 #Περιγραφή-και-χαρακτηριστικά-αυτοκινήτου p{
   text-align: justify;
 }
-.Μορφοποιήση-Πινάκων{
+#Μορφοποιήση-Πινάκων{
   display: flex;
-  flex-flow: column;
-  align-items: left;
-  grid-column: 2/3;
+  flex-flow: row wrap;
+  align-items: stretch;
+  justify-content: space-around;
 }
 
-.Μορφοποιήση-Πινάκων>h3{
+#Μορφοποιήση-Πινάκων h3{
   border-bottom: solid gray;
   border-width: thin;
-  width:18em; 
+  width:fit-content; 
 }
 
-.Μορφοποιήση-Πινάκων>table{
-  width:18em;
+#Μορφοποιήση-Πινάκων .flex-table{
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  height: max-content;
+}
+
+#Μορφοποιήση-Πινάκων table{
+  width:auto;
 }
 
 #Στατιστικά-αγγελίας-και-επικοινωνία > .Μορφοποιήση-Πινάκων{
