@@ -49,6 +49,7 @@ body>main {
 
 .brand-logo img{
   width: 120px;
+  height: 80%;
 }
 
 /* Τα στοιχεία των λιστών δεν έχουν list style (δηλαδή περίεχουν μόνο το κείμενο) */
@@ -274,16 +275,9 @@ a {
 #Main-footer>*{
   width: 90vw;
 }
-#upper-footer{
-  grid-column: 1/4;
-  align-self: center;
-  justify-self: center;
-}
-#middle-footer{
+#flex-the-two-first{
   grid-column: 1/4;
   justify-self: center;
-  grid-row: 2/3;
-  align-self: center;
 }
 footer>p{
   grid-column: 1/4;
@@ -393,12 +387,82 @@ footer >p{
 
 /* Για tablet τα οποία βρίσκονται σε κάθετη οπτική */
 
-@media screen and (min-width: 731px) and (orientation: portrait){
-  /*
-  body>header{
-      height:500px;
+@media screen and (min-width: 731px) {
+  #Main-footer{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
+
   }
-  */
+  #flex-the-two-first{
+    grid-column: 1/3;
+    width: inherit;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+  }
+  
+
+  #upper-footer .brand-logo{
+    margin: 0%;
+    height: 75%;
+    width: 75%;
+  }
+  #upper-footer .brand-logo img{
+    margin: 0%;
+    height: 100%;
+    width: 100%;
+  }
+  #upper-footer ,#middle-footer {
+    width: 45vw;
+    align-self: stretch;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+  }
+  #middle-footer{
+    grid-column: 2/3;
+    grid-row: 1/3;
+  }
+  #middle-footer > ul{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding-left: 0;
+    width: inherit;
+    border:solid black;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 0%;
+  
+  }
+  #middle-footer >ul>li{
+    width:100%;
+  }
+  #middle-footer >ul>li:hover{
+    background-color:#831010;
+  }
+  #middle-footer >ul>li>p{
+    text-align: center;
+    font-size: x-large;
+  }
+  #Right-footer>header,#Right-footer>header>h1,#Right-footer img ,#Right-footer>p{
+    padding: 0%;
+    margin: 0%;
+  }
+  #Right-footer{
+    align-self: center;
+
+  }
+  #Main-footer>p{
+    justify-self: center;
+  }
+
+  .bottom-border-visble{
+    border-bottom: solid black;
+  }
+
 }
 
 /* Για κίνητα τηλέφωνα τα οποία βρίσκονται σε οριζόντια οπτική */
