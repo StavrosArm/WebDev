@@ -388,12 +388,16 @@ footer >p{
 /* Για tablet τα οποία βρίσκονται σε κάθετη οπτική */
 
 @media screen and (min-width: 731px) {
+  /*θέτουμε διάταξη grid δύο στηλών και δύο γραμμών στο footer */
   #Main-footer{
     display:grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 2fr 1fr;
 
   }
+  /* Τα πρώτα δύο parts footer που το ένα περιέχει το logo και το άλλο μια λίστα περιήγησης σε σελίδες 
+  επικοινώνιας και πληρωφορίων , τα έχουμε τοποθε΄τήσει σε ένα κοινό block με όνομα flex-the-two-first . Το τοποθέτουμε 
+  κατά μήκος όλων των στηλών του grid και του θέτουμε μια διάταξη flex ώστε να έιναι δίπλα η εικόνα με την λίστα */
   #flex-the-two-first{
     grid-column: 1/3;
     width: inherit;
@@ -401,8 +405,17 @@ footer >p{
     flex-flow: row nowrap;
     justify-content: center;
   }
-  
-
+  /* Δίνουμε ίδιο width στο logo και στην λίστα και τα κάνουμε flex ώστε να αποκτήσουν το ίδιο height με την ιδιότητα 
+  align-self:strech */
+  #upper-footer ,#middle-footer {
+    width: 45vw;
+    align-self: stretch;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+  }
+  /*θέτουμε στο logo να έχει 75% ύψος και width αναλόγως το block που βρίσκεται ώστε να έιναι responsive */
   #upper-footer .brand-logo{
     margin: 0%;
     height: 75%;
@@ -413,18 +426,8 @@ footer >p{
     height: 100%;
     width: 100%;
   }
-  #upper-footer ,#middle-footer {
-    width: 45vw;
-    align-self: stretch;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    justify-content: center;
-  }
-  #middle-footer{
-    grid-column: 2/3;
-    grid-row: 1/3;
-  }
+  /* Θέτουμε διάταξη flex στην λίστα και της αλλάζουμε την μορφοποιήση ώστε να φαίνεται σαν πίνακας στηλών με πιο εντόνη
+  γραμματοσείρα επειδή μεγαλώνει και το layout μας */
   #middle-footer > ul{
     display: flex;
     flex-flow: column;
@@ -447,6 +450,7 @@ footer >p{
     text-align: center;
     font-size: x-large;
   }
+  /* αφαιρούμε τα paddings και τα margins καθώς πλέον έχουμε διατάξης flex και grid */
   #Right-footer>header,#Right-footer>header>h1,#Right-footer img ,#Right-footer>p{
     padding: 0%;
     margin: 0%;
