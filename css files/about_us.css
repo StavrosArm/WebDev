@@ -41,7 +41,7 @@ main p{
     font-size:medium;
 }
 
-@media screen and (min-width:700px) {
+@media screen and (min-width:731px) {
     main{
         grid-column: 1/13;
         margin:3em;

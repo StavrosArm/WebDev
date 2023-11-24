@@ -20,18 +20,15 @@ article h1{
 }
 
 
-main{
-    grid-column: 2/12;
-}
-
 
 .categories-articles{
     width:100%;
     text-align: center;
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-bottom: 2em;
-    margin-top:2em;
+    margin-top: 2em;
 }
 
 .banner >img{
@@ -51,12 +48,18 @@ article ul{
     text-align: left;
 }
 
-@media screen and (min-width: 665px) and (orientation: portrait) {
+@media screen and (min-width: 731px) {
+
+    main{
+        margin:auto;
+    }
+
     .categories-articles{
         text-align: center;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        column-gap: 1em;
+        column-gap: 3em;
+        row-gap: 3em;
         margin-bottom: 3em;
         margin-top:3em;
     }
@@ -67,23 +70,28 @@ article ul{
 
     .categories-articles>article{
         grid-column: auto;
-        
     }
 
   }
 
-  /*@media screen and (min-width: 1000px)  {
+  @media screen and (min-width: 1000px)  {
+
+    main{
+        margin:auto;
+        margin-bottom:3em;
+        margin-top:3em;
+        grid-column: 1/13;
+    }
+
     .categories-articles{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        column-gap:2em;
-        row-gap:2em;
-        margin:auto;
+        column-gap:3em;
+        row-gap:3em;
+        
     }
 
-    main{
-        grid-column: 1/13;
-    }
+    
 
     .categories-articles>article{
         grid-column:auto;
@@ -105,5 +113,5 @@ article ul{
     .categories-articles>article{
         grid-column:auto;
     }
-  }*/
+  }
 
