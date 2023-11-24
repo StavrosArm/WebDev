@@ -8,10 +8,12 @@
     border-radius: 17px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 80%;
-    max-width: 600px;
+    grid-column: 1/13;
+    margin:1em;
+    /*max-width: 600px;
     margin-left:33.3vw;
     margin-top:2em;
-    margin-bottom:2em;
+    margin-bottom:2em;*/
 }
 
 /*Βάζουμε περίγραμμα και αυξάνουμε το padding 

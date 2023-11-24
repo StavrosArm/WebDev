@@ -1,43 +1,73 @@
 
 main{
+    grid-column: 1/13;
     margin:3em;
-    width: 33.3vw;
-    display:grid;
+    display: flex;
+    flex-direction: column;
+    /*display:grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 1em;
-    align-items: center;
+    align-items: center;*/
 }
 
 main>h1{
     border-bottom:solid;
     border-color: #831010;
-    grid-column: span 3;
+    
 }
 
-/*Θέλουμε τα δυο articles να έχουν απόσταση 1+1=2em ,
-φτιάχνουμε περίγραμμα , προσαρμόζουμε τα ύψη και τα 
-κάνουμε float left*/
+/*Θέλουμε τα δυο articles να έχουν απόσταση 0.5+0.5=1em ,
+φτιάχνουμε περίγραμμα και του προσδίδουμε στρογγυλεμένες 
+άκρες , προσαρμόζουμε τα ύψη και τα καθώς και τα κάνουμε display ως flex*/
 
 main>article{
     padding:1em;
-    width:33vw;
-    height:1000px;
     border:solid;
     border-color:#831010;
     border-radius: 17px;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-around;
+    height:max-content;
+    margin:0.5em;
 }
 
 
 main>article img{
-    width:33.3vw;
+    width:100%;
 }
 
 main p{
     text-align: justify;
-    font-size:large;
+    font-size:medium;
 }
 
+@media screen and (min-width:700px) {
+    main{
+        grid-column: 1/13;
+        margin:3em;
+        display:grid;
+        grid-template-columns: 1fr 1fr ;
+        column-gap: 1em;
+        align-items: center;
+    }
+
+    main>article{
+        grid-column: auto;
+        padding:1em;
+        border:solid;
+        border-color:#831010;
+        border-radius: 17px;
+        display: flex;
+        flex-flow: column nowrap;
+        height:900px;
+        margin:0.5em;
+    }
+
+    main>h1{
+        border-bottom:solid;
+        border-color: #831010;
+        grid-column: 1/3;
+    }
+    
+}
 

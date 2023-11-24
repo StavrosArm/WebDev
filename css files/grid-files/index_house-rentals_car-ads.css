@@ -31,29 +31,32 @@ aside{
   grid-column: 1/3;
 }
 
+
 /*Θέτουμε διάταξη τύπου grid για την ενότητα που περίεχει όλα τα articles και τα χωρίζει σε δύο στήλες η οποίες έχουν μέγεθος όσο το με΄γαλύτερο μέγεθος ενός article .Επιπλέον τα articles εχουν απ΄σταση μεταξύ τους 1 χαρακτήρα .Τέλος η ενότητα αύτη έχει απόσταση 1 χαρακτήρα από ολές τις πλεύρες της. */
+
+.main-content{
+  grid-column: 1/13;
+  text-align: center;
+  align-items: center;
+}
+
 
 .ads-articles{
   margin:1em; 
-  display: grid;
-  grid-template-columns: max-content max-content;
-  gap:1em;
+  display:grid;
+  grid-template-columns: 1fr;
 }
 
 /* Ο τίτλος της ενότητας τοποθετήτε στην πάνω γραμμή του grid */
-.ads-articles>h2{
-  grid-column: 1/3;
-}
 
-/* Κάθε article έχει διάταξη flex και τοποθέτει τα περίεχομενα σε μορφή στηλών χωρίς αναδιάπλωση . Τα στοιχεία του περιέχομενου έ΄χουν ίσο κενό χώρο γύρω τους .Επιπλεόν, κάθε article έχει πλάτος , ύψος 500px,600px αντίστοιχα και ελλειψώειδες περίγραμμα της τάξης των 17 px . To περιεχόμενο έχει αριστερή,δεξία απόσταση από το περ΄ργραμα 17px,12px αντίστοιχα και το περιεχόμενο είναι στοιχισμένο στο κέντρο .Τέλος το περίγραμμα έχει μπορντό χρώμα και πάχος της τάξης των 0.5px */
+
+/* Κάθε article έχει διάταξη flex και τοποθέτει τα περίεχομενα σε μορφή στηλών χωρίς αναδιάπλωση . 
+Τα στοιχεία του περιέχομενου έχουν ίσο κενό χώρο γύρω τους .Επιπλεόν, κάθε article έχει πλάτος , ύψος 500px,600px αντίστοιχα και ελλειψώειδες περίγραμμα της τάξης των 17 px . To περιεχόμενο έχει αριστερή,δεξία απόσταση από το περ΄ργραμα 17px,12px αντίστοιχα και το περιεχόμενο είναι στοιχισμένο στο κέντρο .Τέλος το περίγραμμα έχει μπορντό χρώμα και πάχος της τάξης των 0.5px */
 
 .ads-articles>article{
-  grid-column: 1/3;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-around;
-  width:70vw;  
-  height:650px;
+  height:max-content;
   border:solid;
   border-radius: 17px;
   padding-left: 12px;
@@ -61,7 +64,15 @@ aside{
   text-align: center;
   border-color: #831010;
   border-width: 0.5px;
+  margin-bottom:1em;
 }
+
+/*Tα articles με τις αγγελίες περιέχουν ένα footer , με τα χαρακτηριστικά , 
+το βάζουμε ένα margin , για να φαίνεται πιο όμορφο μέσα στο πλαίσιο της αγγελίας*/
+.ads-articles>article>footer{
+  margin:1em;
+}
+
 
 /* To header κάθε article αποτελείται από ένα τίτλο και μια εικόνα . Στην παρακάτων εντολή κάνουμε την εμφάνιση του header να μοιάζει με polaroid καθώς το περικλείουμαι σε ένα box-shadow */
 
@@ -83,8 +94,8 @@ aside{
 .ads-articles header>img{
   border-radius: 10px;
   border:solid rgba(131, 16, 16, 1);
-  width:200px;
-  height:200px;
+  width:70%;
+ 
 }
 
 /* Κάποια article έχουν και μια λίστα με τα βασικά χαρακτηρίστικα της αγγελίας .Το περιέχομενο της λίστας βρίσκεται στο κέντρο του article με βάση το πλάτος και δεν έχει list-style */
@@ -110,9 +121,117 @@ aside{
 /*-----------------------------------------Aside Styling-------------------------------------
 */
 
-/* Του δίνουμε πλάτος 350 px και απόσταση από τον header 1.5 χαρακτήρα*/
-aside{
-  width: 350px;
-  margin-top: 1.5em;
-  grid-row: 2;
+/*menu-toggle , έχουμε ονομάσει ένα checkbox , που λειτουργεί σαν 
+event listener λίγο ή πολύ.Το κρύβουμε για να μην φαίνεται.*/
+
+#menu-toggle {
+  display: none; 
 }
+
+/*Ορίζουμε το aside να μην έχει width , ώστε ουσιαστικά να κρύβεται,
+κρύβουμε το περιεχόμενο που κάνει overflow, το fix-άρουμε στην πάνω 
+αριστερά γωνία της οθόνης και ορίζουμε το z-index:1 ώστε να εμφανιστούν 
+πάνω απο την υπόλοιπη σελίδα.
+Επιπλέον , έχουμε θέσει χρώματα*/
+
+aside {
+  width: 0;
+  height: 100%;
+  overflow-x: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color:#831010;
+  color:white;
+  transition: 0.5s;
+  z-index: 1;
+}
+
+/*Όταν ουσιαστικά τσεκάρουμε το κουτι , 
+δηλαδή ανοίξουμε το aside , ορίζουμε το width να 
+γίνει το 50% το vw*/
+
+#menu-toggle:checked + label + aside {
+  width: 50%; 
+}
+
+/*Aποτελεί το στυλάρισμα του κουμπιού που ανοίγει το aside.
+'Υψος , πλάτος , μέγεθος γραμματοσειράς , padding , και χρώματα.*/
+
+body>label {
+  grid-column: 1/13;
+  height: auto;
+  width:auto;
+  font-size: large;
+  cursor: pointer;
+  padding: 10px;
+  background-color:#831010;
+  color: #fff;
+}
+
+/*Στυλάρισμα , padding , margin , για την λίστα του aside*/
+aside ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  color:#fff;
+}
+
+.menu ul{
+  color:white;
+}
+
+/*Χρώματα για τις συχνές κατηγορίες*/
+aside li {
+  padding: 10px;
+  color:white;
+  border-bottom: 1px solid white;
+}
+
+/*Εδώ είναι το όνομα της κάθε κατηγορίας , που στο design του mobile και του tablet
+το κρύβουμε. Στην περίπτωση του desktop θα το εμφανίζουμε καθώς θέλουμε να φαίνονται 
+οι βασικές κατηγορίες που το απαρτίζουν.*/
+aside>ul>li{
+  display: none;
+}
+
+
+
+body>img{
+  grid-column: 4/12;
+}
+
+
+
+
+
+/*---------------MEDIA QUERIES-----------*/ 
+
+@media screen and (min-width: 665px) and (orientation: portrait) {
+  .ads-articles{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .ads-articles>h2{
+    grid-column: 1/3;
+  }
+
+  .ads-articles>article{
+    grid-column: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    height:800px;
+    border:solid;
+    border-radius: 17px;
+    padding-left: 12px;
+    padding-right: 12px;
+    text-align: center;
+    border-color: #831010;
+    border-width: 0.5px;
+    margin-bottom:1em;
+  }
+
+}
+
+

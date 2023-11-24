@@ -25,10 +25,13 @@
         <!--Το βασικό μας navbar, λογικά θα πρέπει να προσθέσουμε και άλλα πράγματα στο categories-->
         <nav class="header-navbar">
             <ul>
-                <li class="brand-logo">
-                    <a href="index.html">
-                        <img src="../png/logo-no-background.png" alt="Rent&Buy" >
-                    </a>
+                <li>
+                    <div class="brand-logo">
+                        <a href="index.html">
+                            <img src="../png/logo-no-background.png" alt="Rent&Buy" style="width: 120px;
+                            height: auto">
+                        </a>
+                    </div>
                 </li>
                 <li class="search-container">
                     <form  action="/search" method="get">
@@ -38,8 +41,7 @@
                         </button>
                     </form>
                 </li>
-                <li id="Ads-Categories" class ="Show-Sublist">
-                    <a class="Border-Radius" href="categories.html" title="Categories ">Κατηγορίες Αγγελιών</a>
+                <li class ="Show-Sublist Border-Radius"><a href="categories.html" title="Categories ">Κατηγορίες Αγγελιών</a>
                     <ul>
                         <li><a href = "house-rentals.html" title = "Real Estate">Ακίνητα</a></li>
                         <li><a href = "car-ads.html" title = "Vehicles">Οχήματα</a></li>
@@ -50,14 +52,13 @@
                     
     
                     
-                <li class="Sign-In " id="sign-in">
-                    <a class="Border-Radius" href="">
-                        <img src="../png/sign in.png" alt="Sign/Log in" class="icon">Sign/Log in
-                    </a>
+                <li class="Sign In Border-Radius" id="sign-in">
+                    <a href=""><img src="../png/sign in.png" alt="Sign/Log in" class="icon" style="width: 20px;
+                        height: auto">Sign/Log in</a>
                 </li>
     
-                <li id="Change-language" class="Show-Sublist">
-                    <a class ="Border-Radius" href="#" title = "EN">EN</a>
+                <li class="Show-Sublist Border-Radius">
+                    <a href="#" title = "EN">EN</a>
                     <ul class="language-sidebar" id="language-sidebar">
                         <li><a href="#" title = "GR">GR</a></li>
                         <li><a href="#" title ="EN-LISt">EN</a></li>
@@ -73,6 +74,50 @@
     <!--Είναι καλή πρακτική να μαζέψουμε σε ένα βασικό article όλες τις αγγελίες , και να τα χωρίσουμε
     σε επιμέρους articles.Έχω βάλει τις κλάσεις κτλπ καθώς δοκίμαζα και κάποια css, πρέπει ακόμη να προσθέσουμε
     κάποια πράγματα. -->
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle">&#9776; Συχνές Κατηγορίες</label>
+    <aside>
+           
+       
+            <ul class="menu">
+                <li><a href="#">Ακίνητα</a></li>
+                    <ul>
+                        <li><a href="house-rentals.html">Ακίνητα προς ενοικίαση</a></li>
+                        <li><a href="house-rentals.html">Ακίνητα προς πώληση</a></li>
+                        <li><a href="house-rentals.html">Ενοικιάσεις χώρων εργασίας</a></li>
+                        <li><a href="house-rentals.html">Πωλήσεις χώρων εργασίας</a></li>
+                        <li><a href="house-rentals.html">Χώροι Parking</a></li>        
+                        <li><a href="house-rentals.html">Οικόπεδα</a></li>
+                    </ul>
+                <li><a href="#">Οχήματα</a></li>
+                    <ul>
+                        <li><a href="car-ads.html">Αυτοκίνητα Ι.Χ</a></li>
+                        <li><a href="house-rentals.html">Μοτοσυκλέτες</a></li>
+                        <li><a href="house-rentals.html">RV-Tροχόσπιτα</a></li>
+                        <li><a href="house-rentals.html">Οχήματα επαγγελματικής χρήσεως</a></li>
+                    </ul>
+
+                <li><a href="#">Εργασία</a></li>
+                    <ul>
+                        <li><a href="house-rentals.html">Τεχνολογία</a></li>
+                        <li><a href="house-rentals.html">Αθλήματα</a></li>
+                        <li><a href="house-rentals.html">Τέχνη</a></li>
+                        <li><a href="house-rentals.html">Εστίαση</a></li>
+                        <li><a href="house-rentals.html">Γραμματειακή υποστήριξη</a></li>
+                        <li><a href="house-rentals.html">Άλλο</a></li>
+                    </ul>
+                
+                <li><a href="#">Άλλες Κατηγορίες</a></li>
+                    <ul>
+                        <li><a href="house-rentals.html">Ηλεκτρονικές συσκεύες</a></li>
+                        <li><a href="house-rentals.html">Οικιακές συσκεύες</a></li>
+                        <li><a href="house-rentals.html">Ρούχα και κοσμήματα</a></li>
+                        <li><a href="house-rentals.html">Αξεσουάρ</a></li>
+                    </ul>
+            </ul>
+    </aside>
+
+    <img src="../png/index-images/1.png" alt="quote of tog" >
     
     <main class="main-content">
 
@@ -141,41 +186,7 @@
             </article>
         </section> 
     </main>
-    <aside>
-        <h2>Κατηγορίες Αγγελιών</h2>
-        <ul>
-            <li><a href="#">Ακίνητα</a></li>
-                <ul><a href="house-rentals.html">Ακίνητα προς ενοικίαση</a></ul>
-                <ul><a href="house-rentals.html">Ακίνητα προς πώληση</a></ul>
-                <ul><a href="house-rentals.html">Ενοικιάσεις χώρων εργασίας</a></ul>
-                <ul><a href="house-rentals.html">Πωλήσεις χώρων εργασίας</a></ul>
-                <ul><a href="house-rentals.html">Χώροι Parking</a></ul>        
-                <ul><a href="house-rentals.html">Οικόπεδα</a></ul>
 
-            <li><a href="#">Οχήματα</a></li>
-                <ul><a href="car-ads.html">Αυτοκίνητα Ι.Χ</a></ul>
-                <ul><a href="house-rentals.html">Μοτοσυκλέτες</a></ul>
-                <ul><a href="house-rentals.html">RV-Tροχόσπιτα</a></ul>
-                <ul><a href="house-rentals.html">Οχήματα επαγγελματικής χρήσεως</a></ul>
-                
-
-            <li><a href="#">Εργασία</a></li>
-                <ul><a href="house-rentals.html">Τεχνολογία</a></ul>
-                <ul><a href="house-rentals.html">Αθλήματα</a></ul>
-                <ul><a href="house-rentals.html">Τέχνη</a></ul>
-                <ul><a href="house-rentals.html">Εστίαση</a></ul>
-                <ul><a href="house-rentals.html">Γραμματειακή υποστήριξη</a></ul>
-                <ul><a href="house-rentals.html">Άλλο</a></ul>
-
-            
-            <li><a href="#">Άλλες Κατηγορίες</a></li>
-                <ul><a href="house-rentals.html">Ηλεκτρονικές συσκεύες</a></ul>
-                <ul><a href="house-rentals.html">Οικιακές συσκεύες</a></ul>
-                <ul><a href="house-rentals.html">Ρούχα και κοσμήματα</a></ul>
-                <ul><a href="house-rentals.html">Αξεσουάρ</a></ul>
-            
-        </ul>
-    </aside>
     <!--Έχουμε το footer , που δεν έχω υλοποιήσει κάτι ακόμη-->
     <footer id="Main-footer">
     
