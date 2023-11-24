@@ -13,38 +13,6 @@ body{
     grid-column: col-start / span 12;
   }
 
-/* ΘΑ θέσουμε grid areas για τα 4 βασικά δομικά στοιχεία των ιστοσελίδων μας (header,main,sidebar,footer)*/
-  /*
-  .main-head {
-    grid-area:header;
-  }
-  .main-content{
-    grid-area:content;
-  }
-  
-  #Main-footer{
-    grid-area: footer;
-  }
-  */
-
-/*----------------------------------------grid separation------------------------------------
-*/
-/*
-body>header{
-    grid-column: 1/2;
-  }
-
-body>main {
-    grid-column: 1/2;
-  }
-#Main-footer{
-    grid-column: 1/2;
-  }
-*/
-/*----------------------------------------general styling------------------------------------
-*/
-
-
 /*Θέτουμε το πλατός του logo μας σε 120 px */
 
 .brand-logo img{
@@ -106,6 +74,13 @@ a {
     grid-column: 1/3;
     
   }
+  /*Κάνουμε το Search for flex ώστε η φορμα αναζήτησης να βρίσκεται δίπλα από το κουμπάκι */
+.search-container form{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+}
 
 /* Το Search button περίεχει ένα εικονίδιο αναζήτησης και στην παρακάτω css εντολή το κάνουμε να έχει tranparent μορφή */
 
@@ -190,7 +165,7 @@ a {
     margin-left: 0;
     margin-right: 0;
     margin-bottom: 0;
-    margin-top: 15px;
+    margin-top: 0;
     padding-left: 0;
   }
 
@@ -247,7 +222,7 @@ a {
   }
 
 /*Καθώς περ΄νάει το ποντίκι πάνω από τα στοιχε΄ία του navbar που ΄περιέχουν μια υπολίστα δίνει στην υπολίστα διάταξη flex και εμφανίζεται η υπολ΄ίστα με τα στοιχέια διεταγμένα σε στηλές με την δυνατότητα αναδιαπλ΄΄ω΄σης */
-
+  
   .Border-Radius:hover + ul{
     display: flex;
     flex-flow: column wrap;
@@ -365,15 +340,6 @@ footer >p{
 /*-----------------------------------------Media Queries-------------------------------------
 */
 
-/* Για κίνητα τηλέφωνα τα οποία βρίσκονται σε κάθετη οπτική */
-
-@media screen and (max-width: 730px) and (orientation: portrait){
-  /*
-  .main-head{
-    height:500px;
-  }
-  */
-}
 
 /* Για κίνητα τηλέφωνα τα οποία βρίσκονται σε οριζόντια οπτική */
 
@@ -471,7 +437,88 @@ footer >p{
   }
 
 /*-----------------------------------------------Διαμορφώση header για tablet-----------------------------------------
+/*αλλάζουμε το ύψος του header */
+body>header{
+  height: 350px;
+}
+/*Αρχικά θα  grid καθώς είναι grid δύο στηλ΄ων */
+.header-navbar > ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 2fr 2fr;
+    height: inherit;
+    width:inherit;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-left: 0;
+  }
 
+/*Θα εφαρμόσουμε το width του search container και του logo να είναι ανάλογα */
+
+.header-navbar .brand-logo ,.header-navbar .search-container{
+  width: 50vw;
+}
+
+/*θα τα τοποθετήσουμε τώρα το ένα δ΄ίπλα στο άλλο */
+
+.header-navbar .brand-logo {
+  grid-column: 1/3;
+  grid-row: 1/2;
+  align-self: center;
+}
+/*θα κεντράρουμε τώρα την μπάρα ανα΄ζ΄ητησης*/
+.header-navbar .search-container{
+  grid-column: 3/5;
+  align-self: center;
+  grid-row: 1/2;
+}
+/*Μειώνουμε το height της αλλαγής γλώσσας */
+#Change-language{
+  height: fit-content;
+}
+#Ads-Categories ,.Sign-In{
+  grid-row: 2/3;
+}
+#Ads-Categories{
+  grid-column: 1/3;
+  align-self:flex-start;
+}
+.Sign-In{
+  grid-column: 3/4;
+  align-self: flex-start;
+}
+#Change-language{
+  grid-column: 4/5;
+  grid-row: 2/3;
+}
+
+
+#Ads-Categories>a ,.Sign-In>a,#Change-language>a{
+  font-size: x-large;
+  border-color: black;
+  border-width:2px;;
+}
+#Ads-Categories:hover >ul ,#Change-language:hover >ul{
+  border-width: 2px;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 100%;
+}
+
+#Ads-Categories>ul>li,#Change-language>ul>li{
+  width: 100%;
+  border-width: 2px;
+  border-radius: 0px;
+  text-align: center;
+}
+#Ads-Categories>ul>li>a,#Change-language>ul>li>a{
+  font-size: x-large;
+}
 
 
 }
