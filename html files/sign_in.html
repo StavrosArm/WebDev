@@ -13,6 +13,7 @@
     <meta name="viewport" content="width=device-width", initial-scale="1">
     <link rel="stylesheet" href="../css files/all_files.css">
     <link rel="stylesheet" href="../css files/sign_in.css">
+    <script src="../script.js" defer></script>
 
 </head>
 
@@ -93,7 +94,7 @@
                     <label for="confirmPassword">Επαλήθευση κωδικού πρόσβασης: </label>
                     <input type="password" id="confirmPassword" name="confirmPassword" required>
 
-                    <button type="button" onclick="nextStep(2)">Επόμενο</button>
+                    
                 
             </fieldset>
 
@@ -139,8 +140,7 @@
                         <label for="whatsApp">WhatsApp</label>
                     </fieldset>
    
-                <button type="button" onclick="prevStep(1)">Προηγούμενο</button>
-                <button type="button" onclick="nextStep(3)">Επόμενο</button>
+              
 
             </fieldset>
     
@@ -240,40 +240,34 @@
                 
                 <label for="interests">Πείτε μας μερικά λόγια για τα ενδιαφέροντα σας: </label>
                 <textarea id="interests" name="interests" rows="6"></textarea>
-                
-                
-
-            <button type="button" onclick="prevStep(2)">Προηγούμενο</button>
-            <input type="submit" value="Υποβολή">
             
             </fieldset>
 
 
-          
+            <input type="submit" value="Υποβολή">
             
         </form>
 
     </main>
 
     <footer id="Main-footer">
-    
-        <!--Tο logo μαζί με το alternative text-->
-        <div id="upper-footer">
+        <div id="flex-the-two-first">
+          <div id="upper-footer">
             <h1 class="brand-logo">
                 <a href="index.html">
                     <img src="../png/logo-no-background.png" alt="Rent&Buy" >
                 </a>
             </h1>
-        </div>
+          </div>
             
     
-        <div id = "middle-footer">
+          <div id = "middle-footer">
             <ul>
-                <li>
+                <li class="bottom-border-visble">
                     <p><a href="about-us.html" aria-label="About Us">Ποιοί είμαστε</a></p>
                 </li>
     
-                <li>
+                <li class="bottom-border-visble">
                     <p><a href="ContactForm.html">Τεχνική υποστήριξη</a> </p>
                 </li>
     
@@ -282,50 +276,25 @@
                 </li>
     
             </ul>
+          </div>
         </div>
+      
+        <!--Tο logo μαζί με το alternative text-->
         
-    
+        
+  
         <div id = "Right-footer">
             <!--Den eimai sigouros an einai kalh prakthkh header san paidi enos div-->
             <header>
                 <img src="..\png\index-images\phone-call.png" alt="phone-call-icon">
                 <h1>2106322573</h1>
+                <p>Τηλεφώνησε τώρα από σταθερό ή κινητό και βάλε εύκολα και γρήγορα την αγγελία σου!</p>
             </header>
-            <p>Τηλεφώνησε τώρα από σταθερό ή κινητό και βάλε εύκολα και γρήγορα την αγγελία σου!</p>
         </div>
         
         <p>&copy; 2023 Iouannou-Armeniakos. All rights reserved.</p>
-        </footer>
-
-
-        <script>
-
-            let currentStep = 1;
-
-
-            function nextStep(step) {
-
-                const prevStep = currentStep;
-                currentStep = step;
-                
-                
-                    document.getElementById(`step${prevStep}`).style.display = 'none';
-                    document.getElementById(`step${currentStep}`).style.display = 'block';
-                
-                 
-            }
-
-            function prevStep(step) {
-                const prevStep = currentStep;
-                currentStep = step;
-
-                document.getElementById(`step${prevStep}`).style.display = 'none';
-                document.getElementById(`step${currentStep}`).style.display = 'block'
-            
-            
-            }
-
-
-        </script>
+    
+    
+    </footer>
     
     </body>

@@ -1,13 +1,9 @@
 
-main{
-    grid-column: 1/13;
+/*Κάνουμε flex την main και της προσδίδουμε ένα margin*/
+main{  
     margin:3em;
     display: flex;
     flex-direction: column;
-    /*display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 1em;
-    align-items: center;*/
 }
 
 main>h1{
@@ -18,7 +14,7 @@ main>h1{
 
 /*Θέλουμε τα δυο articles να έχουν απόσταση 0.5+0.5=1em ,
 φτιάχνουμε περίγραμμα και του προσδίδουμε στρογγυλεμένες 
-άκρες , προσαρμόζουμε τα ύψη και τα καθώς και τα κάνουμε display ως flex*/
+άκρες , προσαρμόζουμε τα ύψη καθώς και τα κάνουμε display ως flex*/
 
 main>article{
     padding:1em;
@@ -31,19 +27,26 @@ main>article{
     margin:0.5em;
 }
 
-
+/*H εικόνα να πιάνει το 100% του χώρου*/
 main>article img{
     width:100%;
 }
 
+/*Φτιάχνουμε την παράγραφο να είναι ομοιόμορφη ως προς τον 
+κατακόρυφο άξονα*/
 main p{
     text-align: justify;
     font-size:medium;
 }
 
+/*--------------------------TABLET--------------------------*/
 @media screen and (min-width:731px) {
+
+    /*Eδώ δημιουργούμε ένα πλέγμα για την main , ώστε 
+    τα δυο άρθρα του about-us να εμφανίζονται δίπλα δίπλα 
+    και να έχουμε πολύ κενό χώρο.Βάζουμε και κάποια gaps και 
+    κεντράρουμε το περιεχόμενο.*/
     main{
-        grid-column: 1/13;
         margin:3em;
         display:grid;
         grid-template-columns: 1fr 1fr ;
@@ -51,23 +54,66 @@ main p{
         align-items: center;
     }
 
+    /*Eίναι η επικεφαλίδα της main που θέλουμε να εκτείνεται 
+    σε όλη την πρώτη γραμμή του grid.*/
+    main>h1{
+        border-bottom:solid;
+        border-color: #831010;
+        grid-column: 1/3;
+    }  
+
+    /*Ορίζουμε το ύψος για να είναι και τα 2 στο ίδιο ύψος 
+    καθώς και τους δίνουμε την αντίστοιχη στήλη στο grid.*/
     main>article{
         grid-column: auto;
+        height:900px;
+        margin:0.5em;
+    }
+
+}
+
+/*----------------------DESKTOP---------------------------------------------------*/
+@media screen and (min-width:1100px) {
+
+    /*Φτιάχνουμε το margin της main , την κάνουμε display ως grid 
+    και το χωρίζουμε σε δύο ισαπέχοντα columns.Όμως , στην προκειμένη 
+    περίπτωση ορίζουμε διαφορετικό πλάτος , για να μην είναι τεράστια τα άρθρα.*/
+    main{
+        margin:3em;
+        width: 33.3vw;
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 1em;
+        align-items: center;
+    }
+
+    /*Θέλουμε τα δυο articles να έχουν απόσταση 1+1=2em ,
+    φτιάχνουμε περίγραμμα , προσαρμόζουμε τα ύψη και τα margins
+    και τα κάνουμε flex για την ομοιόμορφη στοίχιση του περιεχομένου*/
+
+    main>article{
         padding:1em;
+        width:33vw;
+        height:1000px;
         border:solid;
         border-color:#831010;
         border-radius: 17px;
         display: flex;
         flex-flow: column nowrap;
-        height:900px;
-        margin:0.5em;
+        justify-content: space-around;
     }
 
-    main>h1{
-        border-bottom:solid;
-        border-color: #831010;
-        grid-column: 1/3;
+    /*Το μέγεθος της εικόνας*/
+    main>article img{
+        width:33.3vw;
     }
-    
+
+    /*Μορφοποίηση των παραγράφων*/
+    main p{
+        text-align: justify;
+        font-size:large;
+    }
+        
 }
+
 

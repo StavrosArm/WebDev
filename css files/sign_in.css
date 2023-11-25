@@ -9,9 +9,9 @@
     padding: 20px;
     border-radius: 17px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 80%;
+    width: 60%;
     max-width: 600px;
-    margin-left:33.3vw;
+    margin:auto;
     margin-top:2em;
     margin-bottom:2em;
 }
@@ -86,15 +86,6 @@ padding για να έχουμε ένα μεγαλύτερο κουμπί.*/
 
 
 
-#step2{
-    display: none;
-}
-
-#step3{
-    display: none;
-}
-
-
 button{
     color: hsl(0, 0%, 100%);
     background-color: #831010;
@@ -104,6 +95,5 @@ button:hover{
    background-color: #680c18; 
 }
 
-fieldset>button:nth-of-type(2),#step1 button{
-    float:right;
-}
+
+

@@ -43,8 +43,8 @@ aside{
 
 .ads-articles{
   margin:1em; 
-  display:grid;
-  grid-template-columns: 1fr;
+  display:flex;
+  flex-direction: column;
 }
 
 /* Ο τίτλος της ενότητας τοποθετήτε στην πάνω γραμμή του grid */
@@ -77,7 +77,8 @@ aside{
 /* To header κάθε article αποτελείται από ένα τίτλο και μια εικόνα . Στην παρακάτων εντολή κάνουμε την εμφάνιση του header να μοιάζει με polaroid καθώς το περικλείουμαι σε ένα box-shadow */
 
 .ads-articles header{
-  width: 100%;
+  width:100%;
+  height:22em;
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -94,8 +95,8 @@ aside{
 .ads-articles header>img{
   border-radius: 10px;
   border:solid rgba(131, 16, 16, 1);
-  width:70%;
- 
+  width:60%;
+  height:60%;
 }
 
 /* Κάποια article έχουν και μια λίστα με τα βασικά χαρακτηρίστικα της αγγελίας .Το περιέχομενο της λίστας βρίσκεται στο κέντρο του article με βάση το πλάτος και δεν έχει list-style */
@@ -145,6 +146,12 @@ aside {
   color:white;
   transition: 0.5s;
   z-index: 1;
+}
+
+/*Κρύβουμε by default στο mobile first την επικεφαλίδα του aside , για να την εμφανίσουμε στο 
+desktop*/
+aside>h2{
+  display:none;
 }
 
 /*Όταν ουσιαστικά τσεκάρουμε το κουτι , 
@@ -206,20 +213,17 @@ body>img{
 
 /*---------------MEDIA QUERIES-----------*/ 
 
-@media screen and (min-width: 665px) and (orientation: portrait) {
+@media screen and (min-width: 731px)  {
   .ads-articles{
     display: grid;
     grid-template-columns: 1fr 1fr;
-  }
-
-  .ads-articles>h2{
-    grid-column: 1/3;
   }
 
   .ads-articles>article{
     grid-column: auto;
     display: flex;
     flex-flow: column nowrap;
+    justify-content: space-between;
     height:800px;
     border:solid;
     border-radius: 17px;
@@ -230,6 +234,66 @@ body>img{
     border-width: 0.5px;
     margin-bottom:1em;
   }
+
+ .ads-articles header{
+    height:20em;
+ }
+
+ 
+
+  .ads-articles>h2{
+    grid-column: 1/3;
+  }
+
+  #Last-ads>article{
+    display:flex;
+    justify-content: inherit;
+    height: 620px;
+    overflow: hidden;
+  }
+  
+
+}
+
+@media screen and (min-width: 1100px){
+    .main-content{
+      grid-column: 1/10;
+    }
+
+    aside{
+      all:initial;
+      grid-column:10/13;
+      width:90%;
+      grid-row:2;
+      height:max-content;
+      margin-top:2.1em;
+    
+     
+    }
+
+    #menu ul {
+      all:initial;
+    }
+
+    aside ul>li{
+      all:inital;
+      
+    }
+
+    aside>h2{
+      display:block;
+      margin:0;
+    }
+
+    body>label{
+      display: none;
+    }
+   
+    aside li{
+      border-bottom:#831010;
+    }
+
+
 
 }
 

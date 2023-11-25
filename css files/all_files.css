@@ -353,7 +353,7 @@ footer >p{
 
 /* Για tablet τα οποία βρίσκονται σε κάθετη οπτική */
 
-@media screen and (min-width: 731px) {
+@media screen and (min-width: 731px) and (max-width:1100px){
 
 /*-----------------------------------------------Διαμορφώση Footer για tablet-----------------------------------------
 
@@ -523,21 +523,176 @@ body>header{
 
 }
 
-/* Για κίνητα τηλέφωνα τα οποία βρίσκονται σε οριζόντια οπτική */
 
-@media screen and (min-height: 731px) and (orientation: landscape){
-  /*
-  body>header{
-    height:500px;
+
+
+/*------------------------------------DESKTOP--------------------------------------------*/
+/*Εδώ ουσιαστικά ακολουθούμε την σχεδίαση που είχαμε στα προηγούμενα κομμάτια της εργασίας.
+Κατά κύριο λόγο χρησιμοποιούμε τον κώδικα των προηγουμένων , αλλά κάνουμε και αρκετά inital , ώστε κανόνες 
+που εξυπηρετούσαν διαφορετικό σκοπό στο mobile , να μην επεμβαίνουν στο desktop.*/
+
+@media screen and (min-width:1100px){
+
+
+  /*---------------------HEADER------------------*/
+
+  /*Προσαρμογή του logo για desktop , στο default μέγεθος*/
+  .brand-logo img{
+    all:initial;
   }
-  */
+
+  /*Επαναορίζουμε το width και το height , του navbar 
+  σε συγκεκριμένα μεγέθη , ώστε να μην κάνουν inherit όπως στις 
+  άλλες συσκεύες*/
+
+  .header-navbar{
+    all:initial;
+    width: 100%;
+    height: 200px;
+    border-bottom: solid ;
+    border-width: 2px;
+  }
+
+  /*Kάνουμε flex την λίστα , βάζουμε κενό γύρω απο τα items , καθώς και του κάνουμε 
+  align στο κέντρο. Τέλος κληρονομεί το ύψος της. */
+  .header-navbar > ul{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: inherit;
+  }
+  
+  /*Επαναφέρουμε στα default features , ορίζουμε να μην έχει κουκκίδες η λίστα , 
+  καθώς και του ορίζουμε σχετικό position*/
+
+  .header-navbar > ul > li {
+    position:relative;
+    list-style: none;
+    all:initial;
+  }
+
+  /*Kάνουμε initial τα features για τις άλλες συσκευές και το επαναφέρουμε σε 
+  σταθερό width*/
+
+  .search-container{
+    all:initial;
+    width:40em;
+    text-align: center;
+    padding:0em;
+  }
+
+  
+  /*Oρίζουμε σταθερό ύψος και πλάτος για το desktop , καθώς 
+  στο κινητό ακολουθεί το μέγεθος της οθόνης , πράγμα που δεν 
+  εξυπηρετεί στο desktop*/
+
+  li input{
+    width: 30em;
+    border-radius: 30px;
+    height:3em;
+  }
+  
+  /*Border-Radius είναι η κλάση της λίστας κατηγοριών, που ουσιαστικά 
+  την χρησιμοποιούμε για να στυλάρουμε την λίστα*/
+  .Border-Radius >a{
+    font-weight: bold;
+  }
+
+  .Border-Radius ul{
+    border:solid #404040;
+    border-width:thin;
+    margin-top: 5px;
+    border-radius: 10px;
+  }
+  .Border-Radius ul>li{
+    font-weight: bold;
+    border-radius: 10px;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  .Border-Radius ul>li:hover{
+    background-color:#831010;
+  }
+
+  .Show-Sublist ul{
+    display:none;
+    position:absolute;
+    padding: 5px;
+  }
+
+  .Show-Sublist:hover ul {
+    display:block;
+   
+  }
+
+  /*Eπαναφορά των κανονών που χρησιμοποιούνται για mobile και tablet*/
+
+  #Change-language{
+    all:initial;
+  }
+
+  #Ads-Categories{
+    all:initial;
+  }
+
+  .Sign-In{
+    all:initial;
+  }
+
+  .search-container form{
+    all:initial;
+  }
+
+/*----------------------------------FOOTER-----------------------------------------*/
+
+#Main-footer{
+  background-image: linear-gradient(to bottom, yellow , #831010);
+  border-top: solid ;
+  padding:1em;
+  border-width: 2px;
+  display: grid;
+  align-items: center;
+  grid-template-columns:1fr 1fr 1fr;
 }
 
-/*Για desktop */
+#Main-footer>*{
+  width:auto;
+}
 
-@media screen and (min-width: 1000px){
+#flex-the-two-first{
+  all:initial;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width:70vw;
+}
 
 
 
+.brand-logo img{
+  all:initial;
+  width: 120px;}
+
+#middle-footer>ul{
+  all:initial;
+  
+}
+
+#Right-footer{
+  grid-row:1;
+  grid-column:2/4;
+}
+
+footer>p{
+  all:initial;
+  width:100% !important;
+  grid-row:2;
+  grid-column:1/4;
+  text-align:center;
+  font-weight: bolder;
+
+}
 
 }
