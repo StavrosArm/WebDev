@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="gr">
+<html lang="el">
 
 <head>
     <title>Rent&Buy-Tech Support</title>
@@ -10,24 +10,29 @@
     <meta name="description" content="Troubleshooting">
     <meta name="keywords" content="Problem, Contact, Tech Support">
     <meta name="author" content="Iouannou-Armeniakos">
-    <meta name="viewport" content="width=device-width", initial-scale="1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../css files/all_files.css">
     <link rel="stylesheet" href="../css files/sign_in.css">
+    <script src="../script.js" defer></script>
 
 </head>
 
 <body>
 
     <header>
+ 
+        <!--Tο logo μαζί με το alternative text-->
+         
+        <!--Ένα search-bar , θεώρησα ότι ίσως αξίζει να το βάλουμε , θα δείξει-->
+    
+        <!--Το βασικό μας navbar, λογικά θα πρέπει να προσθέσουμε και άλλα πράγματα στο categories-->
         <nav class="header-navbar">
             <ul>
-                <li>
-                    <div class="brand-logo">
-                        <a href="index.html">
-                            <img src="../png/logo-no-background.png" alt="Rent&Buy" style="width: 120px;
-                            height: auto">
-                        </a>
-                    </div>
+                <li class="brand-logo">
+                    <a href="index.html">
+                        <img src="../png/logo-no-background.png" alt="Rent&Buy" style="width: 120px;
+                        height: auto">
+                    </a>
                 </li>
                 <li class="search-container">
                     <form  action="/search" method="get">
@@ -37,25 +42,28 @@
                         </button>
                     </form>
                 </li>
-                <li class ="Show-Sublist Border-Radius"><a href="categories.html" title="Categories ">Κατηγορίες Αγγελιών</a>
+                <li id="Ads-Categories" class ="Show-Sublist">
+                    <a class="Border-Radius" href="categories.html" title="Categories ">Κατηγορίες Αγγελιών</a>
                     <ul>
-                        <li><a href = "house-rentals.html" title = "Real Estate">Ακίνητα</a></li>
-                        <li><a href = "car-ads.html" title = "Vehicles">Οχήματα</a></li>
-                        <li><a href = "#" title = "Work">Εργασία</a></li>
+                        <li class="bottom-border-visble"><a href = "house-rentals.html" title = "Real Estate">Ακίνητα</a></li>
+                        <li class="bottom-border-visble"><a href = "car-ads.html" title = "Vehicles">Οχήματα</a></li>
+                        <li class="bottom-border-visble"><a href = "#" title = "Work">Εργασία</a></li>
                         <li><a href = "#" title = "Other Categories">Άλλες κατηγορίες</a></li>
                     </ul>
                 </li>
                     
     
                     
-                <li class="Sign In Border-Radius" id="sign-in">
-                    <a href="">Sign/Log in</a>
+                <li class="Sign-In " id="sign-in">
+                    <a class="Border-Radius" href="sign_in.html">
+                        Sign/Log in
+                    </a>
                 </li>
     
-                <li class="Show-Sublist Border-Radius">
-                    <a href="#" title = "EN">EN</a>
+                <li id="Change-language" class="Show-Sublist">
+                    <a class ="Border-Radius" href="#" title = "EN">EN</a>
                     <ul class="language-sidebar" id="language-sidebar">
-                        <li><a href="#" title = "GR">GR</a></li>
+                        <li class="bottom-border-visble"><a href="#" title = "GR">GR</a></li>
                         <li><a href="#" title ="EN-LISt">EN</a></li>
                     </ul>
                 </li>
@@ -63,19 +71,20 @@
             </ul>
     
         </nav>
+        
     </header>
 
     <main class="tech-support">
 
-        <form action="/submit" method="post">
+        <form action="/submit" method="post" id="registrationForm">
 
-            <fieldset id="step1">
+            <fieldset >
                 <legend>Eγγραφή χρήστη</legend>
     
                 
                     <label for="username">Όνομα χρήστη: </label>
                     <input type="text" id="username" name="username" pattern="[^\s]+" 
-                        title="Παρακαλώ εισάγετε μία λέξη" required>
+                        title="Παρακαλώ εισάγετε μία λέξη" autocomplete="on" required>
                 
     
                 
@@ -85,17 +94,18 @@
                     <label for="confirmPassword">Επαλήθευση κωδικού πρόσβασης: </label>
                     <input type="password" id="confirmPassword" name="confirmPassword" required>
 
-                    <button type="button" onclick="nextStep(2)">Επόμενο</button>
+                    
                 
             </fieldset>
 
-            <fieldset id="step2">
+            <fieldset>
                 <legend>Προσωπικά στοιχεία</legend>
     
                 
                     <label for="fullName">Ονοματεπώνυμο:</label>
-                    <input type="text" id="fullName" name="fullName" required
+                    <input type="text" id="fullName" name="fullName" required autocomplete="on"
                             placeholder="π.χ Γιώργος Παπαδόπουλος">
+                    <span id="errorSymbol" class="error-symbol"></span>
                                 
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" required
@@ -106,7 +116,7 @@
                             placeholder="πχ 6989401950">
                 
                     <label for="address">Διεύθυνση κατοικίας: </label>
-                    <input type="tel" id="adress" name="address" required
+                    <input type="text" id="address" name="address" required
                             placeholder="Πατησίων και παραμυθιού">
 
                     
@@ -131,12 +141,11 @@
                         <label for="whatsApp">WhatsApp</label>
                     </fieldset>
    
-                <button type="button" onclick="prevStep(1)">Προηγούμενο</button>
-                <button type="button" onclick="nextStep(3)">Επόμενο</button>
+              
 
             </fieldset>
     
-            <fieldset id="step3">
+            <fieldset>
                 <legend>Eρωτηματολόγιο προτιμήσεων</legend>
 
                 <fieldset class="question">
@@ -167,7 +176,7 @@
 
                 <fieldset class="question">
                     <label for="nomos">Σε ποιόν νομό αναζητείτε αγγελίες;</label>
-                    <select id="nomos" name="nomos">
+                    <select id="nomos" name="nomos" autocomplete="on">
                         <option value="attiki">Αττική</option>
                         <option value="central-greece">Στερεά Ελλάδα</option>
                         <option value="central-macedonia">Κεντρική Μακεδονία</option>
@@ -185,25 +194,22 @@
                 </fieldset>
 
                 <fieldset class="question">
-                    
+
                     <legend>Tι είδους οχήματα σας ενδιαφέρουν; </legend>
+                
+                    
+                    <input list="vehiclesData" id="vehiclesList" name="vehiclesList" autocomplete="on">
 
-                    <input type="checkbox" id="cars" name="cars">
-                    <label for="cars">Αυτοκίνητα Ι.Χ</label>
-
-                    <input type="checkbox" id="motorcycles" name="motorcycles">
-                    <label for="motorcycles">Μοτοσυκλέτες</label>
-
-                    <input type="checkbox" id="RV" name="RV">
-                    <label for="RV">Τροχόσπιτα</label>
-
-                    <input type="checkbox" id="trucks" name="trucks">
-                    <label for="trucks">Φορτηγά</label>
-
-                    <input type="checkbox" id="work-vec" name="work-vec">
-                    <label for="work-vec">Επαγγελματικής χρήσεως</label>
+                    <datalist id="vehiclesData">
+                        <option value="Αυτοκίνητα Ι.Χ">
+                        <option value="Μοτοσυκλέτες">
+                        <option value="Τροχόσπιτα">
+                        <option value="Φορτηγά">
+                        <option value="Επαγγελματικής χρήσεως">
+                    </datalist>
 
                 </fieldset>
+                
 
                 <fieldset class="question">
 
@@ -232,40 +238,34 @@
                 
                 <label for="interests">Πείτε μας μερικά λόγια για τα ενδιαφέροντα σας: </label>
                 <textarea id="interests" name="interests" rows="6"></textarea>
-                
-                
-
-            <button type="button" onclick="prevStep(2)">Προηγούμενο</button>
-            <input type="submit" value="Υποβολή">
             
             </fieldset>
 
 
-          
+            <input type="submit" value="Υποβολή">
             
         </form>
 
     </main>
 
     <footer id="Main-footer">
-    
-        <!--Tο logo μαζί με το alternative text-->
-        <div id="upper-footer">
+        <div id="flex-the-two-first">
+          <div id="upper-footer">
             <h1 class="brand-logo">
                 <a href="index.html">
                     <img src="../png/logo-no-background.png" alt="Rent&Buy" >
                 </a>
             </h1>
-        </div>
+          </div>
             
     
-        <div id = "middle-footer">
+          <div id = "middle-footer">
             <ul>
-                <li>
+                <li class="bottom-border-visble">
                     <p><a href="about-us.html" aria-label="About Us">Ποιοί είμαστε</a></p>
                 </li>
     
-                <li>
+                <li class="bottom-border-visble">
                     <p><a href="ContactForm.html">Τεχνική υποστήριξη</a> </p>
                 </li>
     
@@ -274,50 +274,26 @@
                 </li>
     
             </ul>
+          </div>
         </div>
+      
+        <!--Tο logo μαζί με το alternative text-->
         
-    
+        
+  
         <div id = "Right-footer">
-            <!--Den eimai sigouros an einai kalh prakthkh header san paidi enos div-->
-            <header>
-                <img src="..\png\index-images\phone-call.png" alt="phone-call-icon">
+            
+            <div class="right-footer-header">
+                
+                <img src="../png/index-images/phone-call.png" alt="phone-call-icon">
                 <h1>2106322573</h1>
-            </header>
-            <p>Τηλεφώνησε τώρα από σταθερό ή κινητό και βάλε εύκολα και γρήγορα την αγγελία σου!</p>
+                <p>Τηλεφώνησε τώρα από σταθερό ή κινητό και βάλε εύκολα και γρήγορα την αγγελία σου!</p>
+            </div>
         </div>
         
         <p>&copy; 2023 Iouannou-Armeniakos. All rights reserved.</p>
-        </footer>
-
-
-        <script>
-
-            let currentStep = 1;
-
-
-            function nextStep(step) {
-
-                const prevStep = currentStep;
-                currentStep = step;
-                
-                
-                    document.getElementById(`step${prevStep}`).style.display = 'none';
-                    document.getElementById(`step${currentStep}`).style.display = 'block';
-                
-                 
-            }
-
-            function prevStep(step) {
-                const prevStep = currentStep;
-                currentStep = step;
-
-                document.getElementById(`step${prevStep}`).style.display = 'none';
-                document.getElementById(`step${currentStep}`).style.display = 'block'
-            
-            
-            }
-
-
-        </script>
+    
+    
+    </footer>
     
     </body>

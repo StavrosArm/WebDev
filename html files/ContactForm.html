@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="gr">
+<html lang="el">
 
 <head>
     <title>Rent&Buy-Tech Support</title>
@@ -10,7 +10,7 @@
     <meta name="description" content="Troubleshooting">
     <meta name="keywords" content="Problem, Contact, Tech Support">
     <meta name="author" content="Iouannou-Armeniakos">
-    <meta name="viewport" content="width=device-width", initial-scale="1">
+    <meta name="viewport" content="width=device-width initial-scale=1">
     <link rel="stylesheet" href="../css files/all_files.css">
     <link rel="stylesheet" href="../css files/contact_form.css">
 
@@ -27,13 +27,11 @@
         <!--Το βασικό μας navbar, λογικά θα πρέπει να προσθέσουμε και άλλα πράγματα στο categories-->
         <nav class="header-navbar">
             <ul>
-                <li>
-                    <div class="brand-logo">
-                        <a href="index.html">
-                            <img src="../png/logo-no-background.png" alt="Rent&Buy" style="width: 120px;
-                            height: auto">
-                        </a>
-                    </div>
+                <li class="brand-logo">
+                    <a href="index.html">
+                        <img src="../png/logo-no-background.png" alt="Rent&Buy" style="width: 120px;
+                        height: auto">
+                    </a>
                 </li>
                 <li class="search-container">
                     <form  action="/search" method="get">
@@ -43,26 +41,28 @@
                         </button>
                     </form>
                 </li>
-                <li class ="Show-Sublist Border-Radius"><a href="categories.html" title="Categories ">Κατηγορίες Αγγελιών</a>
+                <li id="Ads-Categories" class ="Show-Sublist">
+                    <a class="Border-Radius" href="categories.html" title="Categories ">Κατηγορίες Αγγελιών</a>
                     <ul>
-                        <li><a href = "house-rentals.html" title = "Real Estate">Ακίνητα</a></li>
-                        <li><a href = "car-ads.html" title = "Vehicles">Οχήματα</a></li>
-                        <li><a href = "#" title = "Work">Εργασία</a></li>
+                        <li class="bottom-border-visble"><a href = "house-rentals.html" title = "Real Estate">Ακίνητα</a></li>
+                        <li class="bottom-border-visble"><a href = "car-ads.html" title = "Vehicles">Οχήματα</a></li>
+                        <li class="bottom-border-visble"><a href = "#" title = "Work">Εργασία</a></li>
                         <li><a href = "#" title = "Other Categories">Άλλες κατηγορίες</a></li>
                     </ul>
                 </li>
                     
     
                     
-                <li class="Sign In Border-Radius" id="sign-in">
-                    <a href=""><img src="../png/sign in.png" alt="Sign/Log in" class="icon" style="width: 20px;
-                        height: auto">Sign/Log in</a>
+                <li class="Sign-In " id="sign-in">
+                    <a class="Border-Radius" href="sign_in.html">
+                        Sign/Log in
+                    </a>
                 </li>
     
-                <li class="Show-Sublist Border-Radius">
-                    <a href="#" title = "EN">EN</a>
+                <li id="Change-language" class="Show-Sublist">
+                    <a class ="Border-Radius" href="#" title = "EN">EN</a>
                     <ul class="language-sidebar" id="language-sidebar">
-                        <li><a href="#" title = "GR">GR</a></li>
+                        <li class="bottom-border-visble"><a href="#" title = "GR">GR</a></li>
                         <li><a href="#" title ="EN-LISt">EN</a></li>
                     </ul>
                 </li>
@@ -70,7 +70,8 @@
             </ul>
     
         </nav>
-    </header>
+        
+      </header>
 
 <main class="tech-support">
     
@@ -120,24 +121,23 @@
 
 
 <footer id="Main-footer">
-    
-    <!--Tο logo μαζί με το alternative text-->
-    <div id="upper-footer">
+    <div id="flex-the-two-first">
+      <div id="upper-footer">
         <h1 class="brand-logo">
             <a href="index.html">
                 <img src="../png/logo-no-background.png" alt="Rent&Buy" >
             </a>
         </h1>
-    </div>
+      </div>
         
 
-    <div id = "middle-footer">
+      <div id = "middle-footer">
         <ul>
-            <li>
+            <li class="bottom-border-visble">
                 <p><a href="about-us.html" aria-label="About Us">Ποιοί είμαστε</a></p>
             </li>
 
-            <li>
+            <li class="bottom-border-visble">
                 <p><a href="ContactForm.html">Τεχνική υποστήριξη</a> </p>
             </li>
 
@@ -146,20 +146,26 @@
             </li>
 
         </ul>
+      </div>
     </div>
+  
+    <!--Tο logo μαζί με το alternative text-->
+    
     
 
     <div id = "Right-footer">
         <!--Den eimai sigouros an einai kalh prakthkh header san paidi enos div-->
-        <header>
-            <img src="..\png\index-images\phone-call.png" alt="phone-call-icon">
+        <div class="right-footer-header">
+            <img src="../png/index-images/phone-call.png" alt="phone-call-icon">
             <h1>2106322573</h1>
-        </header>
-        <p>Τηλεφώνησε τώρα από σταθερό ή κινητό και βάλε εύκολα και γρήγορα την αγγελία σου!</p>
+            <p>Τηλεφώνησε τώρα από σταθερό ή κινητό και βάλε εύκολα και γρήγορα την αγγελία σου!</p>
+        </div>
     </div>
     
     <p>&copy; 2023 Iouannou-Armeniakos. All rights reserved.</p>
-    </footer>
+
+
+</footer>
 
 </body>
 

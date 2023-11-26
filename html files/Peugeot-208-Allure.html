@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="gr">
+<html lang="el">
     <head>
         <title>Rent&Buy-Peugot Allure 208</title>
         <link href="../png/logo-no-background.png" rel="shortcut icon" type="image/png" />
@@ -9,7 +9,7 @@
         <meta name="description" content="Home,Workspace,parking and car rent and buying ">
         <meta name="keywords" content="Rent, Buy, House, Workspace, Parking">
         <meta name="author" content="Iouannou-Armeniakos">
-        <meta name="viewport" content="width=device-width", initial-scale="1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../css files/all_files.css">
         <link rel="stylesheet" href="../css files/Peugeot-208.css">
         
@@ -24,42 +24,42 @@
     <!--Το βασικό μας navbar, λογικά θα πρέπει να προσθέσουμε και άλλα πράγματα στο categories-->
     <nav class="header-navbar">
         <ul>
-            <li>
-                <div class="brand-logo">
-                    <a href="index.html">
-                        <img src="../png/logo-no-background.png" alt="Rent&Buy" style="width: 120px;
-                        height: auto">
-                    </a>
-                </div>
+            <li class="brand-logo">
+                <a href="index.html">
+                    <img src="../png/logo-no-background.png" alt="Rent&Buy" style="width: 120px;
+                    height: auto">
+                </a>
             </li>
             <li class="search-container">
                 <form  action="/search" method="get">
                     <input type="search" id="search-bar" name="q" placeholder="Search...">
                     <button type="submit" id="search-button">
-                      <img src="../svg/search.svg" alt="Search Icon">
+                        <img src="../svg/search.svg" alt="Search Icon">
                     </button>
                 </form>
             </li>
-            <li class ="Show-Sublist Border-Radius"><a href="categories.html" title="Categories ">Κατηγορίες Αγγελιών</a>
+            <li id="Ads-Categories" class ="Show-Sublist">
+                <a class="Border-Radius" href="categories.html" title="Categories ">Κατηγορίες Αγγελιών</a>
                 <ul>
-                    <li><a href = "house-rentals.html" title = "Real Estate">Ακίνητα</a></li>
-                    <li><a href = "car-ads.html" title = "Vehicles">Οχήματα</a></li>
-                    <li><a href = "#" title = "Work">Εργασία</a></li>
+                    <li class="bottom-border-visble"><a href = "house-rentals.html" title = "Real Estate">Ακίνητα</a></li>
+                    <li class="bottom-border-visble"><a href = "car-ads.html" title = "Vehicles">Οχήματα</a></li>
+                    <li class="bottom-border-visble"><a href = "#" title = "Work">Εργασία</a></li>
                     <li><a href = "#" title = "Other Categories">Άλλες κατηγορίες</a></li>
                 </ul>
             </li>
                 
 
                 
-            <li class="Sign In Border-Radius" id="sign-in">
-                <a href=""><img src="../png/sign in.png" alt="Sign/Log in" class="icon" style="width: 20px;
-                    height: auto">Sign/Log in</a>
+            <li class="Sign-In " id="sign-in">
+                <a class="Border-Radius" href="sign_in.html">
+                    Sign/Log in
+                </a>
             </li>
 
-            <li class="Show-Sublist Border-Radius">
-                <a href="#" title = "EN">EN</a>
+            <li id="Change-language" class="Show-Sublist">
+                <a class ="Border-Radius" href="#" title = "EN">EN</a>
                 <ul class="language-sidebar" id="language-sidebar">
-                    <li><a href="#" title = "GR">GR</a></li>
+                    <li class="bottom-border-visble"><a href="#" title = "GR">GR</a></li>
                     <li><a href="#" title ="EN-LISt">EN</a></li>
                 </ul>
             </li>
@@ -94,24 +94,25 @@
       
       <section id = "Φωτογραφίες-Αμαξιού">
         <h2>Φωτογραφίες(7)</h2>
-        <img src="..\png\car-ads-images\Peugeot-208-Allure-images\Peugeot-208-Allure-1Photo.jpg" alt="Peugeot-208-Allure-1Photo">
+        <img src="../png/car-ads-images/Peugeot-208-Allure-images/Peugeot-208-Allure-1Photo.jpg" alt="Peugeot-208-Allure-1Photo">
 
          <!--Βάζω μια αλλα΄γή γραμμής απλά για να φαίνεται πιο ωραίο . Μ΄΄ολις ξεκιν΄ήσουμε το css θα αφαιρεθεί-->
         <div id="car-small-photos">
           <img src="../png/car-ads-images/Peugeot-208-Allure-images/Peugeot-208-Allure.-2Photojpg.jpg" alt="Peugeot-208-Allure-2Photo">
-          <img src="..\png\car-ads-images\Peugeot-208-Allure-images\Peugeot-208-Allure.-3Photojpg.jpg" alt="Peugeot-208-Allure-3Photo">
-          <img src="..\png\car-ads-images\Peugeot-208-Allure-images\Peugeot-208-Allure.-4Photojpg.jpg" alt="Peugeot-208-Allure-4Photo">
-          <img src="..\png\car-ads-images\Peugeot-208-Allure-images\Peugeot-208-Allure.-5Photojpg.jpg" alt="Peugeot-208-Allure-5Photo">
-          <img src="..\png\car-ads-images\Peugeot-208-Allure-images\Peugeot-208-Allure.-6Photojpg.jpg" alt="Peugeot-208-Allure-6Photo">
-          <img src="..\png\car-ads-images\Peugeot-208-Allure-images\Peugeot-208-Allure.-7Photojpg.jpg" alt="Peugeot-208-Allure-7Photo">
-          <article class="Περιγραφές" id="Συντομή-Περιγραφή">
-            <h3>Συντομή Περιγραφή</h3>
-            <p>Πρόκειται για ένα αυτοκίνητο μάρκας PEUGEOT μοντέλο 208 Allure, κινητήρας 1.199 cc με 100 ίππους, 
-            λευκού χρώματος και μόλις 4.500 χιλιόμετρα διανυθέντα. Καταναλώνει 104 gr CO2 ανά 100 χιλιόμετρα 
-            και είναι Euro6. Διαθέτει αρκετές πρόσθετες επιλογές όπως πάρκινγκ σένσορες, φώτα LED, cruise control 
-            και πολλά άλλα. Είναι σε άριστη κατάσταση, μοντέλο του 2022 και προσφέρεται στην τιμή των 19.000€</p>
-          </article>
+          <img src="../png/car-ads-images/Peugeot-208-Allure-images/Peugeot-208-Allure.-3Photojpg.jpg" alt="Peugeot-208-Allure-3Photo">
+          <img src="../png/car-ads-images/Peugeot-208-Allure-images/Peugeot-208-Allure.-4Photojpg.jpg" alt="Peugeot-208-Allure-4Photo">
+          <img src="../png/car-ads-images/Peugeot-208-Allure-images/Peugeot-208-Allure.-5Photojpg.jpg" alt="Peugeot-208-Allure-5Photo">
+          <img src="../png/car-ads-images/Peugeot-208-Allure-images/Peugeot-208-Allure.-6Photojpg.jpg" alt="Peugeot-208-Allure-6Photo">
+          <img src="../png/car-ads-images/Peugeot-208-Allure-images/Peugeot-208-Allure.-7Photojpg.jpg" alt="Peugeot-208-Allure-7Photo">
+          
         </div>
+        <article class="Περιγραφές" id="Συντομή-Περιγραφή">
+          <h3>Συντομή Περιγραφή</h3>
+          <p>Πρόκειται για ένα αυτοκίνητο μάρκας PEUGEOT μοντέλο 208 Allure, κινητήρας 1.199 cc με 100 ίππους, 
+          λευκού χρώματος και μόλις 4.500 χιλιόμετρα διανυθέντα. Καταναλώνει 104 gr CO2 ανά 100 χιλιόμετρα 
+          και είναι Euro6. Διαθέτει αρκετές πρόσθετες επιλογές όπως πάρκινγκ σένσορες, φώτα LED, cruise control 
+          και πολλά άλλα. Είναι σε άριστη κατάσταση, μοντέλο του 2022 και προσφέρεται στην τιμή των 19.000€</p>
+        </article>
  
 
       
@@ -143,63 +144,67 @@
              τιμή 19.000€</p>
           </article>
 
-        <div class="Μορφοποιήση-Πινάκων">
-          
-          <table >
+        <div id="Μορφοποιήση-Πινάκων">
+          <div class="flex-table">
             <h3>Χαρακτηριστικά Αυτοκινήτου</h3>
-            <tr>
-              <th>Έκδοδη</th>
-              <td>Allure</td>
-            </tr>
-            <tr>
-              <th>Τύπος Αμαξώματος</th>
-              <td>Hatchback</td>
-            </tr>
-            <tr>
-              <th>Κυβικά</th>
-              <td>1.199</td>
-            </tr>
-            <tr>
-              <th>Ίπποι</th>
-              <td>100</td>
-            </tr>
-            <tr>
-              <th>Χιλιόμετρα</th>
-              <td>4500</td>
-            </tr>
-            <tr>
-              <th>Κατάσταση</th>
-              <td>Άριστη</td>
-            </tr>
-            <tr>
-              <th>Χρώμα</th>
-              <td>Λευκό</td>
-            </tr>
-          </table>
-
-          <h3>Στατιστικά αγγελίας και επικοινωνία</h3>
-          <table>
-            <tr>
-              <th>Ημερομηνία Ανάρτησής</th>
-              <td>Δευτέρα, 5 Ιουνίου 2023</td>
-            </tr>
-            <tr>
-              <th>Tελευταία τροποποίηση αγγελίας</th>
-              <td>Κυριακή, 29 Οκτωβρίου 2023</td>
-            </tr>
-            <tr>
-              <th>Τροποποιήση Τιμής</th>
-              <td>Μειώση κατά 500€</td>
-            </tr>
-            <tr>
-              <th>Η αγγελία έχει έως τώρα</th>
-              <td>230 επισκέψεις</td>
-            </tr>
-            <tr>
-              <th>Αγγελία από</th>
-              <td>Ιδιώτη</td>
-            </tr>
-          </table>
+            <table>
+              <tr>
+                <th>Έκδοδη</th>
+                <td>Allure</td>
+              </tr>
+              <tr>
+                <th>Τύπος Αμαξώματος</th>
+                <td>Hatchback</td>
+              </tr>
+              <tr>
+                <th>Κυβικά</th>
+                <td>1.199</td>
+              </tr>
+              <tr>
+                <th>Ίπποι</th>
+                <td>100</td>
+              </tr>
+              <tr>
+                <th>Χιλιόμετρα</th>
+                <td>4500</td>
+              </tr>
+              <tr>
+                <th>Κατάσταση</th>
+                <td>Άριστη</td>
+              </tr>
+              <tr>
+                <th>Χρώμα</th>
+                <td>Λευκό</td>
+              </tr>
+            </table>
+          </div>
+          
+          <div class="flex-table">
+            <h3>Στατιστικά αγγελίας και επικοινωνία</h3>
+            <table>
+              <tr>
+                <th>Ημερομηνία Ανάρτησής</th>
+                <td>Δευτέρα, 5 Ιουνίου 2023</td>
+              </tr>
+              <tr>
+                <th>Tελευταία τροποποίηση αγγελίας</th>
+                <td>Κυριακή, 29 Οκτωβρίου 2023</td>
+              </tr>
+              <tr>
+                <th>Τροποποιήση Τιμής</th>
+                <td>Μειώση κατά 500€</td>
+              </tr>
+              <tr>
+                <th>Η αγγελία έχει έως τώρα</th>
+                <td>230 επισκέψεις</td>
+              </tr>
+              <tr>
+                <th>Αγγελία από</th>
+                <td>Ιδιώτη</td>
+              </tr>
+            </table>
+          </div>
+          
         </div>
       </section>
       
@@ -209,24 +214,23 @@
   </main>
 
     <footer id="Main-footer">
-    
-      <!--Tο logo μαζί με το alternative text-->
-      <div id="upper-footer">
+      <div id="flex-the-two-first">
+        <div id="upper-footer">
           <h1 class="brand-logo">
               <a href="index.html">
                   <img src="../png/logo-no-background.png" alt="Rent&Buy" >
               </a>
           </h1>
-      </div>
+        </div>
           
   
-      <div id = "middle-footer">
+        <div id = "middle-footer">
           <ul>
-              <li>
+              <li class="bottom-border-visble">
                   <p><a href="about-us.html" aria-label="About Us">Ποιοί είμαστε</a></p>
               </li>
   
-              <li>
+              <li class="bottom-border-visble">
                   <p><a href="ContactForm.html">Τεχνική υποστήριξη</a> </p>
               </li>
   
@@ -235,16 +239,21 @@
               </li>
   
           </ul>
+        </div>
       </div>
+    
+      <!--Tο logo μαζί με το alternative text-->
+      
       
 
       <div id = "Right-footer">
           <!--Den eimai sigouros an einai kalh prakthkh header san paidi enos div-->
-          <header>
-              <img src="..\png\index-images\phone-call.png" alt="phone-call-icon">
+          <div class="right-footer-header">
+              <img src="../png/index-images/phone-call.png" alt="phone-call-icon">
               <h1>2106322573</h1>
-          </header>
-          <p>Τηλεφώνησε τώρα από σταθερό ή κινητό και βάλε εύκολα και γρήγορα την αγγελία σου!</p>
+              <p>Τηλεφώνησε τώρα από σταθερό ή κινητό και βάλε εύκολα και γρήγορα την αγγελία σου!</p>
+          </div>
+
       </div>
       
       <p>&copy; 2023 Iouannou-Armeniakos. All rights reserved.</p>
