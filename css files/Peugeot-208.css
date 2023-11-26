@@ -1,4 +1,4 @@
-/* Ο header αποτελείται από 3 parts . Πρώτο το #Upper-header που περιέχει τον σύνδεσμο που ακολούθησε ο χ΄ρήστης .Δεύτερο
+/* Ο header αποτελείται από 3 parts . Πρώτο το #Upper-header που περιέχει τον σύνδεσμο που ακολούθησε ο χρήστης .Δεύτερο
 το Left header το οποίο έχει τον τίτλο του μοντέλου του αμαξιού και την περιοχή από την οποία ανέβηκε η αγγελία.Τέλος ,
 έχουμε τον Right-Header ο οποίος περιέχει την τιμή , ένα κουμπί για προβολή τηλεφώνου και τα δύο πιο βασικά 
 χαρακτηριστικά του αμαξιού τους ίπους και τα κυβικά */
@@ -9,7 +9,7 @@ main{
   display: flex;
   flex-flow: column nowrap;
 }
-/* θέτουμε ύψος σε όλα τα παιδιά την main τέτοιο ώστε να εξαρτάται από το περιέχομενο που περιέχει */
+/* Θέτουμε ύψος σε όλα τα παιδιά την main τέτοιο ώστε να εξαρτάται από το περιέχομενο που περιέχει */
 main>*{
   height:fit-content;
 }
@@ -25,7 +25,7 @@ main>header{
 /*-----------------------------------------------Upper header style------------------------------------------------*/
 
 
-/* Τοποθετούμε το upper-header σε ΄΄ολο το μήκος των στηλών και του θέτουμε διάταξη flex με wrop wrap */
+/* Τοποθετούμε το upper-header σε ολο το μήκος των στηλών και του θέτουμε διάταξη flex με wrop wrap */
 #Upper-header{
   grid-column: 1/3;
   display: flex;
@@ -51,6 +51,9 @@ main>header{
 
 /*-----------------------------------------------Left header style------------------------------------------------*/
 
+/*Αποτελείται απο την ονομασία του αυτοκινήτου , καθώς και την τοποθεσία*/
+/*Του ορίζουμε την στήλη στο πλέγμα , του φτιάχνουμε ένα border , για να διαφοροποιείται 
+απο το right header του main content και το κάνουμε flex .*/
 #Left-header{
   grid-column: 1/2;
   border-right:solid;
@@ -62,6 +65,7 @@ main>header{
   justify-content: flex-start;
 }
 
+/*Oρίζουμε τα margins των περιεχομένων να είναι 0*/
 #Left-header>p{
   margin-top:0px;
 }
@@ -69,8 +73,12 @@ main>header{
   margin-bottom:0px;
 
 }
-/*Right header style*/
+/*---------------------------Right header style--------------------------------------------------------*/
 
+/*Αποτελείται απο το κόστος του αυτοκινήτου , το τηλέφωνο και τις βασικές προδιαγραφές.*/
+
+/*Το κάνουμε flex , και του ορίζουμε το μέγεθος να είναι το 50 vw , καθώς και του ορίζουμε τις στήλες του πλέγματος 
+που θα πρέπει να εκτείνεται.*/
 #Right-Header{
   display: flex;
   flex-flow: row wrap;
@@ -81,21 +89,25 @@ main>header{
 }
 
 
-
+/*Είναι η προβολή τηλεφωνό, της οποίας στυλάρουμε το κουτί , και της δίνουμε στρογγυλεμένες , άκρες.*/
 #Right-Header>button{
   border-radius: 5px;
   width: auto;
   height:auto;
   background-color: yellow;
 }
+/*Είναι το μήνυμα που εμφανίζεται μέσα στο κουτί , και κάνουμε ορισμό γραμματοσειράς.*/
 #Right-Header>button>span{
   font-size:17px;
   font-weight: bold;
 }
 
 
-/* Section Φωτογραφίες-Αμαξιού style */
+/*---------------------------------Section Φωτογραφίες-Αμαξιού-------------------style */
 
+/*Αποτελείται απο μια μεγάλη εικόνα του αυτοκινήτου , και κάποιες μικρές */
+
+/*Το κάνουμε flex και του κεντράρουμε τα αντικείμενα μέσα σε αυτό*/
 #Φωτογραφίες-Αμαξιού{
   display: flex;
   flex-flow: column nowrap;
@@ -103,7 +115,8 @@ main>header{
   
 }
 
-
+/*Είναι το κομμάτι που λέει φωτογραφίες(7), του ορίζουμε για το mobile , να πιάνει όλο το vw ,
+καθώς και του κάνουμε στυλάρισμα για όμορφο αισθητικό αποτέλεσμα*/
 #Φωτογραφίες-Αμαξιού>h2{
   border-bottom:solid gray;
   border-top:solid gray;
@@ -113,36 +126,43 @@ main>header{
   width:100vw;
 }
 
+/*Εδώ είναι η μεγάλη φωτογραφία που περιέχεται μέσα στο section. Της φτιάχνουμε το border , 
+και της λέμε να πιάνει το 90vw , απο αυτό που της δόθηκε. Επίσης προσθέτουμε κάποια margins.*/
 #Φωτογραφίες-Αμαξιού >img{
   border: 4mm ridge rgba(131, 16, 16, 1);
   width: 90vw;
   margin-bottom: 10px;
 }
+/*Είναι οι μικρές φωτογραφίες στο section , τις κάνουμε flex και βάζουμε space-around για την κατανομή*/
 #car-small-photos{
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
 }
 
+/*Αντίστοιχο border , με την μεγάλη*/
 #car-small-photos>img{
   border: 4mm ridge rgba(131, 16, 16, 1);
 }
 
+/*Σύντομη περιγραφή στο section*/
 #Συντομή-Περιγραφή{
   width: auto;
   
 }
+
 
 .Περιγραφές >h3{
   border-bottom: solid gray;
   border-width: thin;
   margin-bottom: 0;
 }
+
 #Συντομή-Περιγραφή >p{
   margin-top: 0;
 }
 
-/* Section Περιγραφή-και-χαρακτηριστικά-αυτοκινήτου style */
+/*------------------------------- Section Περιγραφή-και-χαρακτηριστικά-αυτοκινήτου style----------------------------*/
 
 #Περιγραφή-και-χαρακτηριστικά-αυτοκινήτου{
   display: flex;
@@ -201,6 +221,9 @@ main>header{
   margin-top: 4em;
 }
 
+/*-------------------------------------MEDIA QUERIES----------------------------------------------*/
+
+/*----------------------------------------TABLET--------------------------------------------------*/
 @media screen and (min-width: 731px) {
   #Φωτογραφίες-Αμαξιού {
     display: grid;
@@ -214,6 +237,7 @@ main>header{
   #Φωτογραφίες-Αμαξιού >img{
     align-self: center;
   }
+  
   #Φωτογραφίες-Αμαξιού >h2{
     grid-column: 1/3;
   }
@@ -221,4 +245,196 @@ main>header{
     grid-column: 1/3;
   }
 
+}
+
+/*-------------------------------------DESKTOP--------------------------------------------------*/
+@media screen and (min-width:1100px){
+
+  main>header{
+    all:initial;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width:100%;
+  }
+  
+  /*UPPER HEADER*/
+  
+  /*To upper header της main αντιπροσωπεύει το path , και το κάνουμε 
+  flex για να βγει στην σειρά. Κάνουμε και άλλες προσαρμογές για την εμφάνιση*/
+  
+  /*Το ορίζουμε να πιάνει και τις 3 στήλες του grid , στην 1η γραμμή*/
+  #upper-header{
+    grid-column: 1/3;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: baseline;
+    justify-content:flex-start;
+  
+  }
+  
+  #upper-header>a,#upper-header> p{
+    all:initial;
+    color:#00BFFF;
+    margin-bottom: auto;
+    margin-top: auto;
+  }
+  
+  #Bold{
+    font-weight: bold;
+  }
+  
+  #Upper-header>a:hover{
+    text-decoration: underline;
+  }
+
+  #Right-Header{
+    width:100%;
+  }
+  
+  /*LEFT HEADER*/
+  
+
+  /*RIGHT HEADER*/
+  
+  /*Τα κάνουμε flex για να εμφανιστούν ως γραμμή και ορίζουμε το right header 
+  να πιάνει απο την γραμμή 2 εώς 3 του grid , χρησιμοποιούμε και κάποια margin 
+  για την απόσταση του περιεχομένου*/
+
+  /*Να κολλήσει προς τα πάνω*/
+ 
+  
+  /*Εδώ είναι το κουμπί προβολής τηλεφώνου,και του στρογγυλεύουμε τις άκρες και του 
+  φτιάχνουμε τις διαστάσεις για να έρθει στα μέτρα μας.*/
+
+  
+  
+  /* SECTION CAR IMGS */
+  /*Δημιουργούμε ένα πλέγμα το οποίο εμπεριέχει την μεγάλη φωτογραφία
+  που γίνεται display αριστερά , και τις μικρές στα δεξιά , μαζί με μια σύντομη 
+  περιγραφή.*/
+  
+  #Φωτογραφίες-Αμαξιού{
+    all:initial;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 0em;
+    justify-content: center;
+  }
+  
+  /*Το h2 του section που ουσιαστικά δημιουργεί μια διαχωριστική γραμμή 
+  απο το πάνω κομμάτι της σελίδας*/
+  
+  #Φωτογραφίες-Αμαξιού>h2{
+    width:100%;
+    border-bottom:solid gray;
+    border-top:solid gray;
+    border-width: thin;
+    background-image: linear-gradient(to right, yellow , #831010);
+    margin-top: auto;
+    grid-column: 1/3;
+  }
+  
+  /*Το μέγεθος , το grid column και το margin , της μεγάλης 
+  φωτογραφίας*/
+  #Φωτογραφίες-Αμαξιού >img{
+    justify-self: center;
+    align-self: center;
+    border: 4mm ridge rgba(131, 16, 16, 1);
+    grid-column: 1/2;
+    
+  }
+  
+  /*Εδώ έχουμε μορφοποίηση του δεξιού grid που εμπεριέχει 
+  τις φωτογραφίες ,και την σύντομη περιγραφή*/
+  #car-small-photos{
+    all:initial;
+    grid-column: 2/3;
+    height: 20em;
+  }
+  
+  #car-small-photos>img{
+    border: 4mm ridge rgba(131, 16, 16, 1);
+  }
+  
+  #Συντομή-Περιγραφή{
+    width: 100%;  
+    grid-column:2/3;
+    margin-top:-10em; 
+  }
+    
+  /* SECTION FULL-DESCRIPTION */
+  
+  /*Δημιουργούμε ένα πλέγμα που έχει την αναλυτική περιγραφή , και δύο πίνακες 
+  με τα χαρακτηρηστικά του αυτοκινήτου και τα στατιστικά της αγγελίας.*/
+  
+  #Περιγραφή-και-χαρακτηριστικά-αυτοκινήτου{ 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 2em;
+  }
+  
+  /*Πάλι χρησιμοποιούμε ένα h2 για διαχωριστική γραμμή απο το προηγούμενο section , 
+  του ορίζουμε το grid και κάνουμε διάφορες κασκαρίκες για την εμφάνιση*/
+  
+  #Περιγραφή-και-χαρακτηριστικά-αυτοκινήτου  > h1{
+    width:100%;
+    text-align: center;
+    border-bottom: solid gray;
+    border-top: solid gray;
+    border-width: thin;
+    margin-bottom: 0;
+    background-image: linear-gradient(to right, yellow , #831010);
+    grid-column: 1/3;
+    
+  }
+  
+  /*Ορίζουμε το πλάτος της αναλυτικής περιγράφης να είναι το 45% του viewport 
+  καθώς και βάζουμε ένα margin, καθώς και του ορίζουμε τις στήλες που θα εκτείνεται.*/
+  
+  /*Παράλληλα φτιάχνουμε τις θέσεις του κειμένου μέσα στο width του block*/
+  #Αναλυτική-Περιγραφή{
+    all:initial;
+    width: 45vw;
+    margin-left: 0.8em;
+    grid-column:1/2;
+  }
+  
+  /*Είναι η επικεφαλίδα της παραγράφου*/
+  #Αναλυτική-Περιγραφή>h3{ 
+    text-align: center; 
+  }
+  
+  /*Θέλουμε η παράγραφος να φαίνεται ομοιόμοργη στις 2 άκρες*/
+  #Περιγραφή-και-χαρακτηριστικά-αυτοκινήτου p{
+    text-align: justify;
+  }
+  
+  /*Kάνουμε flex τους πίνακες και για να εμφανιστούν σαν στήλες , και τους 
+  ορίζουμε και το grid-column*/
+  .Μορφοποίηση-Πινάκων{
+    all:initial;
+    display: flex;
+    flex-flow: column;
+    align-items:center;
+    grid-column: 2/3;
+    width:45vw;
+  }
+  
+  /*Μορφοποίηση του ονόματος του κάθε πίνακα*/
+  .Μορφοποίηση-Πινάκων>h3{
+    border-bottom: solid gray;
+    border-width: thin;
+    width:18em; 
+  }
+  
+  /*Ορισμός διαστάσεων του πίνακα*/
+  .Μορφοποίηση-Πινάκων>table{
+    all:initial;
+    width:18em;
+  }
+
+  /*Επαναφορά των κανόνων στους αρχικούς της html*/
+  #Μορφοποιήση-Πινάκων .flex-table{
+   all:initial;
+  }
 }

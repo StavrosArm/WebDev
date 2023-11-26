@@ -9,9 +9,8 @@
     padding: 20px;
     border-radius: 17px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 60%;
-    max-width: 600px;
     margin:auto;
+    max-width: 100%;
     margin-top:2em;
     margin-bottom:2em;
 }
@@ -20,24 +19,30 @@
 καθώς και το margin για να απέχουν τα fieldset μεταξύ τους
 καθώς και απο το header της φόρμα.*/
 
-.tech-support>form fieldset {
+.tech-support>form>fieldset {
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 10px;
     margin-bottom: 20px;
+    max-width: 100%;
 }
 
+/*Oρίζουμε ως bold το font των legend*/
 .tech-support legend {
     font-weight: bold;
 }
 
-
+/*Xρώμα , margins και τα κάνουμε display ως block τα labels*/
 .tech-support label {
     display: block;
     margin-bottom: 5px;
     color: #333;
 }
 
+
+/*Εδώ στυλάρουμε τα inputs και τα text-areas ολόκληρης της φόρμας.Τους ορίζουμε 
+το width ως 100% , το μέγεθος της γραμματοσειράς , βάζουμε να περικλείονται απο κουτί 
+καθώς και προσαρμόζουμε τα margins. */
 .tech-support input, textarea {
     width: 100%;
     padding: 10px;
@@ -47,6 +52,7 @@
     font-size: 14px;
     margin-top: 5px;
     margin-bottom: 15px;
+    max-width:100%;
 }
 
 /*Φτιάχνουμε τα χρώματα , και προσαρμόζουμε το 
@@ -66,34 +72,56 @@ padding για να έχουμε ένα μεγαλύτερο κουμπί.*/
     background-color: #680c18;
 }
 
+/*question έχουμε ονομάσει τα εσωτερικά fieldsets , κάνουμε align όλα του τα παιδιά 
+στο κέντρο , προσαρμόζουμε το μέγιστο πλάτος , και στρογγυλεύουμε το κουρί. Επίσης προσθέτουμε κάποια margins*/
 .question {
-    display: flex;
-    align-items: baseline;
+    align-items: center;
+    max-width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    
 }
 
+/*Στα εσωτερικά fieldsets δεν θέλουμε να είναι bold τα γράμματα , για καλύτερο αισθητικό αποτέλεσμα*/
 .question legend{
     font-weight: normal;
+    
 }
 
+/*Margin , και μέγεθος για το κάθε checkbox*/
 .question input[type="checkbox"]{
     width:15px;
     margin-left:10px;
+    
 }
 
+/*Θέλουμε τα labels στα εσωτερικά fieldsets να εμφανίζονται ως inline 
+ώστε τα checkboxes , να είναι δίπλα με κάθε επιλογή  */
+.question>label{
+    width:max-content;
+    display: inline;
+}
+
+/*Margin για την επιλογή νομός*/
 .question #nomos{
     margin-left:10px;
 }
 
 
-
+/*To κουμπί υποβολής της φόρμας*/
 button{
     color: hsl(0, 0%, 100%);
     background-color: #831010;
 }
 
+/*Η αλλαγή όταν το πατάς*/
 button:hover{
    background-color: #680c18; 
 }
 
 
 
+/*Σημείωση. Η σελίδα sign-in δεν έχει νόημα να έχει διαφορετικά πράγματα ανά οθόνη , καθώς αποτελείται 
+απο μία φόρμα που ακολουθεί το μέγεθος της οθόνης. Εφαρμόζει το RWD του footer και του header. */

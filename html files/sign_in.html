@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="gr">
+<html lang="el">
 
 <head>
     <title>Rent&Buy-Tech Support</title>
@@ -10,7 +10,7 @@
     <meta name="description" content="Troubleshooting">
     <meta name="keywords" content="Problem, Contact, Tech Support">
     <meta name="author" content="Iouannou-Armeniakos">
-    <meta name="viewport" content="width=device-width", initial-scale="1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../css files/all_files.css">
     <link rel="stylesheet" href="../css files/sign_in.css">
     <script src="../script.js" defer></script>
@@ -76,15 +76,15 @@
 
     <main class="tech-support">
 
-        <form action="/submit" method="post">
+        <form action="/submit" method="post" id="registrationForm">
 
-            <fieldset id="step1">
+            <fieldset >
                 <legend>Eγγραφή χρήστη</legend>
     
                 
                     <label for="username">Όνομα χρήστη: </label>
                     <input type="text" id="username" name="username" pattern="[^\s]+" 
-                        title="Παρακαλώ εισάγετε μία λέξη" required>
+                        title="Παρακαλώ εισάγετε μία λέξη" autocomplete="on" required>
                 
     
                 
@@ -98,13 +98,14 @@
                 
             </fieldset>
 
-            <fieldset id="step2">
+            <fieldset>
                 <legend>Προσωπικά στοιχεία</legend>
     
                 
                     <label for="fullName">Ονοματεπώνυμο:</label>
-                    <input type="text" id="fullName" name="fullName" required
+                    <input type="text" id="fullName" name="fullName" required autocomplete="on"
                             placeholder="π.χ Γιώργος Παπαδόπουλος">
+                    <span id="errorSymbol" class="error-symbol"></span>
                                 
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" required
@@ -115,7 +116,7 @@
                             placeholder="πχ 6989401950">
                 
                     <label for="address">Διεύθυνση κατοικίας: </label>
-                    <input type="tel" id="adress" name="address" required
+                    <input type="text" id="address" name="address" required
                             placeholder="Πατησίων και παραμυθιού">
 
                     
@@ -144,7 +145,7 @@
 
             </fieldset>
     
-            <fieldset id="step3">
+            <fieldset>
                 <legend>Eρωτηματολόγιο προτιμήσεων</legend>
 
                 <fieldset class="question">
@@ -175,7 +176,7 @@
 
                 <fieldset class="question">
                     <label for="nomos">Σε ποιόν νομό αναζητείτε αγγελίες;</label>
-                    <select id="nomos" name="nomos">
+                    <select id="nomos" name="nomos" autocomplete="on">
                         <option value="attiki">Αττική</option>
                         <option value="central-greece">Στερεά Ελλάδα</option>
                         <option value="central-macedonia">Κεντρική Μακεδονία</option>
@@ -193,25 +194,22 @@
                 </fieldset>
 
                 <fieldset class="question">
-                    
+
                     <legend>Tι είδους οχήματα σας ενδιαφέρουν; </legend>
+                
+                    
+                    <input list="vehiclesData" id="vehiclesList" name="vehiclesList" autocomplete="on">
 
-                    <input type="checkbox" id="cars" name="cars">
-                    <label for="cars">Αυτοκίνητα Ι.Χ</label>
-
-                    <input type="checkbox" id="motorcycles" name="motorcycles">
-                    <label for="motorcycles">Μοτοσυκλέτες</label>
-
-                    <input type="checkbox" id="RV" name="RV">
-                    <label for="RV">Τροχόσπιτα</label>
-
-                    <input type="checkbox" id="trucks" name="trucks">
-                    <label for="trucks">Φορτηγά</label>
-
-                    <input type="checkbox" id="work-vec" name="work-vec">
-                    <label for="work-vec">Επαγγελματικής χρήσεως</label>
+                    <datalist id="vehiclesData">
+                        <option value="Αυτοκίνητα Ι.Χ">
+                        <option value="Μοτοσυκλέτες">
+                        <option value="Τροχόσπιτα">
+                        <option value="Φορτηγά">
+                        <option value="Επαγγελματικής χρήσεως">
+                    </datalist>
 
                 </fieldset>
+                
 
                 <fieldset class="question">
 
@@ -284,12 +282,13 @@
         
   
         <div id = "Right-footer">
-            <!--Den eimai sigouros an einai kalh prakthkh header san paidi enos div-->
-            <header>
-                <img src="..\png\index-images\phone-call.png" alt="phone-call-icon">
+            
+            <div class="right-footer-header">
+                
+                <img src="../png/index-images/phone-call.png" alt="phone-call-icon">
                 <h1>2106322573</h1>
                 <p>Τηλεφώνησε τώρα από σταθερό ή κινητό και βάλε εύκολα και γρήγορα την αγγελία σου!</p>
-            </header>
+            </div>
         </div>
         
         <p>&copy; 2023 Iouannou-Armeniakos. All rights reserved.</p>
