@@ -26,7 +26,8 @@ sign in data validation.You can see a preview of the website , below :
 
 
 ### Categories
-![Στιγμιότυπο οθόνης 2023-12-21 161503](https://github.com/StavrosArm/WebDev/assets/75743598/d6297003-fe45-41c4-9881-7e330f26715b)
+![Στιγμιότυπο οθόνης 2023-12-21 162813](https://github.com/StavrosArm/WebDev/assets/75743598/04b669b2-32b5-4ee1-b518-963da8ac5a89)
+
 
 ### Footer
 ![Στιγμιότυπο οθόνης 2023-12-21 162653](https://github.com/StavrosArm/WebDev/assets/75743598/01623dba-d7d7-4330-b47c-7043dceddb85)
