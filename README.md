@@ -14,24 +14,7 @@ creating websites , where each page is fully written from the beginning to the e
 - sign_in.html
 
 All html pages are fully responsive for desktop , tablet and mobile. And also at the sign-in page , JavaScript's CustomValidity API was used for
-sign in data validation.You can see a preview of the website , below :
-
-  
-### House Rentals
-![Στιγμιότυπο οθόνης 2023-12-21 162420](https://github.com/StavrosArm/WebDev/assets/75743598/f0b50262-60eb-4d62-b635-3a0f5c24d451)
-
-### Peugot-208-Allure
-
-![Στιγμιότυπο οθόνης 2023-12-21 162455](https://github.com/StavrosArm/WebDev/assets/75743598/946c1778-8b64-4f80-a45d-a77a0c033cf7)
-
-
-### Categories
-![Στιγμιότυπο οθόνης 2023-12-21 162813](https://github.com/StavrosArm/WebDev/assets/75743598/04b669b2-32b5-4ee1-b518-963da8ac5a89)
-
-
-### Footer
-![Στιγμιότυπο οθόνης 2023-12-21 162653](https://github.com/StavrosArm/WebDev/assets/75743598/01623dba-d7d7-4330-b47c-7043dceddb85)
-
+sign in data validation.
 
 *(Note:Aesthetics is not the target of this project , but to showcase skills on hardcoding HTML , CSS and JS based on best practices provided by 
 the Mozzila Developer Network and W3C)*
