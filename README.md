@@ -1,6 +1,6 @@
 # WebDev
 
-## This project aims to showcase skills for HTML , CSS and basic JavaScript.
+## This project aims to showcase skills for HTML , CSS and basic JavaScript.You can preview the project here :https://stavrosarm.github.io/WebDev/
 
 The project follows all the HTML5 standards , and it makes good use of the CSS selectors for reusable stylesheets.It is built based on the classic way of 
 creating websites , where each page is fully written from the beginning to the end , and no content is dynamically created. It consists of 8 html files in total :
